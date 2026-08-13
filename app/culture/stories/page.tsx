@@ -29,7 +29,7 @@ export default function FolkStories() {
         </div>
       </div>
 
-      <section className="section-space" style={{ background: '#F2ECD8' }}>
+      <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))', gap: '1.25rem', marginBottom: '3.5rem' }}>
             {stories.map((story) => (
@@ -39,13 +39,13 @@ export default function FolkStories() {
                     {story.lang}
                   </span>
                 </div>
-                <h3 className="heading-serif" style={{ fontSize: '1.25rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '0.75rem', lineHeight: 1.3 }}>{story.title}</h3>
+                <h3 className="heading-serif" style={{ fontSize: '1.25rem', fontWeight: 700, color: '#242424', marginBottom: '0.75rem', lineHeight: 1.3 }}>{story.title}</h3>
                 <p style={{ fontSize: '0.9rem', color: '#666', lineHeight: 1.75 }}>{story.excerpt}</p>
               </div>
             ))}
           </div>
 
-          <div style={{ background: '#1A1A1A', borderRadius: '1.25rem', padding: '3rem', textAlign: 'center' }}>
+          <div style={{ background: '#242424', borderRadius: '1.25rem', padding: '3rem', textAlign: 'center' }}>
             <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#fff', marginBottom: '1rem' }}>Share a Story</h2>
             <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, maxWidth: '480px', marginInline: 'auto', marginBottom: '2rem' }}>
               Do you know a traditional folk story that isn't in our archive? Help us preserve our oral heritage.

@@ -29,7 +29,7 @@ export default function Totems() {
         </div>
       </div>
 
-      <section className="section-space" style={{ background: '#F2ECD8' }}>
+      <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site">
           <p style={{ fontSize: '1rem', color: '#666', lineHeight: 1.85, maxWidth: '680px', marginBottom: '3.5rem' }}>
             In Bwamba culture, each clan is associated with a totem — an animal or natural element that represents the clan's identity, spiritual connection and values. Totems are treated with great respect and are central to ceremony, naming and community life.
@@ -40,7 +40,7 @@ export default function Totems() {
               <div key={totem.name} className="card" style={{ padding: '2rem', display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
                 <div style={{ fontSize: '2.25rem', lineHeight: 1, flexShrink: 0 }}>{totem.symbol}</div>
                 <div>
-                  <h3 style={{ fontSize: '1.0625rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '0.5rem' }}>{totem.name}</h3>
+                  <h3 style={{ fontSize: '1.0625rem', fontWeight: 700, color: '#242424', marginBottom: '0.5rem' }}>{totem.name}</h3>
                   <p style={{ fontSize: '0.875rem', color: '#666', lineHeight: 1.7 }}>{totem.significance}</p>
                 </div>
               </div>
@@ -48,7 +48,7 @@ export default function Totems() {
           </div>
 
           <div className="card" style={{ padding: '3rem', textAlign: 'center' }}>
-            <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '0.875rem' }}>Share Totem Knowledge</h2>
+            <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '0.875rem' }}>Share Totem Knowledge</h2>
             <p style={{ fontSize: '0.9375rem', color: '#666', lineHeight: 1.85, maxWidth: '460px', marginInline: 'auto', marginBottom: '2rem' }}>
               Help us build a comprehensive record of clan totems and their cultural meanings.
             </p>

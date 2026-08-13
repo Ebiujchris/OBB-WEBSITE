@@ -26,17 +26,17 @@ export default function Events() {
         </div>
       </div>
 
-      <section className="section-space" style={{ background: '#F2ECD8' }}>
+      <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site" style={{ maxWidth: '860px' }}>
 
           {/* Upcoming */}
-          <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '2rem' }}>Upcoming Events</h2>
+          <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '2rem' }}>Upcoming Events</h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', marginBottom: '4rem' }}>
             {upcoming.map((ev) => (
               <div key={ev.id} className="card" style={{ padding: '2rem 2.25rem' }}>
                 <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-start', justifyContent: 'space-between', gap: '1.5rem' }}>
                   <div style={{ flex: 1, minWidth: '220px' }}>
-                    <h3 className="heading-serif" style={{ fontSize: '1.25rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '0.875rem' }}>{ev.title}</h3>
+                    <h3 className="heading-serif" style={{ fontSize: '1.25rem', fontWeight: 700, color: '#242424', marginBottom: '0.875rem' }}>{ev.title}</h3>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.25rem', marginBottom: '1rem' }}>
                       {[{ icon: '📅', val: ev.date }, { icon: '🕐', val: ev.time }, { icon: '📍', val: ev.location }].map(({ icon, val }) => (
                         <span key={val} style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', fontSize: '0.875rem', color: '#555' }}>
@@ -55,15 +55,15 @@ export default function Events() {
           </div>
 
           {/* Past */}
-          <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '2rem' }}>Past Events</h2>
+          <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '2rem' }}>Past Events</h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             {past.map((ev) => (
               <div key={ev.id} style={{ background: '#fff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '1rem', padding: '1.5rem 2rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1rem' }}>
                 <div>
-                  <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '0.375rem' }}>{ev.title}</h3>
+                  <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#242424', marginBottom: '0.375rem' }}>{ev.title}</h3>
                   <p style={{ fontSize: '0.875rem', color: '#666', lineHeight: 1.65 }}>{ev.desc}</p>
                 </div>
-                <span style={{ fontSize: '0.875rem', fontWeight: 600, color: '#C4922A', flexShrink: 0 }}>{ev.date}</span>
+                <span style={{ fontSize: '0.875rem', fontWeight: 600, color: '#C99A2E', flexShrink: 0 }}>{ev.date}</span>
               </div>
             ))}
           </div>

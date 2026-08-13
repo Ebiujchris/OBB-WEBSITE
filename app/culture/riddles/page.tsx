@@ -26,24 +26,24 @@ export default function Riddles() {
         </div>
       </div>
 
-      <section className="section-space" style={{ background: '#F2ECD8' }}>
+      <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site" style={{ maxWidth: '860px' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', marginBottom: '3.5rem' }}>
             {riddles.map((r, i) => (
               <div key={i} className="card" style={{ padding: '2rem' }}>
                 <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', marginBottom: '1rem' }}>
                   <span style={{ fontSize: '1.25rem', lineHeight: 1, flexShrink: 0 }}>❓</span>
-                  <p style={{ fontSize: '1rem', fontWeight: 500, color: '#1A1A1A', lineHeight: 1.65 }}>{r.question}</p>
+                  <p style={{ fontSize: '1rem', fontWeight: 500, color: '#242424', lineHeight: 1.65 }}>{r.question}</p>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', paddingLeft: '2.25rem' }}>
-                  <span style={{ fontSize: '0.875rem', color: '#C4922A', fontWeight: 600 }}>Answer: {r.answer}</span>
+                  <span style={{ fontSize: '0.875rem', color: '#C99A2E', fontWeight: 600 }}>Answer: {r.answer}</span>
                   <span style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '0.25rem 0.625rem', borderRadius: '9999px', background: 'rgba(107,30,46,0.08)', color: '#6B1E2E', border: '1px solid rgba(107,30,46,0.15)' }}>{r.lang}</span>
                 </div>
               </div>
             ))}
           </div>
           <div className="card" style={{ padding: '3rem', textAlign: 'center' }}>
-            <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '0.875rem' }}>Know a Riddle?</h2>
+            <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '0.875rem' }}>Know a Riddle?</h2>
             <p style={{ fontSize: '0.9375rem', color: '#666', lineHeight: 1.85, maxWidth: '440px', marginInline: 'auto', marginBottom: '2rem' }}>Help us collect traditional riddles from all three Bwamba languages.</p>
             <Link href="/contact" className="btn btn-primary">Contribute a Riddle</Link>
           </div>

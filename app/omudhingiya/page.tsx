@@ -10,15 +10,15 @@ export default function Omudhingiya() {
         </div>
       </div>
 
-      <section className="section-space" style={{ background: '#F2ECD8' }}>
+      <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site" style={{ maxWidth: '900px' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
 
             {/* Main profile */}
             <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-              <div style={{ height: '18rem', background: 'linear-gradient(135deg, #6B1E2E 0%, #1A1A1A 50%, #1E4D38 100%)' }} />
+              <div style={{ height: '18rem', background: 'linear-gradient(135deg, #6B1E2E 0%, #242424 50%, #1F4D3A 100%)' }} />
               <div style={{ padding: '2.5rem' }}>
-                <h2 className="heading-serif" style={{ fontSize: '1.625rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '1.5rem' }}>The Cultural Leader</h2>
+                <h2 className="heading-serif" style={{ fontSize: '1.625rem', fontWeight: 700, color: '#242424', marginBottom: '1.5rem' }}>The Cultural Leader</h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                   {[
                     'OMUDHINGIYA is the symbol of Bamba, Vonoma and Babwisi\'s dignity and his presence is inspiring the community with a sense of unity, peace, tranquility, joy, happiness and the continuity of our cherished way of life for future generations to emulate.',
@@ -34,11 +34,11 @@ export default function Omudhingiya() {
             {/* Responsibilities & Structure */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.25rem' }}>
               <div className="card" style={{ padding: '2.25rem' }}>
-                <h3 className="heading-serif" style={{ fontSize: '1.375rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '1.5rem' }}>Responsibilities</h3>
+                <h3 className="heading-serif" style={{ fontSize: '1.375rem', fontWeight: 700, color: '#242424', marginBottom: '1.5rem' }}>Responsibilities</h3>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
                   {['Chief Spokesman and representative of Obudhingiya', 'Embodiment of unity for all clans', 'Custodian of customs, traditions and practices', 'Supreme head and fountain of honour'].map((item) => (
                     <li key={item} style={{ display: 'flex', gap: '0.75rem', fontSize: '0.9rem', color: '#555', lineHeight: 1.65 }}>
-                      <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#C4922A', flexShrink: 0, marginTop: '0.45rem' }} />
+                      <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#C99A2E', flexShrink: 0, marginTop: '0.45rem' }} />
                       {item}
                     </li>
                   ))}
@@ -46,7 +46,7 @@ export default function Omudhingiya() {
               </div>
 
               <div className="card" style={{ padding: '2.25rem' }}>
-                <h3 className="heading-serif" style={{ fontSize: '1.375rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '1.5rem' }}>Leadership Structure</h3>
+                <h3 className="heading-serif" style={{ fontSize: '1.375rem', fontWeight: 700, color: '#242424', marginBottom: '1.5rem' }}>Leadership Structure</h3>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
                   {["Esimudhingiya (Head of Elders)", "Katikilo (Prime Minister)", "Executive Council (Ministers)", "Council of Elders (Bakulu b'Entula)", "Cultural Council (Kusei)"].map((item) => (
                     <li key={item} style={{ display: 'flex', gap: '0.75rem', fontSize: '0.9rem', color: '#555', lineHeight: 1.65 }}>

@@ -29,10 +29,10 @@ export default function Kwamba() {
         </div>
       </div>
 
-      <section className="section-space" style={{ background: '#F2ECD8' }}>
+      <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site" style={{ maxWidth: '900px' }}>
           <div className="card" style={{ padding: '2.5rem', marginBottom: '2rem' }}>
-            <h2 className="heading-serif" style={{ fontSize: '1.625rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '1.25rem' }}>About Kwamba</h2>
+            <h2 className="heading-serif" style={{ fontSize: '1.625rem', fontWeight: 700, color: '#242424', marginBottom: '1.25rem' }}>About Kwamba</h2>
             <p style={{ fontSize: '0.9375rem', color: '#555', lineHeight: 1.85, marginBottom: '1rem' }}>
               Kwamba is a Nilotic language spoken by the Bamba people, one of the three primary communities of Obudhingiya Bwa Bwamba. Its Nilotic roots distinguish it from the Bantu Lubwisi, reflecting the diverse linguistic heritage of the Bwamba region.
             </p>
@@ -44,19 +44,19 @@ export default function Kwamba() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '1px', background: 'rgba(0,0,0,0.07)', borderRadius: '1rem', overflow: 'hidden', marginBottom: '2rem' }}>
             {[{ value: '38', label: 'Folk Stories' }, { value: '95', label: 'Proverbs' }, { value: '25', label: 'Songs' }].map((s) => (
               <div key={s.label} style={{ background: '#fff', padding: '1.75rem', textAlign: 'center' }}>
-                <p className="heading-serif" style={{ fontSize: '2rem', fontWeight: 700, color: '#C4922A', lineHeight: 1 }}>{s.value}</p>
+                <p className="heading-serif" style={{ fontSize: '2rem', fontWeight: 700, color: '#C99A2E', lineHeight: 1 }}>{s.value}</p>
                 <p style={{ fontSize: '0.8125rem', color: '#888', marginTop: '0.5rem' }}>{s.label}</p>
               </div>
             ))}
           </div>
 
-          <h2 className="heading-serif" style={{ fontSize: '1.5rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '1.5rem' }}>Explore in Kwamba</h2>
+          <h2 className="heading-serif" style={{ fontSize: '1.5rem', fontWeight: 700, color: '#242424', marginBottom: '1.5rem' }}>Explore in Kwamba</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(260px,1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
             {categories.map((cat) => (
               <Link key={cat.href} href={cat.href} style={{ textDecoration: 'none' }}>
                 <div className="card" style={{ padding: '1.75rem', display: 'flex', gap: '1rem', alignItems: 'center' }}>
                   <span style={{ fontSize: '1.75rem', lineHeight: 1 }}>{cat.icon}</span>
-                  <span style={{ fontSize: '0.9375rem', fontWeight: 600, color: '#1A1A1A' }}>{cat.title}</span>
+                  <span style={{ fontSize: '0.9375rem', fontWeight: 600, color: '#242424' }}>{cat.title}</span>
                 </div>
               </Link>
             ))}

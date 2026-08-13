@@ -24,7 +24,7 @@ export default function Lullabies() {
         </div>
       </div>
 
-      <section className="section-space" style={{ background: '#F2ECD8' }}>
+      <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site" style={{ maxWidth: '860px' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginBottom: '3.5rem' }}>
             {lullabies.map((l) => (
@@ -32,7 +32,7 @@ export default function Lullabies() {
                 <span style={{ fontSize: '2.5rem', lineHeight: 1, flexShrink: 0 }}>🎼</span>
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.875rem' }}>
-                    <h3 className="heading-serif" style={{ fontSize: '1.25rem', fontWeight: 700, color: '#1A1A1A', fontStyle: 'italic' }}>{l.title}</h3>
+                    <h3 className="heading-serif" style={{ fontSize: '1.25rem', fontWeight: 700, color: '#242424', fontStyle: 'italic' }}>{l.title}</h3>
                     <span style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '0.25rem 0.625rem', borderRadius: '9999px', background: 'rgba(107,30,46,0.08)', color: '#6B1E2E', border: '1px solid rgba(107,30,46,0.15)', flexShrink: 0 }}>{l.lang}</span>
                   </div>
                   <p style={{ fontSize: '0.9375rem', color: '#666', lineHeight: 1.8 }}>{l.desc}</p>

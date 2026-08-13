@@ -31,13 +31,13 @@ export default function Names() {
         </div>
       </div>
 
-      <section className="section-space" style={{ background: '#F2ECD8' }}>
+      <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(300px,1fr))', gap: '1.25rem', marginBottom: '3.5rem' }}>
             {names.map((n) => (
               <div key={n.name} className="card" style={{ padding: '1.75rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.875rem' }}>
-                  <h3 className="heading-serif" style={{ fontSize: '1.5rem', fontWeight: 700, color: '#1A1A1A' }}>{n.name}</h3>
+                  <h3 className="heading-serif" style={{ fontSize: '1.5rem', fontWeight: 700, color: '#242424' }}>{n.name}</h3>
                   <span style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '0.25rem 0.625rem', borderRadius: '9999px', background: 'rgba(107,30,46,0.08)', color: '#6B1E2E', border: '1px solid rgba(107,30,46,0.15)' }}>{n.lang}</span>
                 </div>
                 <p style={{ fontSize: '0.9375rem', color: '#555', lineHeight: 1.7, marginBottom: '0.75rem' }}>&ldquo;{n.meaning}&rdquo;</p>
@@ -46,7 +46,7 @@ export default function Names() {
             ))}
           </div>
           <div className="card" style={{ padding: '3rem', textAlign: 'center' }}>
-            <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '0.875rem' }}>Know a Traditional Name?</h2>
+            <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '0.875rem' }}>Know a Traditional Name?</h2>
             <p style={{ fontSize: '0.9375rem', color: '#666', lineHeight: 1.85, maxWidth: '460px', marginInline: 'auto', marginBottom: '2rem' }}>
               Help us build a comprehensive dictionary of Bwamba names and their meanings across all three languages.
             </p>

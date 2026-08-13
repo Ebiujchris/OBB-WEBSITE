@@ -15,13 +15,13 @@ export default function VisitBwamba() {
         </div>
       </div>
 
-      <section className="section-space" style={{ background: '#F2ECD8' }}>
+      <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site" style={{ maxWidth: '900px' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
 
             {/* About */}
             <div className="card" style={{ padding: '2.5rem' }}>
-              <h2 className="heading-serif" style={{ fontSize: '1.625rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '1.25rem' }}>About Bwamba</h2>
+              <h2 className="heading-serif" style={{ fontSize: '1.625rem', fontWeight: 700, color: '#242424', marginBottom: '1.25rem' }}>About Bwamba</h2>
               <p style={{ fontSize: '0.9375rem', color: '#555', lineHeight: 1.85, marginBottom: '1rem' }}>
                 Obudhingiya Bwa Bwamba is located in Bundibugyo District, nestled between the western slopes of the Rwenzori Mountains and the Semuliki Valley in Uganda, extending to Beni District in the Democratic Republic of Congo.
               </p>
@@ -35,12 +35,12 @@ export default function VisitBwamba() {
               <div className="card" style={{ padding: '2.25rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', marginBottom: '1.5rem' }}>
                   <span style={{ fontSize: '1.75rem' }}>🏔️</span>
-                  <h3 className="heading-serif" style={{ fontSize: '1.25rem', fontWeight: 700, color: '#1A1A1A' }}>Natural Attractions</h3>
+                  <h3 className="heading-serif" style={{ fontSize: '1.25rem', fontWeight: 700, color: '#242424' }}>Natural Attractions</h3>
                 </div>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
                   {['Rwenzori Mountains (Mountains of the Moon)', 'Semuliki National Park', 'Sempaya Hot Springs', 'Ngite Natural Waterfalls', 'Crater Lakes'].map((item) => (
                     <li key={item} style={{ display: 'flex', gap: '0.75rem', fontSize: '0.9rem', color: '#555', lineHeight: 1.6 }}>
-                      <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#C4922A', flexShrink: 0, marginTop: '0.45rem' }} />
+                      <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#C99A2E', flexShrink: 0, marginTop: '0.45rem' }} />
                       {item}
                     </li>
                   ))}
@@ -50,7 +50,7 @@ export default function VisitBwamba() {
               <div className="card" style={{ padding: '2.25rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', marginBottom: '1.5rem' }}>
                   <span style={{ fontSize: '1.75rem' }}>🏛️</span>
-                  <h3 className="heading-serif" style={{ fontSize: '1.25rem', fontWeight: 700, color: '#1A1A1A' }}>Cultural Sites</h3>
+                  <h3 className="heading-serif" style={{ fontSize: '1.25rem', fontWeight: 700, color: '#242424' }}>Cultural Sites</h3>
                 </div>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
                   {['Bujumila (Magic Tree)', 'Mbugha (Hot Springs)', 'Kirogoji (Ngite Water Falls)', 'Kiwalaga (Water Pool)', 'Cultural Information Centre'].map((item) => (
@@ -64,7 +64,7 @@ export default function VisitBwamba() {
             </div>
 
             {/* Wildlife */}
-            <div style={{ background: '#1E4D38', borderRadius: '1.25rem', padding: '2.5rem' }}>
+            <div style={{ background: '#1F4D3A', borderRadius: '1.25rem', padding: '2.5rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', marginBottom: '1.25rem' }}>
                 <span style={{ fontSize: '1.75rem' }}>🌿</span>
                 <h3 className="heading-serif" style={{ fontSize: '1.375rem', fontWeight: 700, color: '#fff' }}>Wildlife & Nature</h3>
@@ -79,7 +79,7 @@ export default function VisitBwamba() {
 
             {/* CTA */}
             <div className="card" style={{ padding: '3rem', textAlign: 'center' }}>
-              <h3 className="heading-serif" style={{ fontSize: '1.875rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '0.875rem' }}>Plan Your Visit</h3>
+              <h3 className="heading-serif" style={{ fontSize: '1.875rem', fontWeight: 700, color: '#242424', marginBottom: '0.875rem' }}>Plan Your Visit</h3>
               <p style={{ fontSize: '0.9375rem', color: '#666', lineHeight: 1.85, maxWidth: '480px', marginInline: 'auto', marginBottom: '2rem' }}>
                 Experience the warmth and hospitality of the Bwamba people. Contact us for guidance on visiting cultural sites, attending events, or learning more about our heritage.
               </p>

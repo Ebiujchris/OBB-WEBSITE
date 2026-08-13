@@ -15,13 +15,13 @@ export default function Contact() {
         </div>
       </div>
 
-      <section className="section-space" style={{ background: '#F2ECD8' }}>
+      <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site">
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem', alignItems: 'start' }} className="contact-grid">
 
             {/* Form */}
             <div className="card" style={{ padding: '2.75rem' }}>
-              <h2 className="heading-serif" style={{ fontSize: '1.625rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '0.625rem' }}>Send a message</h2>
+              <h2 className="heading-serif" style={{ fontSize: '1.625rem', fontWeight: 700, color: '#242424', marginBottom: '0.625rem' }}>Send a message</h2>
               <p style={{ fontSize: '0.9375rem', color: '#777', lineHeight: 1.7, marginBottom: '2.25rem' }}>
                 Share your questions, cultural contributions, research interests or partnership ideas with us.
               </p>
@@ -31,7 +31,7 @@ export default function Contact() {
                   { label: 'Email Address',  type: 'email', id: 'email', placeholder: 'your.email@example.com' },
                 ].map((field) => (
                   <div key={field.id}>
-                    <label htmlFor={field.id} style={{ display: 'block', fontSize: '0.875rem', fontWeight: 600, color: '#1A1A1A', marginBottom: '0.5rem' }}>
+                    <label htmlFor={field.id} style={{ display: 'block', fontSize: '0.875rem', fontWeight: 600, color: '#242424', marginBottom: '0.5rem' }}>
                       {field.label}
                     </label>
                     <input
@@ -41,17 +41,17 @@ export default function Contact() {
                       style={{
                         width: '100%', padding: '0.875rem 1.125rem',
                         borderRadius: '0.75rem', border: '1.5px solid rgba(0,0,0,0.1)',
-                        background: '#fff', fontSize: '0.9375rem', color: '#1A1A1A',
+                        background: '#fff', fontSize: '0.9375rem', color: '#242424',
                         outline: 'none', transition: 'border-color 0.2s, box-shadow 0.2s',
                       }}
-                      onFocus={e => { e.target.style.borderColor = '#C4922A'; e.target.style.boxShadow = '0 0 0 3px rgba(196,146,42,0.12)'; }}
+                      onFocus={e => { e.target.style.borderColor = '#C99A2E'; e.target.style.boxShadow = '0 0 0 3px rgba(201,154,46,0.12)'; }}
                       onBlur={e => { e.target.style.borderColor = 'rgba(0,0,0,0.1)'; e.target.style.boxShadow = 'none'; }}
                     />
                   </div>
                 ))}
 
                 <div>
-                  <label htmlFor="subject" style={{ display: 'block', fontSize: '0.875rem', fontWeight: 600, color: '#1A1A1A', marginBottom: '0.5rem' }}>
+                  <label htmlFor="subject" style={{ display: 'block', fontSize: '0.875rem', fontWeight: 600, color: '#242424', marginBottom: '0.5rem' }}>
                     Subject
                   </label>
                   <select
@@ -59,10 +59,10 @@ export default function Contact() {
                     style={{
                       width: '100%', padding: '0.875rem 1.125rem',
                       borderRadius: '0.75rem', border: '1.5px solid rgba(0,0,0,0.1)',
-                      background: '#fff', fontSize: '0.9375rem', color: '#1A1A1A',
+                      background: '#fff', fontSize: '0.9375rem', color: '#242424',
                       outline: 'none', cursor: 'pointer',
                     }}
-                    onFocus={e => { e.target.style.borderColor = '#C4922A'; e.target.style.boxShadow = '0 0 0 3px rgba(196,146,42,0.12)'; }}
+                    onFocus={e => { e.target.style.borderColor = '#C99A2E'; e.target.style.boxShadow = '0 0 0 3px rgba(201,154,46,0.12)'; }}
                     onBlur={e => { e.target.style.borderColor = 'rgba(0,0,0,0.1)'; e.target.style.boxShadow = 'none'; }}
                   >
                     <option>General Inquiry</option>
@@ -74,7 +74,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" style={{ display: 'block', fontSize: '0.875rem', fontWeight: 600, color: '#1A1A1A', marginBottom: '0.5rem' }}>
+                  <label htmlFor="message" style={{ display: 'block', fontSize: '0.875rem', fontWeight: 600, color: '#242424', marginBottom: '0.5rem' }}>
                     Message
                   </label>
                   <textarea
@@ -84,11 +84,11 @@ export default function Contact() {
                     style={{
                       width: '100%', padding: '0.875rem 1.125rem',
                       borderRadius: '0.75rem', border: '1.5px solid rgba(0,0,0,0.1)',
-                      background: '#fff', fontSize: '0.9375rem', color: '#1A1A1A',
+                      background: '#fff', fontSize: '0.9375rem', color: '#242424',
                       outline: 'none', resize: 'vertical',
                       transition: 'border-color 0.2s, box-shadow 0.2s',
                     }}
-                    onFocus={e => { e.target.style.borderColor = '#C4922A'; e.target.style.boxShadow = '0 0 0 3px rgba(196,146,42,0.12)'; }}
+                    onFocus={e => { e.target.style.borderColor = '#C99A2E'; e.target.style.boxShadow = '0 0 0 3px rgba(201,154,46,0.12)'; }}
                     onBlur={e => { e.target.style.borderColor = 'rgba(0,0,0,0.1)'; e.target.style.boxShadow = 'none'; }}
                   />
                 </div>
@@ -103,22 +103,22 @@ export default function Contact() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               {[
                 {
-                  icon: <svg width="18" height="18" fill="none" stroke="#C4922A" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>,
+                  icon: <svg width="18" height="18" fill="none" stroke="#C99A2E" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>,
                   title: 'Email', value: 'info@obudhingiya.org', href: 'mailto:info@obudhingiya.org',
                 },
                 {
-                  icon: <svg width="18" height="18" fill="none" stroke="#C4922A" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>,
+                  icon: <svg width="18" height="18" fill="none" stroke="#C99A2E" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>,
                   title: 'Phone', value: '+256 XXX XXX XXX', href: null,
                 },
                 {
-                  icon: <svg width="18" height="18" fill="none" stroke="#C4922A" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>,
+                  icon: <svg width="18" height="18" fill="none" stroke="#C99A2E" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>,
                   title: 'Location', value: 'Bundibugyo District, Uganda', href: null,
                 },
               ].map((item) => (
                 <div key={item.title} className="card" style={{ padding: '1.75rem', display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                   <div style={{
                     width: '2.75rem', height: '2.75rem', borderRadius: '0.75rem',
-                    background: 'rgba(196,146,42,0.1)', border: '1px solid rgba(196,146,42,0.18)',
+                    background: 'rgba(201,154,46,0.1)', border: '1px solid rgba(201,154,46,0.18)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
                   }}>
                     {item.icon}
@@ -126,8 +126,8 @@ export default function Contact() {
                   <div>
                     <p style={{ fontSize: '0.6875rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.14em', color: '#999', marginBottom: '0.375rem' }}>{item.title}</p>
                     {item.href
-                      ? <a href={item.href} style={{ fontSize: '0.9375rem', color: '#1A1A1A' }}>{item.value}</a>
-                      : <p style={{ fontSize: '0.9375rem', color: '#1A1A1A' }}>{item.value}</p>
+                      ? <a href={item.href} style={{ fontSize: '0.9375rem', color: '#242424' }}>{item.value}</a>
+                      : <p style={{ fontSize: '0.9375rem', color: '#242424' }}>{item.value}</p>
                     }
                   </div>
                 </div>

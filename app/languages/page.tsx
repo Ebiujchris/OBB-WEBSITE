@@ -4,21 +4,21 @@ const languages = [
   {
     name: 'Lubwisi', slug: 'lubwisi', ethnicity: 'Babwisi', type: 'Bantu',
     accentBg: 'rgba(107,30,46,0.07)', accentColor: '#6B1E2E', accentBorder: 'rgba(107,30,46,0.15)', bar: '#6B1E2E',
-    gradient: 'linear-gradient(135deg, #6B1E2E, #2E2E2E)',
+    gradient: 'linear-gradient(135deg, #6B1E2E, #242424)',
     description: 'Bantu language spoken by the Babwisi people, sharing linguistic roots with Banyoro, Batooro, Bakonzo, and Baganda.',
     stats: { stories: 45, proverbs: 120, songs: 30 },
   },
   {
     name: 'Kwamba', slug: 'kwamba', ethnicity: 'Bamba', type: 'Nilotic',
-    accentBg: 'rgba(196,146,42,0.08)', accentColor: '#8A6515', accentBorder: 'rgba(196,146,42,0.2)', bar: '#C4922A',
-    gradient: 'linear-gradient(135deg, #8A6515, #2E2E2E)',
+    accentBg: 'rgba(201,154,46,0.08)', accentColor: '#8a6a1a', accentBorder: 'rgba(201,154,46,0.2)', bar: '#C99A2E',
+    gradient: 'linear-gradient(135deg, #8a6a1a, #242424)',
     description: 'Nilotic language preserving the heritage and cultural expressions of the Bamba people through oral traditions.',
     stats: { stories: 38, proverbs: 95, songs: 25 },
   },
   {
     name: 'Vonoma', slug: 'vonoma', ethnicity: 'Vanuma', type: 'Nilotic',
-    accentBg: 'rgba(30,77,56,0.07)', accentColor: '#1E4D38', accentBorder: 'rgba(30,77,56,0.15)', bar: '#1E4D38',
-    gradient: 'linear-gradient(135deg, #1E4D38, #2E2E2E)',
+    accentBg: 'rgba(31,77,58,0.07)', accentColor: '#1F4D3A', accentBorder: 'rgba(31,77,58,0.15)', bar: '#1F4D3A',
+    gradient: 'linear-gradient(135deg, #1F4D3A, #242424)',
     description: 'Nilotic language carrying the wisdom and unique cultural narratives of the Vanuma community.',
     stats: { stories: 32, proverbs: 78, songs: 22 },
   },
@@ -39,7 +39,7 @@ export default function Languages() {
         </div>
       </div>
 
-      <section className="section-space" style={{ background: '#F2ECD8' }}>
+      <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site">
 
           <p style={{ fontSize: '1rem', color: '#666', lineHeight: 1.85, maxWidth: '700px', marginBottom: '3.5rem' }}>
@@ -65,7 +65,7 @@ export default function Languages() {
                 </div>
 
                 <div style={{ padding: '1.75rem' }}>
-                  <h2 className="heading-serif" style={{ fontSize: '1.875rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '0.375rem' }}>{lang.name}</h2>
+                  <h2 className="heading-serif" style={{ fontSize: '1.875rem', fontWeight: 700, color: '#242424', marginBottom: '0.375rem' }}>{lang.name}</h2>
                   <p style={{ fontSize: '0.8125rem', fontWeight: 600, color: '#999', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: '1rem' }}>
                     Spoken by: {lang.ethnicity}
                   </p>
@@ -74,7 +74,7 @@ export default function Languages() {
                   {/* Stats */}
                   <div style={{
                     display: 'grid', gridTemplateColumns: '1fr 1fr 1fr',
-                    background: '#F2ECD8', borderRadius: '0.875rem',
+                    background: '#F8F3E7', borderRadius: '0.875rem',
                     overflow: 'hidden', border: '1px solid rgba(0,0,0,0.05)',
                     marginBottom: '1.5rem',
                   }}>
@@ -83,7 +83,7 @@ export default function Languages() {
                         padding: '1rem', textAlign: 'center',
                         borderRight: i < arr.length - 1 ? '1px solid rgba(0,0,0,0.07)' : 'none',
                       }}>
-                        <p style={{ fontSize: '1.375rem', fontWeight: 700, color: '#1A1A1A', lineHeight: 1 }}>{val}</p>
+                        <p style={{ fontSize: '1.375rem', fontWeight: 700, color: '#242424', lineHeight: 1 }}>{val}</p>
                         <p style={{ fontSize: '0.6875rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#999', marginTop: '0.375rem' }}>{key}</p>
                       </div>
                     ))}
@@ -99,7 +99,7 @@ export default function Languages() {
 
           {/* CTA */}
           <div className="card" style={{ padding: '3rem', textAlign: 'center' }}>
-            <h2 className="heading-serif" style={{ fontSize: '1.875rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '0.875rem' }}>
+            <h2 className="heading-serif" style={{ fontSize: '1.875rem', fontWeight: 700, color: '#242424', marginBottom: '0.875rem' }}>
               Language Preservation & Documentation
             </h2>
             <p style={{ fontSize: '0.9375rem', color: '#666', lineHeight: 1.85, maxWidth: '560px', marginInline: 'auto', marginBottom: '2rem' }}>

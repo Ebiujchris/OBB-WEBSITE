@@ -25,7 +25,7 @@ export default function Culture() {
         </div>
       </div>
 
-      <section className="section-space" style={{ background: '#F2ECD8' }}>
+      <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site">
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.25rem', marginBottom: '4rem' }}>
@@ -41,7 +41,7 @@ export default function Culture() {
                     {cat.icon}
                   </div>
                   <div>
-                    <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '0.5rem' }}>{cat.title}</h3>
+                    <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#242424', marginBottom: '0.5rem' }}>{cat.title}</h3>
                     <p style={{ fontSize: '0.875rem', color: '#666', lineHeight: 1.75 }}>{cat.description}</p>
                   </div>
                 </div>
@@ -51,7 +51,7 @@ export default function Culture() {
 
           {/* CTA */}
           <div style={{
-            background: '#1E4D38',
+            background: '#1F4D3A',
             borderRadius: '1.25rem',
             padding: '3.5rem',
             textAlign: 'center',

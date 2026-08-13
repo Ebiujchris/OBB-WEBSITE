@@ -20,10 +20,10 @@ export default function Lwamba() {
         </div>
       </div>
 
-      <section className="section-space" style={{ background: '#F2ECD8' }}>
+      <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site" style={{ maxWidth: '900px' }}>
           <div className="card" style={{ padding: '2.5rem', marginBottom: '2rem' }}>
-            <h2 className="heading-serif" style={{ fontSize: '1.625rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '1.25rem' }}>About Lwamba</h2>
+            <h2 className="heading-serif" style={{ fontSize: '1.625rem', fontWeight: 700, color: '#242424', marginBottom: '1.25rem' }}>About Lwamba</h2>
             <p style={{ fontSize: '0.9375rem', color: '#555', lineHeight: 1.85 }}>
               Lwamba is a vital language of the Bwamba community, preserving centuries of wisdom and cultural knowledge through its rich oral traditions. The language continues to be an important part of community life and cultural identity in the Bundibugyo region.
             </p>
@@ -41,7 +41,7 @@ export default function Lwamba() {
               <Link key={cat.href} href={cat.href} style={{ textDecoration: 'none' }}>
                 <div className="card" style={{ padding: '1.75rem', display: 'flex', gap: '1rem', alignItems: 'center' }}>
                   <span style={{ fontSize: '1.75rem', lineHeight: 1 }}>{cat.icon}</span>
-                  <span style={{ fontSize: '0.9375rem', fontWeight: 600, color: '#1A1A1A' }}>{cat.title}</span>
+                  <span style={{ fontSize: '0.9375rem', fontWeight: 600, color: '#242424' }}>{cat.title}</span>
                 </div>
               </Link>
             ))}

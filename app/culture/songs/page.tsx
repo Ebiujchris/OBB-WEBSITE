@@ -26,21 +26,21 @@ export default function Songs() {
         </div>
       </div>
 
-      <section className="section-space" style={{ background: '#F2ECD8' }}>
+      <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: '1.25rem', marginBottom: '3.5rem' }}>
             {songs.map((s) => (
               <div key={s.title} className="card" style={{ padding: '2rem' }}>
                 <div style={{ display: 'flex', gap: '0.625rem', marginBottom: '1.25rem', flexWrap: 'wrap' }}>
-                  <span style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '0.25rem 0.625rem', borderRadius: '9999px', background: 'rgba(30,77,56,0.08)', color: '#1E4D38', border: '1px solid rgba(30,77,56,0.15)' }}>{s.type}</span>
+                  <span style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '0.25rem 0.625rem', borderRadius: '9999px', background: 'rgba(31,77,58,0.08)', color: '#1F4D3A', border: '1px solid rgba(31,77,58,0.15)' }}>{s.type}</span>
                   <span style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '0.25rem 0.625rem', borderRadius: '9999px', background: 'rgba(107,30,46,0.08)', color: '#6B1E2E', border: '1px solid rgba(107,30,46,0.15)' }}>{s.lang}</span>
                 </div>
-                <h3 className="heading-serif" style={{ fontSize: '1.25rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '0.75rem', fontStyle: 'italic' }}>{s.title}</h3>
+                <h3 className="heading-serif" style={{ fontSize: '1.25rem', fontWeight: 700, color: '#242424', marginBottom: '0.75rem', fontStyle: 'italic' }}>{s.title}</h3>
                 <p style={{ fontSize: '0.9rem', color: '#666', lineHeight: 1.75 }}>{s.desc}</p>
               </div>
             ))}
           </div>
-          <div style={{ background: '#1A1A1A', borderRadius: '1.25rem', padding: '3rem', textAlign: 'center' }}>
+          <div style={{ background: '#242424', borderRadius: '1.25rem', padding: '3rem', textAlign: 'center' }}>
             <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#fff', marginBottom: '1rem' }}>Share a Song</h2>
             <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, maxWidth: '480px', marginInline: 'auto', marginBottom: '2rem' }}>
               Help us build a complete archive of traditional Bwamba songs in all three languages.

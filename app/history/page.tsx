@@ -15,7 +15,7 @@ export default function History() {
         </div>
       </div>
 
-      <section className="section-space" style={{ background: '#F2ECD8' }}>
+      <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site" style={{ maxWidth: '860px' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
 
@@ -34,7 +34,7 @@ export default function History() {
               },
             ].map((section) => (
               <div key={section.title} className="card" style={{ padding: '2.5rem' }}>
-                <h2 className="heading-serif" style={{ fontSize: '1.625rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '1.25rem' }}>
+                <h2 className="heading-serif" style={{ fontSize: '1.625rem', fontWeight: 700, color: '#242424', marginBottom: '1.25rem' }}>
                   {section.title}
                 </h2>
                 {section.body.map((para, i) => (
@@ -44,7 +44,7 @@ export default function History() {
             ))}
 
             {/* Timeline */}
-            <div style={{ background: '#1A1A1A', borderRadius: '1.25rem', padding: '2.5rem' }}>
+            <div style={{ background: '#242424', borderRadius: '1.25rem', padding: '2.5rem' }}>
               <h2 className="heading-serif" style={{ fontSize: '1.625rem', fontWeight: 700, color: '#fff', marginBottom: '2rem' }}>Historical Timeline</h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
                 {[
@@ -56,12 +56,12 @@ export default function History() {
                   <div key={item.era} style={{ display: 'flex', gap: '1.5rem' }}>
                     {/* Timeline spine */}
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
-                      <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#C4922A', border: '3px solid #1A1A1A', outline: '2px solid #C4922A', flexShrink: 0, marginTop: '0.2rem' }} />
+                      <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#C99A2E', border: '3px solid #242424', outline: '2px solid #C99A2E', flexShrink: 0, marginTop: '0.2rem' }} />
                       {i < arr.length - 1 && <div style={{ width: 1, flex: 1, background: 'rgba(255,255,255,0.12)', margin: '0.5rem 0' }} />}
                     </div>
                     {/* Content */}
                     <div style={{ paddingBottom: i < arr.length - 1 ? '1.75rem' : 0 }}>
-                      <p style={{ fontSize: '0.875rem', fontWeight: 700, color: '#C4922A', marginBottom: '0.375rem' }}>{item.era}</p>
+                      <p style={{ fontSize: '0.875rem', fontWeight: 700, color: '#C99A2E', marginBottom: '0.375rem' }}>{item.era}</p>
                       <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.7 }}>{item.detail}</p>
                     </div>
                   </div>
@@ -71,7 +71,7 @@ export default function History() {
 
             {/* CTA */}
             <div style={{ background: '#fff', border: '1px solid rgba(0,0,0,0.07)', borderRadius: '1.25rem', padding: '3rem', textAlign: 'center' }}>
-              <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '0.875rem' }}>
+              <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '0.875rem' }}>
                 Contribute to Our History
               </h2>
               <p style={{ fontSize: '0.9375rem', color: '#666', lineHeight: 1.8, maxWidth: '480px', marginInline: 'auto', marginBottom: '2rem' }}>

@@ -20,11 +20,11 @@ export default function ClanLeaders() {
         </div>
       </div>
 
-      <section className="section-space" style={{ background: '#F2ECD8' }}>
+      <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site">
           <div className="card" style={{ padding: '3rem', textAlign: 'center', marginBottom: '2rem' }}>
             <div style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>👑</div>
-            <h2 className="heading-serif" style={{ fontSize: '1.875rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '0.875rem' }}>
+            <h2 className="heading-serif" style={{ fontSize: '1.875rem', fontWeight: 700, color: '#242424', marginBottom: '0.875rem' }}>
               Guardians of Tradition
             </h2>
             <p style={{ fontSize: '0.9375rem', color: '#666', lineHeight: 1.85, maxWidth: '580px', marginInline: 'auto' }}>

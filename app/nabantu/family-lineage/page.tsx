@@ -20,7 +20,7 @@ export default function FamilyLineage() {
         </div>
       </div>
 
-      <section className="section-space" style={{ background: '#F2ECD8' }}>
+      <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site" style={{ maxWidth: '860px' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             {[
@@ -30,12 +30,12 @@ export default function FamilyLineage() {
               { title: 'Intergenerational Knowledge', body: 'Family units serve as the primary vehicle for transmitting cultural knowledge. Elders within the family hold responsibility for teaching younger generations the history, values and customs of their clan and community.' },
             ].map((section) => (
               <div key={section.title} className="card" style={{ padding: '2.25rem' }}>
-                <h2 className="heading-serif" style={{ fontSize: '1.375rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '1rem' }}>{section.title}</h2>
+                <h2 className="heading-serif" style={{ fontSize: '1.375rem', fontWeight: 700, color: '#242424', marginBottom: '1rem' }}>{section.title}</h2>
                 <p style={{ fontSize: '0.9375rem', color: '#555', lineHeight: 1.85 }}>{section.body}</p>
               </div>
             ))}
 
-            <div style={{ background: '#1E4D38', borderRadius: '1.25rem', padding: '2.75rem', textAlign: 'center' }}>
+            <div style={{ background: '#1F4D3A', borderRadius: '1.25rem', padding: '2.75rem', textAlign: 'center' }}>
               <h3 className="heading-serif" style={{ fontSize: '1.5rem', fontWeight: 700, color: '#fff', marginBottom: '0.875rem' }}>Trace Your Lineage</h3>
               <p style={{ fontSize: '0.9375rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.8, maxWidth: '460px', marginInline: 'auto', marginBottom: '2rem' }}>
                 Want help researching your family history and clan connections? Reach out to our community team.

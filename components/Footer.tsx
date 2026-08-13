@@ -2,7 +2,25 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#1A1A1A', color: '#fff', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+    <footer style={{ background: '#111111', color: '#fff', position: 'relative', overflow: 'hidden' }}>
+      {/* Uganda-flag colour wash */}
+      <div style={{
+        position: 'absolute', inset: 0, pointerEvents: 'none',
+        background: `
+          radial-gradient(ellipse 60% 50% at 0% 100%,   rgba(216,35,42,0.22)  0%, transparent 55%),
+          radial-gradient(ellipse 50% 45% at 100% 0%,   rgba(252,209,22,0.15) 0%, transparent 55%),
+          radial-gradient(ellipse 45% 40% at 100% 100%, rgba(31,77,58,0.18)   0%, transparent 55%)
+        `,
+      }} />
+      {/* top colour-stripe bar: black | yellow | red | black | green | black */}
+      <div style={{ position: 'relative', display: 'flex', height: '4px' }}>
+        <div style={{ flex: 1, background: '#D8232A' }} />
+        <div style={{ flex: 1, background: '#111111' }} />
+        <div style={{ flex: 1, background: '#FCD116' }} />
+        <div style={{ flex: 1, background: '#111111' }} />
+        <div style={{ flex: 1, background: '#1F4D3A' }} />
+        <div style={{ flex: 1, background: '#111111' }} />
+      </div>
       <div className="container-site" style={{ paddingTop: '4rem', paddingBottom: '2.5rem' }}>
 
         {/* Top grid */}
@@ -35,7 +53,7 @@ export default function Footer() {
               Cultural institution of the Bamba, Babwisi and Vanuma communities. Preserving heritage since 2012.
             </p>
             <div style={{ marginTop: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#C4922A', display: 'inline-block' }} />
+              <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#FCD116', display: 'inline-block' }} />
               <span style={{ fontSize: '0.8125rem', color: 'rgba(255,255,255,0.4)' }}>Bundibugyo, Uganda</span>
             </div>
           </div>
@@ -89,14 +107,14 @@ export default function Footer() {
             </p>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem' }}>
-                <svg width="16" height="16" fill="none" stroke="#C4922A" strokeWidth="1.5" viewBox="0 0 24 24" style={{ marginTop: '0.1rem', flexShrink: 0 }}>
+                <svg width="16" height="16" fill="none" stroke="#D8232A" strokeWidth="1.5" viewBox="0 0 24 24" style={{ marginTop: '0.1rem', flexShrink: 0 }}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 <span style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.6 }}>Bundibugyo District, Uganda</span>
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem' }}>
-                <svg width="16" height="16" fill="none" stroke="#C4922A" strokeWidth="1.5" viewBox="0 0 24 24" style={{ marginTop: '0.1rem', flexShrink: 0 }}>
+                <svg width="16" height="16" fill="none" stroke="#FCD116" strokeWidth="1.5" viewBox="0 0 24 24" style={{ marginTop: '0.1rem', flexShrink: 0 }}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 <a href="mailto:info@obudhingiya.org" className="footer-link">

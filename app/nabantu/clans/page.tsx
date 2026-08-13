@@ -28,19 +28,19 @@ export default function Clans() {
         </div>
       </div>
 
-      <section className="section-space" style={{ background: '#F2ECD8' }}>
+      <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(200px,1fr))', gap: '1rem', marginBottom: '4rem' }}>
             {clans.map((clan, i) => (
               <div key={i} style={{ background: '#fff', border: '1px solid rgba(0,0,0,0.06)', borderRadius: '0.875rem', padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                <span style={{ width: 8, height: 8, borderRadius: '50%', background: i % 3 === 0 ? '#6B1E2E' : i % 3 === 1 ? '#C4922A' : '#1E4D38', flexShrink: 0 }} />
-                <span style={{ fontSize: '0.9375rem', fontWeight: 600, color: '#1A1A1A' }}>{clan}</span>
+                <span style={{ width: 8, height: 8, borderRadius: '50%', background: i % 3 === 0 ? '#6B1E2E' : i % 3 === 1 ? '#C99A2E' : '#1F4D3A', flexShrink: 0 }} />
+                <span style={{ fontSize: '0.9375rem', fontWeight: 600, color: '#242424' }}>{clan}</span>
               </div>
             ))}
           </div>
 
           <div className="card" style={{ padding: '3rem', textAlign: 'center' }}>
-            <h2 className="heading-serif" style={{ fontSize: '1.875rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '0.875rem' }}>Know Your Clan?</h2>
+            <h2 className="heading-serif" style={{ fontSize: '1.875rem', fontWeight: 700, color: '#242424', marginBottom: '0.875rem' }}>Know Your Clan?</h2>
             <p style={{ fontSize: '0.9375rem', color: '#666', lineHeight: 1.85, maxWidth: '480px', marginInline: 'auto', marginBottom: '2rem' }}>
               Help us document the history, totems and lineage of your clan. Every contribution enriches our shared heritage.
             </p>

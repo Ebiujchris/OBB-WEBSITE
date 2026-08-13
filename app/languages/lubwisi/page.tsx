@@ -29,12 +29,12 @@ export default function Lubwisi() {
         </div>
       </div>
 
-      <section className="section-space" style={{ background: '#F2ECD8' }}>
+      <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site" style={{ maxWidth: '900px' }}>
 
           {/* About */}
           <div className="card" style={{ padding: '2.5rem', marginBottom: '2rem' }}>
-            <h2 className="heading-serif" style={{ fontSize: '1.625rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '1.25rem' }}>About Lubwisi</h2>
+            <h2 className="heading-serif" style={{ fontSize: '1.625rem', fontWeight: 700, color: '#242424', marginBottom: '1.25rem' }}>About Lubwisi</h2>
             <p style={{ fontSize: '0.9375rem', color: '#555', lineHeight: 1.85, marginBottom: '1rem' }}>
               Lubwisi is a Bantu language spoken by the Babwisi people of western Uganda. It belongs to the same language family as Rutooro, Runyoro, Lhukonzo and Luganda, making it part of one of Africa's largest language groups.
             </p>
@@ -54,13 +54,13 @@ export default function Lubwisi() {
           </div>
 
           {/* Culture categories */}
-          <h2 className="heading-serif" style={{ fontSize: '1.5rem', fontWeight: 700, color: '#1A1A1A', marginBottom: '1.5rem' }}>Explore in Lubwisi</h2>
+          <h2 className="heading-serif" style={{ fontSize: '1.5rem', fontWeight: 700, color: '#242424', marginBottom: '1.5rem' }}>Explore in Lubwisi</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(260px,1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
             {categories.map((cat) => (
               <Link key={cat.href} href={cat.href} style={{ textDecoration: 'none' }}>
                 <div className="card" style={{ padding: '1.75rem', display: 'flex', gap: '1rem', alignItems: 'center' }}>
                   <span style={{ fontSize: '1.75rem', lineHeight: 1 }}>{cat.icon}</span>
-                  <span style={{ fontSize: '0.9375rem', fontWeight: 600, color: '#1A1A1A' }}>{cat.title}</span>
+                  <span style={{ fontSize: '0.9375rem', fontWeight: 600, color: '#242424' }}>{cat.title}</span>
                 </div>
               </Link>
             ))}
