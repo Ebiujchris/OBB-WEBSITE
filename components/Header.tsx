@@ -11,6 +11,7 @@ const navItems = [
   { href: '/culture',     label: 'Culture' },
   { href: '/nabantu',     label: 'Our People' },
   { href: '/visit',       label: 'Visit' },
+  { href: '/media',       label: 'Media' },
 ];
 
 export default function Header() {
@@ -48,7 +49,7 @@ export default function Header() {
               <span style={{ color: '#fff', fontWeight: 700, fontSize: '1.1rem', fontFamily: 'serif', lineHeight: 1 }}>O</span>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
-              <span style={{ fontWeight: 700, fontSize: '0.9375rem', color: '#1A1A1A', letterSpacing: '-0.01em' }}>Obudhingiya</span>
+              <span style={{ fontWeight: 700, fontSize: '0.9375rem', color: '#242424', letterSpacing: '-0.01em' }}>Obudhingiya</span>
               <span style={{ fontWeight: 400, fontSize: '0.625rem', color: '#888', textTransform: 'uppercase', letterSpacing: '0.22em', marginTop: '0.1rem' }}>Bwa Bwamba</span>
             </div>
           </Link>
@@ -85,7 +86,7 @@ export default function Header() {
               borderRadius: '0.5rem',
               padding: '0.5rem',
               cursor: 'pointer',
-              color: '#1A1A1A',
+              color: '#242424',
               display: 'flex',
               alignItems: 'center',
             }}
