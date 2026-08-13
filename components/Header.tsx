@@ -29,7 +29,6 @@ export default function Header() {
         zIndex: 50,
         background: 'rgba(255,255,255,0.97)',
         backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid rgba(0,0,0,0.07)',
         boxShadow: '0 1px 12px rgba(0,0,0,0.06)',
       }}
     >
@@ -99,6 +98,15 @@ export default function Header() {
           </button>
         </div>
       </div>
+      {/* flag stripe */}
+      <div style={{ display: 'flex', height: '3px' }}>
+        <div style={{ flex: 1, background: '#D8232A' }} />
+        <div style={{ flex: 1, background: '#111111' }} />
+        <div style={{ flex: 1, background: '#FCD116' }} />
+        <div style={{ flex: 1, background: '#111111' }} />
+        <div style={{ flex: 1, background: '#1F4D3A' }} />
+        <div style={{ flex: 1, background: '#111111' }} />
+      </div>
 
       {/* Mobile menu */}
       {open && (
@@ -119,15 +127,15 @@ export default function Header() {
                     borderRadius: '0.625rem',
                     fontSize: '0.9375rem',
                     fontWeight: isActive(item.href) ? 600 : 400,
-                    color: isActive(item.href) ? '#6B1E2E' : '#222',
-                    background: isActive(item.href) ? 'rgba(107,30,46,0.06)' : 'transparent',
+                    color: isActive(item.href) ? '#D8232A' : '#222',
+                    background: isActive(item.href) ? 'rgba(216,35,42,0.06)' : 'transparent',
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center',
                   }}
                 >
                   {item.label}
-                  {isActive(item.href) && <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#6B1E2E' }} />}
+                  {isActive(item.href) && <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#D8232A' }} />}
                 </Link>
               ))}
             </nav>
@@ -149,6 +157,9 @@ export default function Header() {
           .lg-cta  { display: block !important; }
           .lg-hide { display: none !important; }
         }
+        .nav-link { color: #444; }
+        .nav-link:hover { color: #D8232A !important; }
+        .nav-link.active { color: #D8232A !important; font-weight: 600; }
       `}</style>
     </header>
   );
