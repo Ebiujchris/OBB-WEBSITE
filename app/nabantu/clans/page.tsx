@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
 const clans = [
-  'Bakonzo', 'Banyabindi', 'Baswagha', 'Batuku', 'Banyabutumbi',
-  'Baruli', 'Bakingwe', 'Basiita', 'Banyabindi', 'Baganda',
-  'Baamba', 'Bavuma', 'Banyoro', 'Batooro', 'Banyabwisha',
-  'Batwa', 'Banyamusitu', 'Bamaliba', 'Bakoki', 'Bahamba',
-  'Bayaga', 'Baswezi', 'Batambi', 'Basongola', 'Banyalusuku',
+  'Babandi', 'Basu', 'Batalinga', 'Banyamwela', 'Balungu',
+  'Baseghiya', 'Bawiisa', 'Bandimbuka', 'Bahombi', 'Balirehe',
+  'Banseelu', 'Baboni', 'Bahundu', 'Bamate', 'Bahanda',
+  'Bandimanga', 'Batolu', 'Bakuteele', 'Banyangule', 'Bajimbula',
+  'Bandinibe', 'Babhila', 'Bamaga', 'Ba_hula', 'Vonoma',
 ];
 
 export default function Clans() {
