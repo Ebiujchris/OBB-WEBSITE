@@ -45,12 +45,6 @@ export default function FolkStories() {
             ))}
           </div>
 
-          <div style={{ background: '#242424', borderRadius: '1.25rem', padding: '3rem', textAlign: 'center' }}>
-            <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#fff', marginBottom: '1rem' }}>Share a Story</h2>
-            <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, maxWidth: '480px', marginInline: 'auto', marginBottom: '2rem' }}>
-              Do you know a traditional folk story that isn't in our archive? Help us preserve our oral heritage.
-            </p>
-            <Link href="/contact" className="btn btn-gold">Contribute a Story</Link>
           </div>
         </div>
       </section>

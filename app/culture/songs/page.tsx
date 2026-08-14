@@ -40,13 +40,6 @@ export default function Songs() {
               </div>
             ))}
           </div>
-          <div style={{ background: '#242424', borderRadius: '1.25rem', padding: '3rem', textAlign: 'center' }}>
-            <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#fff', marginBottom: '1rem' }}>Share a Song</h2>
-            <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, maxWidth: '480px', marginInline: 'auto', marginBottom: '2rem' }}>
-              Help us build a complete archive of traditional Bwamba songs in all three languages.
-            </p>
-            <Link href="/contact" className="btn btn-gold">Contribute a Song</Link>
-          </div>
         </div>
       </section>
     </main>

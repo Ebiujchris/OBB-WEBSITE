@@ -39,13 +39,7 @@ export default function Clans() {
             ))}
           </div>
 
-          <div className="card" style={{ padding: '3rem', textAlign: 'center' }}>
-            <h2 className="heading-serif" style={{ fontSize: '1.875rem', fontWeight: 700, color: '#242424', marginBottom: '0.875rem' }}>Know Your Clan?</h2>
-            <p style={{ fontSize: '0.9375rem', color: '#666', lineHeight: 1.85, maxWidth: '480px', marginInline: 'auto', marginBottom: '2rem' }}>
-              Help us document the history, totems and lineage of your clan. Every contribution enriches our shared heritage.
-            </p>
-            <Link href="/contact" className="btn btn-primary">Contribute Clan History</Link>
-          </div>
+
         </div>
       </section>
     </main>

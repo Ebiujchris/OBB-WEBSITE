@@ -69,17 +69,6 @@ export default function History() {
               </div>
             </div>
 
-            {/* CTA */}
-            <div style={{ background: '#fff', border: '1px solid rgba(0,0,0,0.07)', borderRadius: '1.25rem', padding: '3rem', textAlign: 'center' }}>
-              <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '0.875rem' }}>
-                Contribute to Our History
-              </h2>
-              <p style={{ fontSize: '0.9375rem', color: '#666', lineHeight: 1.8, maxWidth: '480px', marginInline: 'auto', marginBottom: '2rem' }}>
-                Do you have historical records, photographs, or stories to share? Help us document our complete history.
-              </p>
-              <Link href="/contact" className="btn btn-primary">Share Your Story</Link>
-            </div>
-
           </div>
         </div>
       </section>

@@ -45,13 +45,6 @@ export default function Names() {
               </div>
             ))}
           </div>
-          <div className="card" style={{ padding: '3rem', textAlign: 'center' }}>
-            <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '0.875rem' }}>Know a Traditional Name?</h2>
-            <p style={{ fontSize: '0.9375rem', color: '#666', lineHeight: 1.85, maxWidth: '460px', marginInline: 'auto', marginBottom: '2rem' }}>
-              Help us build a comprehensive dictionary of Bwamba names and their meanings across all three languages.
-            </p>
-            <Link href="/contact" className="btn btn-primary">Contribute a Name</Link>
-          </div>
         </div>
       </section>
     </main>

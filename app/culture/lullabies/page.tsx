@@ -40,13 +40,6 @@ export default function Lullabies() {
               </div>
             ))}
           </div>
-          <div style={{ background: '#6B1E2E', borderRadius: '1.25rem', padding: '3rem', textAlign: 'center' }}>
-            <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#fff', marginBottom: '1rem' }}>Share a Lullaby</h2>
-            <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.8, maxWidth: '460px', marginInline: 'auto', marginBottom: '2rem' }}>
-              Do you remember a lullaby from your childhood? Help us preserve these tender songs for future generations.
-            </p>
-            <Link href="/contact" className="btn btn-gold">Contribute a Lullaby</Link>
-          </div>
         </div>
       </section>
     </main>

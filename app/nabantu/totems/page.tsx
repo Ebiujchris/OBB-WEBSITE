@@ -47,13 +47,7 @@ export default function Totems() {
             ))}
           </div>
 
-          <div className="card" style={{ padding: '3rem', textAlign: 'center' }}>
-            <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '0.875rem' }}>Share Totem Knowledge</h2>
-            <p style={{ fontSize: '0.9375rem', color: '#666', lineHeight: 1.85, maxWidth: '460px', marginInline: 'auto', marginBottom: '2rem' }}>
-              Help us build a comprehensive record of clan totems and their cultural meanings.
-            </p>
-            <Link href="/contact" className="btn btn-primary">Contribute</Link>
-          </div>
+
         </div>
       </section>
     </main>

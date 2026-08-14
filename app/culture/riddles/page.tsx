@@ -42,11 +42,6 @@ export default function Riddles() {
               </div>
             ))}
           </div>
-          <div className="card" style={{ padding: '3rem', textAlign: 'center' }}>
-            <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '0.875rem' }}>Know a Riddle?</h2>
-            <p style={{ fontSize: '0.9375rem', color: '#666', lineHeight: 1.85, maxWidth: '440px', marginInline: 'auto', marginBottom: '2rem' }}>Help us collect traditional riddles from all three Bwamba languages.</p>
-            <Link href="/contact" className="btn btn-primary">Contribute a Riddle</Link>
-          </div>
         </div>
       </section>
     </main>

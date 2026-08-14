@@ -64,7 +64,6 @@ export default function Kwamba() {
 
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <Link href="/languages" className="btn btn-outline-dark" style={{ padding: '0.625rem 1.375rem', fontSize: '0.875rem' }}>← All Languages</Link>
-            <Link href="/contact" className="btn btn-primary">Contribute Content</Link>
           </div>
         </div>
       </section>

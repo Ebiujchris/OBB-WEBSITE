@@ -41,11 +41,6 @@ export default function Poems() {
               </div>
             ))}
           </div>
-          <div className="card" style={{ padding: '3rem', textAlign: 'center' }}>
-            <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '0.875rem' }}>Share a Poem</h2>
-            <p style={{ fontSize: '0.9375rem', color: '#666', lineHeight: 1.85, maxWidth: '440px', marginInline: 'auto', marginBottom: '2rem' }}>Contribute original or traditional poems in any Bwamba language to our growing poetry archive.</p>
-            <Link href="/contact" className="btn btn-primary">Contribute a Poem</Link>
-          </div>
         </div>
       </section>
     </main>

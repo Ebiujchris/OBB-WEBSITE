@@ -28,7 +28,7 @@ export default function Culture() {
       <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site">
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.25rem', marginBottom: '4rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.25rem' }}>
             {categories.map((cat) => (
               <Link key={cat.slug} href={`/culture/${cat.slug}`} style={{ textDecoration: 'none' }}>
                 <div className="card" style={{ padding: '2rem', display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
@@ -47,22 +47,6 @@ export default function Culture() {
                 </div>
               </Link>
             ))}
-          </div>
-
-          {/* CTA */}
-          <div style={{
-            background: '#1F4D3A',
-            borderRadius: '1.25rem',
-            padding: '3.5rem',
-            textAlign: 'center',
-          }}>
-            <h2 className="heading-serif" style={{ fontSize: '2rem', fontWeight: 700, color: '#fff', marginBottom: '1rem' }}>
-              Preserve Our Heritage
-            </h2>
-            <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.8, maxWidth: '500px', marginInline: 'auto', marginBottom: '2.25rem' }}>
-              Have a story, proverb, or cultural tradition to share? Help us preserve our heritage by contributing to our growing archive.
-            </p>
-            <Link href="/contact" className="btn btn-gold">Contribute Now</Link>
           </div>
         </div>
       </section>

@@ -24,7 +24,7 @@ export default function Media() {
 
       <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: '1.25rem', marginBottom: '4rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: '1.25rem' }}>
             {mediaTypes.map((m) => (
               <Link key={m.href} href={m.href} style={{ textDecoration: 'none' }}>
                 <div className="card" style={{ padding: '2.25rem', textAlign: 'center' }}>
@@ -35,16 +35,9 @@ export default function Media() {
               </Link>
             ))}
           </div>
-
-          <div style={{ background: '#1F4D3A', borderRadius: '1.25rem', padding: '3.5rem', textAlign: 'center' }}>
-            <h2 className="heading-serif" style={{ fontSize: '2rem', fontWeight: 700, color: '#fff', marginBottom: '1rem' }}>Contribute to Our Archive</h2>
-            <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.8, maxWidth: '500px', marginInline: 'auto', marginBottom: '2.25rem' }}>
-              Do you have photos, videos, audio recordings, or documents related to Bwamba culture? Help us preserve our heritage.
-            </p>
-            <Link href="/contact" className="btn btn-gold">Submit Your Content</Link>
-          </div>
         </div>
       </section>
     </main>
   );
 }
+
