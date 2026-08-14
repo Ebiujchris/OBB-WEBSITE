@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HeroCarousel from '@/components/HeroCarousel';
 
 export default function Home() {
   return (
@@ -34,7 +35,8 @@ export default function Home() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '3.5rem', alignItems: 'center' }} className="hero-grid">
             {/* Left */}
             <div style={{ maxWidth: '680px' }}>
-              <div className="badge badge-light" style={{ marginBottom: '1.75rem' }}>
+              <div className="badge badge-light" style={{ marginBottom: '1.75rem', display: 'flex', alignItems: 'center', gap: '0.625rem' }}>
+                <img src="/kingdom flag.jpeg" alt="Bwamba Kingdom flag" style={{ width: '1.25rem', height: '0.875rem', objectFit: 'cover', borderRadius: '2px', flexShrink: 0 }} />
                 <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#FCD116', display: 'inline-block' }} />
                 Cultural institution since 2012
               </div>
@@ -75,30 +77,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right — focus areas card */}
-            {/* Right — Prime Minister photo */}
-            <div style={{
-              borderRadius: '1.25rem',
-              overflow: 'hidden',
-              border: '1px solid rgba(216,35,42,0.25)',
-              boxShadow: '0 0 40px rgba(216,35,42,0.08)',
-              position: 'relative',
-              aspectRatio: '3/4',
-            }} className="hero-card">
-              <img
-                src="/prime-minister.jpg"
-                alt="Rt. Hon. Charles Bukantwa — Prime Minister"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-              />
-              <div style={{
-                position: 'absolute', bottom: 0, left: 0, right: 0,
-                background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, transparent 100%)',
-                padding: '2rem 1.25rem 1.5rem',
-              }}>
-                <p style={{ fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#FCD116', marginBottom: '0.375rem' }}>Prime Minister</p>
-                <p style={{ fontSize: '1.125rem', fontWeight: 700, color: '#fff', lineHeight: 1.3 }}>Rt. Hon. Charles Bukantwa</p>
-              </div>
-            </div>
+            {/* Right — sliding carousel */}
+            <HeroCarousel />
           </div>
         </div>
       </section>

@@ -44,13 +44,11 @@ export default function Header() {
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexShrink: 0 }}>
             <div style={{
               width: '2.5rem', height: '2.5rem',
-              background: '#6B1E2E',
               borderRadius: '0.625rem',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              boxShadow: '0 3px 10px rgba(107,30,46,0.3)',
+              overflow: 'hidden',
               flexShrink: 0,
             }}>
-              <span style={{ color: '#fff', fontWeight: 700, fontSize: '1.1rem', fontFamily: 'serif', lineHeight: 1 }}>O</span>
+              <img src="/kingdom logo.jpeg" alt="Obudhingiya Bwa Bwamba logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
               <span style={{ fontWeight: 700, fontSize: '0.9375rem', color: '#242424', letterSpacing: '-0.01em' }}>Obudhingiya</span>
