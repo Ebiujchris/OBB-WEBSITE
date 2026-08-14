@@ -11,14 +11,16 @@ const navItems = [
   ]},
   { href: '/languages',   label: 'Languages' },
   { href: '/culture',     label: 'Culture' },
-  { href: '/nabantu',     label: 'Our People' },
+  { href: '/nabantu',     label: 'Our People', dropdown: [
+    { href: '/history', label: 'History' },
+  ]},
   { href: '/visit',       label: 'Visit' },
   { href: '/media',       label: 'Media' },
 ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
   const pathname = usePathname();
 
   const isActive = (href: string) =>
@@ -63,8 +65,8 @@ export default function Header() {
                 <div
                   key={item.href}
                   style={{ position: 'relative' }}
-                  onMouseEnter={() => setDropdownOpen(true)}
-                  onMouseLeave={() => setDropdownOpen(false)}
+                  onMouseEnter={() => setDropdownOpen(item.href)}
+                  onMouseLeave={() => setDropdownOpen(null)}
                 >
                   <Link
                     href={item.href}
@@ -76,7 +78,7 @@ export default function Header() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                     </svg>
                   </Link>
-                  {dropdownOpen && (
+                  {dropdownOpen === item.href && (
                     <div style={{
                       position: 'absolute',
                       top: '100%',
