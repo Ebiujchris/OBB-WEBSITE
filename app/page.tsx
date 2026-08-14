@@ -76,40 +76,27 @@ export default function Home() {
             </div>
 
             {/* Right — focus areas card */}
+            {/* Right — Prime Minister photo */}
             <div style={{
-              background: 'rgba(255,255,255,0.04)',
-              border: '1px solid rgba(216,35,42,0.25)',
               borderRadius: '1.25rem',
-              padding: '2rem',
-              backdropFilter: 'blur(8px)',
+              overflow: 'hidden',
+              border: '1px solid rgba(216,35,42,0.25)',
               boxShadow: '0 0 40px rgba(216,35,42,0.08)',
+              position: 'relative',
+              aspectRatio: '3/4',
             }} className="hero-card">
-              <p style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '1.5rem' }}>
-                Our focus areas
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
-                {[
-                  { title: 'Language Preservation',  desc: 'Documenting Lubwisi, Kwamba, and Vonoma.',              dot: '#FCD116' },
-                  { title: 'Oral Heritage',           desc: 'Stories, proverbs and music from elders.',              dot: '#D8232A' },
-                  { title: 'Community Strength',      desc: 'A united cultural identity across all clans.',          dot: '#1F4D3A' },
-                  { title: 'Living Traditions',       desc: 'Celebrating ceremonies, rituals and daily life.',       dot: '#FCD116' },
-                ].map((item) => (
-                  <div key={item.title} style={{
-                    display: 'flex',
-                    gap: '0.875rem',
-                    alignItems: 'flex-start',
-                    background: 'rgba(255,255,255,0.04)',
-                    border: '1px solid rgba(255,255,255,0.07)',
-                    borderRadius: '0.875rem',
-                    padding: '1rem 1.25rem',
-                  }}>
-                    <span style={{ width: 8, height: 8, borderRadius: '50%', background: item.dot, flexShrink: 0, marginTop: '0.35rem' }} />
-                    <div>
-                      <p style={{ fontSize: '0.9375rem', fontWeight: 600, color: '#fff', marginBottom: '0.25rem' }}>{item.title}</p>
-                      <p style={{ fontSize: '0.8125rem', color: 'rgba(255,255,255,0.45)', lineHeight: 1.6 }}>{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
+              <img
+                src="/prime-minister.jpg"
+                alt="Rt. Hon. Charles Bukantwa — Prime Minister"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              />
+              <div style={{
+                position: 'absolute', bottom: 0, left: 0, right: 0,
+                background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, transparent 100%)',
+                padding: '2rem 1.25rem 1.5rem',
+              }}>
+                <p style={{ fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#FCD116', marginBottom: '0.375rem' }}>Prime Minister</p>
+                <p style={{ fontSize: '1.125rem', fontWeight: 700, color: '#fff', lineHeight: 1.3 }}>Rt. Hon. Charles Bukantwa</p>
               </div>
             </div>
           </div>
