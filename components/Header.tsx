@@ -98,15 +98,6 @@ export default function Header() {
           </button>
         </div>
       </div>
-      {/* flag stripe */}
-      <div style={{ display: 'flex', height: '3px' }}>
-        <div style={{ flex: 1, background: '#D8232A' }} />
-        <div style={{ flex: 1, background: '#111111' }} />
-        <div style={{ flex: 1, background: '#FCD116' }} />
-        <div style={{ flex: 1, background: '#111111' }} />
-        <div style={{ flex: 1, background: '#1F4D3A' }} />
-        <div style={{ flex: 1, background: '#111111' }} />
-      </div>
 
       {/* Mobile menu */}
       {open && (
