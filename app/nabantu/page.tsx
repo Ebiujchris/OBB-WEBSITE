@@ -7,7 +7,7 @@ export default function Nabantu() {
         <div className="container-site" style={{ position: 'relative' }}>
           <div className="badge badge-gold" style={{ marginBottom: '1.5rem' }}>Our people</div>
           <h1 className="heading-serif" style={{ fontSize: 'clamp(2.25rem, 4vw, 3.5rem)', fontWeight: 700, color: '#fff', marginBottom: '1.25rem' }}>
-            Nabantu — Our People
+            Our People
           </h1>
           <p style={{ fontSize: '1.125rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, maxWidth: '520px' }}>
             The three ethnic communities that form Obudhingiya Bwa Bwamba.

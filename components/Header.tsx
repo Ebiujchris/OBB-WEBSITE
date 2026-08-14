@@ -6,7 +6,9 @@ import { usePathname } from 'next/navigation';
 
 const navItems = [
   { href: '/about',       label: 'About' },
-  { href: '/omudhingiya', label: 'Omudhingiya' },
+  { href: '/omudhingiya', label: 'Omudhingiya', dropdown: [
+    { href: '/nabantu', label: 'Nabantu (Queen)' },
+  ]},
   { href: '/languages',   label: 'Languages' },
   { href: '/culture',     label: 'Culture' },
   { href: '/nabantu',     label: 'Our People' },
@@ -16,6 +18,7 @@ const navItems = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const pathname = usePathname();
 
   const isActive = (href: string) =>
@@ -55,15 +58,74 @@ export default function Header() {
 
           {/* Desktop nav */}
           <nav style={{ display: 'none', alignItems: 'center', gap: '0.25rem' }} className="lg-nav">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`nav-link${isActive(item.href) ? ' active' : ''}`}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) =>
+              item.dropdown ? (
+                <div
+                  key={item.href}
+                  style={{ position: 'relative' }}
+                  onMouseEnter={() => setDropdownOpen(true)}
+                  onMouseLeave={() => setDropdownOpen(false)}
+                >
+                  <Link
+                    href={item.href}
+                    className={`nav-link${isActive(item.href) ? ' active' : ''}`}
+                    style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}
+                  >
+                    {item.label}
+                    <svg width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" style={{ marginTop: '1px' }}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </Link>
+                  {dropdownOpen && (
+                    <div style={{
+                      position: 'absolute',
+                      top: '100%',
+                      left: 0,
+                      paddingTop: '0.5rem',
+                      background: 'transparent',
+                      zIndex: 100,
+                      minWidth: '180px',
+                    }}>
+                      <div style={{
+                        background: '#fff',
+                        border: '1px solid rgba(0,0,0,0.08)',
+                        borderRadius: '0.75rem',
+                        boxShadow: '0 8px 24px rgba(0,0,0,0.1)',
+                        overflow: 'hidden',
+                      }}>
+                      {item.dropdown.map((sub) => (
+                        <Link
+                          key={sub.href}
+                          href={sub.href}
+                          style={{
+                            display: 'block',
+                            padding: '0.75rem 1.25rem',
+                            fontSize: '0.9rem',
+                            color: isActive(sub.href) ? '#D8232A' : '#242424',
+                            fontWeight: isActive(sub.href) ? 600 : 400,
+                            textDecoration: 'none',
+                            transition: 'background 0.15s',
+                          }}
+                          onMouseEnter={e => (e.currentTarget.style.background = '#F8F3E7')}
+                          onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+                        >
+                          {sub.label}
+                        </Link>
+                      ))}
+                    </div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`nav-link${isActive(item.href) ? ' active' : ''}`}
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
           </nav>
 
           {/* Desktop CTA */}
@@ -109,25 +171,42 @@ export default function Header() {
           <div className="container-site">
             <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', marginBottom: '1.25rem' }}>
               {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  style={{
-                    padding: '0.875rem 1rem',
-                    borderRadius: '0.625rem',
-                    fontSize: '0.9375rem',
-                    fontWeight: isActive(item.href) ? 600 : 400,
-                    color: isActive(item.href) ? '#D8232A' : '#222',
-                    background: isActive(item.href) ? 'rgba(216,35,42,0.06)' : 'transparent',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                  }}
-                >
-                  {item.label}
-                  {isActive(item.href) && <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#D8232A' }} />}
-                </Link>
+                <div key={item.href}>
+                  <Link
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    style={{
+                      padding: '0.875rem 1rem',
+                      borderRadius: '0.625rem',
+                      fontSize: '0.9375rem',
+                      fontWeight: isActive(item.href) ? 600 : 400,
+                      color: isActive(item.href) ? '#D8232A' : '#222',
+                      background: isActive(item.href) ? 'rgba(216,35,42,0.06)' : 'transparent',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                    }}
+                  >
+                    {item.label}
+                    {isActive(item.href) && <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#D8232A' }} />}
+                  </Link>
+                  {item.dropdown?.map((sub) => (
+                    <Link
+                      key={sub.href}
+                      href={sub.href}
+                      onClick={() => setOpen(false)}
+                      style={{
+                        padding: '0.625rem 1rem 0.625rem 2rem',
+                        borderRadius: '0.625rem',
+                        fontSize: '0.875rem',
+                        color: isActive(sub.href) ? '#D8232A' : '#666',
+                        display: 'block',
+                      }}
+                    >
+                      {sub.label}
+                    </Link>
+                  ))}
+                </div>
               ))}
             </nav>
             <Link
