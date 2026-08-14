@@ -44,8 +44,6 @@ export default function FolkStories() {
               </div>
             ))}
           </div>
-
-          </div>
         </div>
       </section>
     </main>
