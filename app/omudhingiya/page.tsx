@@ -16,7 +16,21 @@ export default function Omudhingiya() {
 
             {/* Main profile */}
             <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-              <div style={{ height: '18rem', background: 'linear-gradient(135deg, #6B1E2E 0%, #242424 50%, #1F4D3A 100%)' }} />
+              <div style={{ position: 'relative', background: '#111' }}>
+                <img
+                  src="/omundhingiya image.jpeg"
+                  alt="Omudhingiya Martin Ayongi Kamya"
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+                <div style={{
+                  position: 'absolute', bottom: 0, left: 0, right: 0,
+                  background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%)',
+                  padding: '1.5rem',
+                }}>
+                  <p style={{ fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#FCD116', marginBottom: '0.25rem' }}>Cultural Leader</p>
+                  <p style={{ fontSize: '1.25rem', fontWeight: 700, color: '#fff' }}>Omudhingiya Martin Ayongi Kamya</p>
+                </div>
+              </div>
               <div style={{ padding: '2.5rem' }}>
                 <h2 className="heading-serif" style={{ fontSize: '1.625rem', fontWeight: 700, color: '#242424', marginBottom: '1.5rem' }}>The Cultural Leader</h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
