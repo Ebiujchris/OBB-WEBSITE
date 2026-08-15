@@ -53,7 +53,7 @@ export default function Home() {
                 <span style={{ color: '#D8232A' }}>Bamba</span>,{' '}
                 <span style={{ color: '#FCD116' }}>Babwisi</span>{' '}
                 and{' '}
-                <span style={{ color: '#4CAF7D' }}>Vanuma</span>{' '}
+                <span style={{ color: '#4CAF7D' }}>Vonoma</span>{' '}
                 communities.
               </h1>
 
