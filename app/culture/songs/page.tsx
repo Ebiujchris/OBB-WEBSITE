@@ -40,6 +40,34 @@ export default function Songs() {
               </div>
             ))}
           </div>
+
+          {/* Obudhingiya Folk Songs */}
+          <div className="card" style={{ padding: '2.5rem' }}>
+            <div className="badge badge-gold" style={{ marginBottom: '1.25rem' }}>Obudhingiya Folk Songs · Lubwisi</div>
+            <h2 className="heading-serif" style={{ fontSize: '1.5rem', fontWeight: 700, color: '#242424', marginBottom: '1.5rem' }}>Traditional Songs</h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+              {[
+                { title: 'Nkaba Ningenda', author: 'Mubulya A. Wilson', lines: ['Nkaba ningenda e waa Taata', 'Naasanga bu̱noni̱ bubili mu njila', 'Kali̱ kati bususa bi̱ti̱ya', 'Kali̱ kati, \'butukuula', 'Naalasi̱ye njenje mu kutui', 'Naalulukana njenje munda', 'Kamucole, kamucole'] },
+                { title: 'Mukuwe Ali e Kaanu̱ma', author: 'Mubulya A. Wilson', lines: ['Mukuwe ali e kaanu̱ma', 'Aasi̱ye kulola maaha', 'Oghende oghambile njoko', 'Ki̱i̱no kyamukangama', 'Ee naawe Bheeni̱to', 'Bheeni̱to na Ngulunguta', 'Ngulunguta na Selengi̱bho'] },
+                { title: 'Ki̱i̱su̱ndo', author: 'Mubulya A. Wilson', lines: ['Solo: Ki̱i̱su̱ndo, ki̱i̱su̱ndo', 'Chorus: Heeleya ki̱su̱ndo', 'Naawe odhongomela ala'] },
+                { title: 'Kasandaliya', author: 'Mubulya A. Wilson', lines: ['Londo e Londo', 'Kasandali̱ya….', 'Sandala tulole', 'Nga maasi ghaa kitenee'] },
+                { title: 'Nkoko Nsokolome', author: 'Traditional', lines: ['Nkoko nsokolome yasamba ntu̱u̱li̱', 'Otali muntu mukulu tookuuya eti̱nde', 'Kpolo-kpolo mooti̱ katu̱mi̱sage li̱bho'] },
+                { title: 'Muleli', author: 'Traditional', lines: ['Hooli̱ya ee hooli̱ya ee', 'Njoko waawe ni mu̱gu̱ndi̱ya', 'Na mu̱leli̱ na mu̱leli̱ tabamwi̱ma', 'Kahu̱si̱ko ka mu̱leeli̱ o', 'Kakongo ka mu̱leeli̱ o'] },
+                { title: 'Oni Bhwengi̱ya', author: 'Mubulya A. Wilson', lines: ['Oni Bhwengi̱ya', 'Oni Bhwengi̱ya', 'Si̱ye Bhwengi̱ya bwa Taata'] },
+                { title: 'Baana Mugange', author: 'Mubulya A. Wilson', lines: ['Kanganganga.. kanganga', 'Baana mugange', 'Bakulu bakahuwa', 'Kabiyo-biyo – biyo', 'Kusanga biyo', 'Ku̱ku̱nda biyo'] },
+              ].map((song, i) => (
+                <div key={i} style={{ borderLeft: '3px solid #1F4D3A', paddingLeft: '1.25rem' }}>
+                  <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', marginBottom: '0.75rem', flexWrap: 'wrap' }}>
+                    <h3 className="heading-serif" style={{ fontSize: '1.1rem', fontWeight: 700, color: '#242424', fontStyle: 'italic' }}>{song.title}</h3>
+                    <span style={{ fontSize: '0.8125rem', color: '#666' }}>— {song.author}</span>
+                  </div>
+                  {song.lines.map((line, j) => (
+                    <p key={j} style={{ fontSize: '0.9rem', color: '#555', lineHeight: 1.8 }}>{line}</p>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </main>

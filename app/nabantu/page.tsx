@@ -1,5 +1,54 @@
 import Link from 'next/link';
 
+const clanLeaders = [
+  { no: '01', name: 'Mr. Baker Samuel B',        clan: 'Babandi' },
+  { no: '02', name: 'Mr. Mudhele Salim',          clan: 'Basu' },
+  { no: '03', name: 'Rev. Suuza Acleo',           clan: 'Batalinga' },
+  { no: '04', name: 'Mr. Bakecura Cornelius',     clan: 'Banyamwela' },
+  { no: '05', name: 'Rev. Yovani Mutoghwabo',     clan: 'Balungu' },
+  { no: '06', name: 'Mr. Ngugha Yostasi',         clan: 'Baseghiya' },
+  { no: '07', name: 'Mr. Kisembo Sulait M.',      clan: 'Bawiisa' },
+  { no: '08', name: 'Mr. Gabriel Bacurana',       clan: 'Bandimbuka' },
+  { no: '09', name: 'Mr. Limbaponi Yowasi',       clan: 'Bahombi' },
+  { no: '10', name: 'Mr. Bakawerayo Hillary',     clan: 'Balirehe' },
+  { no: '11', name: 'Mr. Ngeye Stephen',          clan: 'Banseelu' },
+  { no: '12', name: 'Mr. Dominic Atooko',         clan: 'Baboni' },
+  { no: '13', name: 'Mr. Kiloolo Leo',            clan: 'Bahundu' },
+  { no: '14', name: 'Mr. Leo Bamwitirebye',       clan: 'Bamate' },
+  { no: '15', name: 'Mr. Katongole James',        clan: 'Bahanda' },
+  { no: '16', name: 'Pr. Balaami Tadeo',          clan: 'Bandimanga' },
+  { no: '17', name: 'Mr. Ndigyaha John',          clan: 'Batolu' },
+  { no: '18', name: 'Mr. Bambanduwa Filimon',     clan: 'Bakuteele' },
+  { no: '19', name: 'Rev. Yofesi Bgalaghanja',    clan: 'Banyangule' },
+  { no: '20', name: 'Mr. Bazalirwaki Vanensio',   clan: 'Bajimbula' },
+  { no: '21', name: 'Mr. Aruta Sirwano',          clan: 'Bandinibe' },
+  { no: '22', name: 'Mr. Denesi Nyaruhondo',      clan: 'Babhila' },
+  { no: '23', name: 'Mr. Adonia Balinsangayo',    clan: 'Bamaga' },
+  { no: '24', name: 'Mr. Basiime Amos',           clan: 'Ba_hula' },
+  { no: '25', name: 'Mr. Alajo Sylivano',         clan: 'Vanuma' },
+];
+
+const clans = [
+  'Babandi','Basu','Batalinga','Banyamwela','Balungu',
+  'Baseghiya','Bawiisa','Bandimbuka','Bahombi','Balirehe',
+  'Banseelu','Baboni','Bahundu','Bamate','Bahanda',
+  'Bandimanga','Batolu','Bakuteele','Banyangule','Bajimbula',
+  'Bandinibe','Babhila','Bamaga','Ba_hula','Vonoma',
+];
+
+const bandimangaSubClans = [
+  { subClan: 'Feme', people: 'Bafeme' },
+  { subClan: 'Timbo', people: 'Bandimutimbo' },
+  { subClan: 'Syoko', people: 'Bandisyoko' },
+  { subClan: 'Fokeri', people: 'Bandifokeri' },
+  { subClan: 'Leeu', people: 'Bandileeu' },
+  { subClan: 'Kagwani', people: 'Bandikagwani' },
+  { subClan: 'Sendwa', people: 'Basendwa' },
+  { subClan: 'Ndwasumba', people: 'Bandwasumba' },
+  { subClan: 'Ndimbuwo', people: 'Bandimbuwo' },
+  { subClan: 'Kuwbikari', people: 'Bakuwbikari' },
+];
+
 export default function Nabantu() {
   return (
     <main>
@@ -63,7 +112,7 @@ export default function Nabantu() {
           </div>
 
           {/* Sub-pages */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.25rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.25rem', marginBottom: '3rem' }}>
             {[
               { href: '/nabantu/clans',          icon: '🏛️', title: 'Clans & Sub-Clans',   desc: 'Explore the 25 clans, their histories, totems, and cultural significance.' },
               { href: '/nabantu/clan-leaders',   icon: '👑', title: 'Clan Leaders',         desc: 'Meet the heads of clans who preserve our traditions and guide our communities.' },

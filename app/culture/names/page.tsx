@@ -45,6 +45,44 @@ export default function Names() {
               </div>
             ))}
           </div>
+
+          {/* Obudhingiya Traditional Names */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div className="card" style={{ padding: '2.5rem' }}>
+              <div className="badge badge-gold" style={{ marginBottom: '1.25rem' }}>Traditional Names · Lubwisi (Babwisi)</div>
+              <h2 className="heading-serif" style={{ fontSize: '1.375rem', fontWeight: 700, color: '#242424', marginBottom: '0.5rem' }}>Bakali — Names for Girls/Women</h2>
+              <p style={{ fontSize: '0.8125rem', color: '#999', marginBottom: '1.25rem' }}>Compiled by: Rev. Can. Timothy Bandirana — Maliina ghaa Lubwisi</p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '0.5rem' }}>
+                {['Mbikaliiye','Beeswikila','Nanjala','Balindiya','Balinjikuta','Tabutoona','Babisobwabo','Bukampemula','Bakampimbila','Ndighwaki','Kilihoona','Etimalyabo','Babiik\'ebugha','Lukulwabo','Tabiita','Tabununka','Nkaukimba','Nkaghumela','Ghubiika','Bambuniyaki','Balikulilaha','Tabasiima','Bukansukuwa','Badheedheeuwe','Koomwawe','Buhemula','Balinguwo','Mughasoki','Beelogha','Kalibaatila','Agbekuwa (balongo)','Ambuusa','Tababwomba','Tabaghwata','Kubholiya','Babukwatiya','Bukeebwabo','Tabakuliliyaayo','Balikanjiyo','Nsonisyabo','Mbulisyabo','Balimbughiya','Mbuleleeye','Kaheelu','Butulibwabo','Nkabukwelela','Mbubyaliiye','Beeikaliya','Tuliikaliilaha','Butamanya','Bighuweki','Bukandwaliya','Byabo','Beebona','Tibaghitaliya','Kwedima','Nsonooki','Kaboneesa','Nakyabu','Byabanaghi','Baghende','Ndighenda','Bukambona','Bulogho','Byabali','Byabusa','Busabutama','Babyali','Libhwabho','Taabughaniya','Tibaliila onji','Beesemeliya','Baghwemaliya','Buswekiya','Ndisiimwani','Beeigha','Buswaliya','Bukanjeheelela','Buloliya','Ngulibiita','Kaabhalanja','Kanikki','Kabanjungu','Kabahindi','Bukanjoleka','Baghwejiba','Nakala','Nambaijo','Bujune','Nditumaani','Nansooliya','Nsunguwa','Nkabadheedha','Nkabasaasiya','Kwegheliya','Nkabwongela','Nkabanonela','Kaboolu','Mukaliki','Bhansunge','Wende','Balimpana','Ghaalimaka','Makaaghaabo','Kabhengu','Kalabiyo','Bulimpikiyaha','Etimalyabo','Babukwatiya','Batighiwa'].map((name, i) => (
+                  <div key={i} style={{ background: '#F8F3E7', borderRadius: '0.5rem', padding: '0.5rem 0.75rem', fontSize: '0.8125rem', color: '#333' }}>{name}</div>
+                ))}
+              </div>
+            </div>
+
+            <div className="card" style={{ padding: '2.5rem' }}>
+              <h2 className="heading-serif" style={{ fontSize: '1.375rem', fontWeight: 700, color: '#242424', marginBottom: '0.5rem' }}>Basaasa — Names for Boys/Men</h2>
+              <p style={{ fontSize: '0.8125rem', color: '#999', marginBottom: '1.25rem' }}>Compiled by: Rev. Can. Timothy Bandirana — Maliina ghaa Lubwisi</p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '0.5rem' }}>
+                {['Komunjala','Babindubhila','Balinsangayo','Nyamayabo','Ngighuyabo','Kitalikyawe','Bamwitileebiye','Ndyejiika','Mujiiki','Balikamanya','Nkwilabusa','Ndyanabo','Nkabona','Bakahuwa','Kalikoona','Kawe-kawe','Mubughitaali','Mugami','Mubuuliya','Bakeecula','Bwankeela','Ntamuhiila','Nsekanabo','Bampalana','Nkabukeesiya','Ndikyemalila','Balijeluw','Balyogbuwa','Mbaanaani','Onjitaalogha','Bakatwelinga','Bakatuusuka','Bukantuwa','Tabamwenda','Basiima','Byamaka','Bahemuka','Bambaliilila','Balikighamba','Tabeenigha','Katuulamu','Sengi kato (balongo)','Butelukila','Banseka','Bakeetuwa','Balitwana','Weeitile','Bakankwaki','Beebhihiliya','Bakatwika','Ndibamaliisiya','Bandirana','Balikulungi','Bhacurana','Bhaajane','Muyaayi','Ndiiyaha','Tombo','Bundoloye','Balikulilaha','Kyesaagha','Ndabughilaha','Kyebungiya','Nkaghuluma','Bwisakilo','Bukanjoha','Bujune','Nkombi','Mukulumba','Nkabwisila','Tibaaghuwa','Bakankwaki','Nditumwani','Kituulo','Bulogho','Ndibajela','Nkabandinabo','Tabunsaala','Tandiswala','Tandisaaghayo','Tuughuwe','Bakaweelayo','Bampiigha','Mpiighuwa','Mulenguwa','Mbeighaana','Bundeketiye','Tambesigha','Kimbutu','Balikanjiyo','Bhanjale','Ngugha','Kikonko','Kighambi','Kabimbi','Kaakwanguwa','Kabhii','Bulimbe','Ngeleki','Ntanda','Katalikaawe','Kitakuliiyo','Kyebhimba','Weehuniye','Kitaami','Mudhingiya','Mbaanaani','Kamuntu','Tibengana','Tumwelinde','Weelinde','Weeghendiye','Mpweluwa','Nsiima','Mbungi','Ndiiyaha','Taaliwaawe','Balyesiima','Kyambiyo','Kihanda','Bakangambila','Kalunjiyamu','Kabhili','Nkubha','Asili','Ndighilantiya','Bunkwamiiye','Kyesangile','Ndyaanabo','Nkabatama','Bakatwika','Ntaaghuwa','Bukanjujuula','Namutakiya','Babimpeekiya','Babiisile','Bughani','Kasooli','Bampuwa','Bamukoka','Bamunaabiliya','Bukantangisiya','Bankotelana','Ntulanke','Bhanjale','Mujoloto','Teekwila','Kahusiko','Bakyeyalemu','Kyamboone','Kyaboona','Bakankwisiya','Mahanga','Mutoghwabo','Bidimaagiyo','Bakabundiila','Balyebuuliya','Mudhibiya','Malemo','Tabunguka','Bitighale'].map((name, i) => (
+                  <div key={i} style={{ background: '#F8F3E7', borderRadius: '0.5rem', padding: '0.5rem 0.75rem', fontSize: '0.8125rem', color: '#333' }}>{name}</div>
+                ))}
+              </div>
+            </div>
+
+            <div className="card" style={{ padding: '2.5rem' }}>
+              <div className="badge badge-gold" style={{ marginBottom: '1.25rem' }}>Traditional Spirits</div>
+              <h2 className="heading-serif" style={{ fontSize: '1.375rem', fontWeight: 700, color: '#242424', marginBottom: '0.5rem' }}>Maliina Ghaa Mi̱li̱mu̱ ya Babwisi na Bamba</h2>
+              <p style={{ fontSize: '0.875rem', color: '#666', lineHeight: 1.8, marginBottom: '1.25rem' }}>Traditional spirits for worship and consultation among the Babwisi and Bamba communities.</p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: '0.5rem' }}>
+                {['Baghwejiba','Nakala','Elungu','Namujuna','Luhanga','Mulyome','Ngoou̱we','Aluta','Ndyoka','Namujunga','Kamangana','Nambaijo','Kamalampaka','Kiloghoji','Namulimi','Bhitoto','Mukila','Katabaali','Wasana','Mankini','Mugheluula','Kengeina','Ndibanindola'].map((spirit, i) => (
+                  <div key={i} style={{ background: '#F8F3E7', borderRadius: '0.5rem', padding: '0.5rem 0.75rem', fontSize: '0.8125rem', color: '#333', display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                    <span style={{ fontSize: '0.7rem', fontWeight: 700, color: '#C99A2E' }}>{String(i+1).padStart(2,'0')}</span>
+                    {spirit}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

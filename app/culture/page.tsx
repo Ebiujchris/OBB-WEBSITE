@@ -1,13 +1,14 @@
 import Link from 'next/link';
 
 const categories = [
-  { title: 'Folk Stories', slug: 'stories',   icon: '📚', description: 'Traditional narratives passed down through generations, teaching values and history.' },
-  { title: 'Proverbs',     slug: 'proverbs',  icon: '💬', description: 'Wisdom and insights expressed through time-honoured sayings.' },
-  { title: 'Riddles',      slug: 'riddles',   icon: '❓', description: 'Traditional puzzles that challenge the mind and entertain across all ages.' },
-  { title: 'Songs',        slug: 'songs',     icon: '🎵', description: 'Musical expressions of joy, sorrow, celebration, and daily life.' },
-  { title: 'Poems',        slug: 'poems',     icon: '✍️', description: 'Poetic expressions of our culture and lived experiences.' },
-  { title: 'Lullabies',    slug: 'lullabies', icon: '🎼', description: 'Gentle songs sung to children across generations.' },
-  { title: 'Names',        slug: 'names',     icon: '👤', description: 'Meanings and significance of traditional Bwamba names.' },
+  { title: 'Folk Stories',          slug: 'stories',    icon: '📚', description: 'Traditional narratives passed down through generations, teaching values and history.' },
+  { title: 'Proverbs',              slug: 'proverbs',   icon: '💬', description: 'Wisdom and insights expressed through time-honoured sayings.' },
+  { title: 'Riddles',               slug: 'riddles',    icon: '❓', description: 'Traditional puzzles that challenge the mind and entertain across all ages.' },
+  { title: 'Songs',                 slug: 'songs',      icon: '🎵', description: 'Musical expressions of joy, sorrow, celebration, and daily life.' },
+  { title: 'Poems',                 slug: 'poems',      icon: '✍️', description: 'Poetic expressions of our culture and lived experiences.' },
+  { title: 'Lullabies',             slug: 'lullabies',  icon: '🎼', description: 'Gentle songs sung to children across generations.' },
+  { title: 'Names',                 slug: 'names',      icon: '👤', description: 'Meanings and significance of traditional Bwamba names.' },
+  { title: 'Customs & Traditions',  slug: 'customs',    icon: '🪘', description: 'Rituals, ceremonies and traditional practices of the Obudhingiya people.' },
 ];
 
 export default function Culture() {
