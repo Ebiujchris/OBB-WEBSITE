@@ -5,16 +5,16 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 
 const navItems = [
-  { href: '/about',       label: 'About' },
+  { href: '/about',       label: 'About', dropdown: [
+    { href: '/history', label: 'History' },
+    { href: '/visit',   label: 'Visit Bwamba' },
+  ]},
   { href: '/omudhingiya', label: 'Omudhingiya', dropdown: [
     { href: '/nabantu', label: 'Nabantu (Queen)' },
   ]},
   { href: '/languages',   label: 'Languages' },
   { href: '/culture',     label: 'Culture' },
-  { href: '/nabantu',     label: 'Our People', dropdown: [
-    { href: '/history', label: 'History' },
-  ]},
-  { href: '/visit',       label: 'Visit' },
+  { href: '/nabantu',     label: 'Our People' },
   { href: '/media',       label: 'Media' },
 ];
 
