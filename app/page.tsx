@@ -150,10 +150,14 @@ export default function Home() {
               overflow: 'hidden',
               boxShadow: '0 20px 60px rgba(0,0,0,0.15)',
             }}>
-              <div style={{
-                height: '14rem',
-                background: 'linear-gradient(135deg, #6B1E2E 0%, #242424 50%, #1F4D3A 100%)',
-              }} />
+              <div style={{ position: 'relative', height: '18rem', overflow: 'hidden' }}>
+                <img
+                  src="/omundhingiya image.jpeg"
+                  alt="Omudhingiya Martin Ayongi Kamya"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
+                />
+                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '4rem', background: 'linear-gradient(to top, #242424, transparent)' }} />
+              </div>
               <div style={{ padding: '1.75rem' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.875rem' }}>
                   {[
