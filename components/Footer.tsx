@@ -70,7 +70,7 @@ export default function Footer() {
                 { href: '/nabantu',     label: 'Our People' },
                 { href: '/culture',     label: 'Culture' },
                 { href: '/history',     label: 'History' },
-                { href: '/visit',       label: 'Visit Bwamba' },
+                { href: '/visit',       label: 'Bwamba' },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="footer-link">{label}</Link>
