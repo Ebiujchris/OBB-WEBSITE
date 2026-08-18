@@ -4,6 +4,8 @@ const touristPhotos = [
   { src: '/tourist%20attraction/Rwenzori%20Ranges%20.webp', title: 'Rwenzori ranges', description: 'Snow-capped peaks and misty mountain views.' },
   { src: '/tourist%20attraction/Ngite%20water%20falls1.webp', title: 'Ngite Waterfalls', description: 'A dramatic waterfall surrounded by rich forest.' },
   { src: '/tourist%20attraction/sempaya%20hot%20spring.webp', title: 'Sempaya Hot Springs', description: 'Natural thermal springs and bubbling mineral pools.' },
+  { src: '/tourist%20attraction/Female%20Hotsprings%20.webp', title: 'Hot spring traditions', description: 'Local community life around the geothermal wonders of the region.' },
+  { src: '/tourist%20attraction/Batama%20cultural%20group.jpg', title: 'Batama cultural group', description: 'A vibrant community performance celebrating identity and heritage.' },
   { src: '/tourist%20attraction/sunbird%20semuliki-national-park-1024x680-1.jpg', title: 'Semuliki wildlife', description: 'Rare birds and forest life in the national park.' },
   { src: '/tourist%20attraction/white%20bird.webp', title: 'Birdlife', description: 'An abundance of bird species found in the region.' },
   { src: '/tourist%20attraction/Cocoa%20frutes.jfif', title: 'Cocoa farms', description: 'Bwamba’s fertile soils support rich agriculture.' },
