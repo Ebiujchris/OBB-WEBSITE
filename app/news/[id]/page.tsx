@@ -6,6 +6,10 @@ const articles: Record<string, { title: string; date: string; category: string; 
   '3': { title: 'Elder Stories Project Completed',        date: 'July 30, 2026',    category: 'Culture',   gradient: 'linear-gradient(135deg,#7A5C3E,#1A1A1A)', body: ['After two years of dedicated work, we have successfully recorded 150 traditional folk stories from community elders, representing all three Bwamba communities.', 'The stories cover a wide range of themes — from origin tales and moral fables to historical accounts and nature stories — providing a rich window into the worldview of the Bwamba people.', 'All recordings have been transcribed and are now available in the cultural archive, with translations into English to make them accessible to a wider audience.'] },
 };
 
+export function generateStaticParams() {
+  return Object.keys(articles).map((id) => ({ id }));
+}
+
 export default function NewsArticle({ params }: { params: { id: string } }) {
   const article = articles[params.id];
 
