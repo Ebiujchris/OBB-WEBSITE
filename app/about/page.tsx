@@ -155,8 +155,8 @@ export default function About() {
                 { title: 'Katikilo (Prime Minister)', image: '/prime-minister.jpg', personName: 'Rt. Hon. Charles Bukantwa' },
                 { title: 'Kusei (Cultural Council)', image: '/kingdom%20logo.jpeg' },
                 { title: "Council of Elders (Bakulu b'Entula)", image: '/Esimudhungiya%20Head%20of%20the%20Elders%20council.jpeg' },
-                { title: 'Kusei Speaker', image: '/cabinet%20images/4.Rt.Hon.Maisaba%20Manzi%20Edmond.%20Kusei%20Speaker..jpg', personName: 'Rt. Hon. Maisaba Manzi Edmond' },
-                { title: 'Attorney General', image: '/cabinet%20images/6.Oweng.Kisembo%20David%20Bakasima.%20Attoney%20General..jpg', personName: 'Oweng. Kisembo David Bakasima' },
+                { title: 'Kusei Speaker', image: '/Oweng.%20Maisaba%20Manzi%20Edmond%20-speaker.jpeg', personName: 'Rt. Hon. Maisaba Manzi Edmond' },
+                { title: 'Attorney General', image: '/Owneg.%20Kisembo%20David%20Bakasima%20attorney%20general.jpeg', personName: 'Oweng. Kisembo David Bakasima' },
               ].map((item) => (
                 <div key={item.title} style={{ background: '#F8F3E7', borderRadius: '0.875rem', padding: '1.25rem', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '0.875rem', overflow: 'hidden' }}>
                   <h4 style={{ fontSize: '0.9375rem', fontWeight: 700, color: '#242424', margin: 0 }}>{item.title}</h4>
