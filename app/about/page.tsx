@@ -149,18 +149,24 @@ export default function About() {
           <div className="card" style={{ padding: '2.5rem' }}>
             <div className="badge badge-gold" style={{ marginBottom: '1.25rem' }}>Leadership Structure</div>
             <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '1.5rem' }}>Governance & Administration</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.25rem' }}>
               {[
-                { title: 'Omudhingiya', desc: 'Supreme head and fountain of honour. Takes precedence over all persons paying allegiance. Heard in silence.' },
-                { title: 'Katikilo (Prime Minister)', desc: 'Head of Executive Council. Assists Omudhingiya in all duties and leads Obudhingiya business in Kusei. Must be a male Mwamba, Mubwisi or Muvanuma, aged 40–70, of unquestionable moral integrity.' },
-                { title: 'Kusei (Cultural Council)', desc: 'The legislative and policy making body. Composed of 2 elected clan representatives per clan (male & female), Elders Council representatives, youth representatives, and 25 special nominees of Omudhingiya.' },
-                { title: "Council of Elders (Bakulu b'Entula)", desc: 'Consists of clan leaders from all 25 clans. Headed by Esimudhingiya (Head of Clans). Deliberates on all matters pertaining to Obudhingiya and formulates guidelines on customs.' },
-                { title: 'Kusei Speaker', desc: 'Presides over Cultural Council sittings. Elected from Members of Kusei on the first sitting. The position is rotational among the ethnic communities.' },
-                { title: 'Attorney General', desc: 'Principal legal advisor of Obudhingiya. Must be an Advocate of the Courts of Judicature with at least 5 years experience. Handles agreements, contracts and legal representation.' },
+                { title: 'Omudhingiya', image: '/omundhingiya%20image.jpeg' },
+                { title: 'Katikilo (Prime Minister)', image: '/prime-minister.jpg' },
+                { title: 'Kusei (Cultural Council)', image: '/kingdom%20logo.jpeg' },
+                { title: "Council of Elders (Bakulu b'Entula)", image: '/kingdom%20logo.jpeg' },
+                { title: 'Kusei Speaker', image: '/kingdom%20logo.jpeg' },
+                { title: 'Attorney General', image: '/kingdom%20logo.jpeg' },
               ].map((item) => (
-                <div key={item.title} style={{ background: '#F8F3E7', borderRadius: '0.875rem', padding: '1.5rem' }}>
-                  <h4 style={{ fontSize: '0.9375rem', fontWeight: 700, color: '#242424', marginBottom: '0.5rem' }}>{item.title}</h4>
-                  <p style={{ fontSize: '0.875rem', color: '#666', lineHeight: 1.7 }}>{item.desc}</p>
+                <div key={item.title} style={{ background: '#F8F3E7', borderRadius: '0.875rem', padding: '1.25rem', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '0.875rem', overflow: 'hidden' }}>
+                  <h4 style={{ fontSize: '0.9375rem', fontWeight: 700, color: '#242424', margin: 0 }}>{item.title}</h4>
+                  <div style={{ width: '100%', maxWidth: '180px', height: '200px', background: '#fff', borderRadius: '0.75rem', border: '1px solid rgba(0,0,0,0.08)', overflow: 'hidden' }}>
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
+                    />
+                  </div>
                 </div>
               ))}
             </div>
