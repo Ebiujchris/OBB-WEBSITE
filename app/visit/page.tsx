@@ -1,5 +1,14 @@
 import Link from 'next/link';
 
+const touristPhotos = [
+  { src: '/tourist%20attraction/Rwenzori%20Ranges%20.webp', title: 'Rwenzori ranges', description: 'Snow-capped peaks and misty mountain views.' },
+  { src: '/tourist%20attraction/Ngite%20water%20falls1.webp', title: 'Ngite Waterfalls', description: 'A dramatic waterfall surrounded by rich forest.' },
+  { src: '/tourist%20attraction/sempaya%20hot%20spring.webp', title: 'Sempaya Hot Springs', description: 'Natural thermal springs and bubbling mineral pools.' },
+  { src: '/tourist%20attraction/sunbird%20semuliki-national-park-1024x680-1.jpg', title: 'Semuliki wildlife', description: 'Rare birds and forest life in the national park.' },
+  { src: '/tourist%20attraction/white%20bird.webp', title: 'Birdlife', description: 'An abundance of bird species found in the region.' },
+  { src: '/tourist%20attraction/Cocoa%20frutes.jfif', title: 'Cocoa farms', description: 'Bwamba’s fertile soils support rich agriculture.' },
+];
+
 export default function VisitBwamba() {
   return (
     <main>
@@ -121,6 +130,30 @@ export default function VisitBwamba() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+
+          {/* Tourist gallery */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'end', gap: '1rem', flexWrap: 'wrap' }}>
+              <h3 className="heading-serif" style={{ fontSize: '1.5rem', fontWeight: 700, color: '#242424', margin: 0 }}>Tourist Highlights</h3>
+              <span style={{ fontSize: '0.8125rem', color: '#6B1E2E', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase' }}>Bwamba at a glance</span>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem' }}>
+              {touristPhotos.map((photo) => (
+                <div key={photo.title} className="card" style={{ overflow: 'hidden', padding: 0 }}>
+                  <img
+                    src={photo.src}
+                    alt={photo.title}
+                    style={{ width: '100%', height: '220px', objectFit: 'cover', display: 'block' }}
+                  />
+                  <div style={{ padding: '1rem 1rem 1.1rem' }}>
+                    <h4 className="heading-serif" style={{ fontSize: '1.05rem', fontWeight: 700, color: '#242424', marginBottom: '0.35rem' }}>{photo.title}</h4>
+                    <p style={{ fontSize: '0.8rem', color: '#666', lineHeight: 1.6, margin: 0 }}>{photo.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
