@@ -151,12 +151,12 @@ export default function About() {
             <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '1.5rem' }}>Governance & Administration</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.25rem' }}>
               {[
-                { title: 'Omudhingiya', image: '/omundhingiya%20image.jpeg' },
-                { title: 'Katikilo (Prime Minister)', image: '/prime-minister.jpg' },
+                { title: 'Omudhingiya', image: '/omundhingiya%20image.jpeg', personName: 'Omudhingiya Martin Ayongi Kamya' },
+                { title: 'Katikilo (Prime Minister)', image: '/prime-minister.jpg', personName: 'Rt. Hon. Charles Bukantwa' },
                 { title: 'Kusei (Cultural Council)', image: '/kingdom%20logo.jpeg' },
-                { title: "Council of Elders (Bakulu b'Entula)", image: '/kingdom%20logo.jpeg' },
-                { title: 'Kusei Speaker', image: '/kingdom%20logo.jpeg' },
-                { title: 'Attorney General', image: '/kingdom%20logo.jpeg' },
+                { title: "Council of Elders (Bakulu b'Entula)", image: '/Esimudhungiya%20Head%20of%20the%20Elders%20council.jpeg' },
+                { title: 'Kusei Speaker', image: '/cabinet%20images/4.Rt.Hon.Maisaba%20Manzi%20Edmond.%20Kusei%20Speaker..jpg', personName: 'Rt. Hon. Maisaba Manzi Edmond' },
+                { title: 'Attorney General', image: '/cabinet%20images/6.Oweng.Kisembo%20David%20Bakasima.%20Attoney%20General..jpg', personName: 'Oweng. Kisembo David Bakasima' },
               ].map((item) => (
                 <div key={item.title} style={{ background: '#F8F3E7', borderRadius: '0.875rem', padding: '1.25rem', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '0.875rem', overflow: 'hidden' }}>
                   <h4 style={{ fontSize: '0.9375rem', fontWeight: 700, color: '#242424', margin: 0 }}>{item.title}</h4>
@@ -167,6 +167,9 @@ export default function About() {
                       style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
                     />
                   </div>
+                  {item.personName && (
+                    <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#1F4D3A', lineHeight: 1.5 }}>{item.personName}</div>
+                  )}
                 </div>
               ))}
             </div>
