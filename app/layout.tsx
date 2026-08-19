@@ -6,6 +6,9 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Obudhingiya Bwa Bwamba - Cultural Heritage & Languages",
   description: "Preserving the rich cultural heritage, languages, and traditions of the Bwamba people",
+  icons: {
+    icon: "/kingdom%20logo.jpeg",
+  },
 };
 
 export default function RootLayout({
