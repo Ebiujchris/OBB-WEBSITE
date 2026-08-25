@@ -147,7 +147,12 @@ export default function About() {
 
           {/* Leadership Structure */}
           <div className="card" style={{ padding: '2.5rem' }}>
-            <div className="badge badge-gold" style={{ marginBottom: '1.25rem' }}>Leadership Structure</div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '1.25rem' }}>
+              <div className="badge badge-gold">Leadership Structure</div>
+              <Link href="/media/photos" className="btn btn-gold" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', padding: '0.75rem 1.25rem', fontSize: '0.8125rem', fontWeight: 700 }}>
+                View Cabinet Ministers →
+              </Link>
+            </div>
             <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '1.5rem' }}>Governance & Administration</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.25rem' }}>
               {[
