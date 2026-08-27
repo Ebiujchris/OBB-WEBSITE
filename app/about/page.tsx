@@ -149,7 +149,7 @@ export default function About() {
           <div className="card" style={{ padding: '2.5rem' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '1.25rem' }}>
               <div className="badge badge-gold">Leadership Structure</div>
-              <Link href="/media/photos" className="btn btn-gold" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', padding: '0.75rem 1.25rem', fontSize: '0.8125rem', fontWeight: 700 }}>
+              <Link href="/about/cabinet-ministers" className="btn btn-gold" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', padding: '0.75rem 1.25rem', fontSize: '0.8125rem', fontWeight: 700 }}>
                 View Cabinet Ministers →
               </Link>
             </div>
