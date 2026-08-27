@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const BASE = 'https://res.cloudinary.com/a9kf2wue/image/upload/v1786659106';
 
-const cabinetMembers = [
+export const cabinetMembers = [
   { src: `${BASE}/1.Rt.Hon.Charles_Bukantwa._Prime_Minister..jpg`, name: 'Rt. Hon. Charles Bukantwa', title: 'Prime Minister' },
   { src: `${BASE}/2.Rt.Hon._Hassan_Kihanda.1st_Deputy_Prime_Minister..jpg`, name: 'Rt. Hon. Hassan Kihanda', title: '1st Deputy Prime Minister' },
   { src: `${BASE}/3.Rt.Hon._Ivan_Mutebi.2nd_Deputy_Prime_Minister..jpg`, name: 'Rt. Hon. Ivan Mutebi', title: '2nd Deputy Prime Minister' },
