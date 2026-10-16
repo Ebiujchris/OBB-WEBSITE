@@ -15,7 +15,7 @@ const categories = [
 const cultureImages = [
   { src: '/images/culture/leadership%20council%20of%20elders%20image.PNG', alt: 'Elders gathered with cultural leaders', caption: 'Elders & oral history' },
   { src: '/images/culture/women%20dance%201%20image.jpg', alt: 'Women performing a traditional cultural dance', caption: 'Dance & celebration' },
-  { src: '/images/culture/women%20weaving%20baskets%20%282%29.jfif', alt: 'Women weaving traditional baskets', caption: 'Traditional crafts' },
+  { src: '/images/culture/women%20weaving%20baskets%20(2).jfif', alt: 'Women weaving traditional baskets', caption: 'Traditional crafts' },
 ];
 
 export default function Culture() {
