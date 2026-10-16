@@ -8,12 +8,12 @@ const mediaTypes = [
 ];
 
 const videos = [
-  { src: '/images/videos/812C3555.MOV', title: 'Community video 1' },
-  { src: '/images/videos/812C3564.MOV', title: 'Community video 2' },
-  { src: '/images/videos/812C3570.MOV', title: 'Community video 3' },
-  { src: '/images/videos/812C3572.MOV', title: 'Community video 4' },
-  { src: '/images/videos/812C3590.MOV', title: 'Community video 5' },
-  { src: '/images/videos/praying%20for%20omudhiiya%20video.MOV', title: 'Prayer for Omudhingiya' },
+  { src: 'https://res.cloudinary.com/a9kf2wue/video/upload/f_mp4/812c3555.mov', type: 'video/mp4', title: 'Community video 1' },
+  { src: 'https://res.cloudinary.com/a9kf2wue/video/upload/f_mp4/812c3564.mov', type: 'video/mp4', title: 'Community video 2' },
+  { src: 'https://res.cloudinary.com/a9kf2wue/video/upload/f_mp4/812c3570.mov', type: 'video/mp4', title: 'Community video 3' },
+  { src: 'https://res.cloudinary.com/a9kf2wue/video/upload/f_mp4/812c3572.mov', type: 'video/mp4', title: 'Community video 4' },
+  { src: 'https://res.cloudinary.com/a9kf2wue/video/upload/f_mp4/812c3590.mov', type: 'video/mp4', title: 'Community video 5' },
+  { src: '/images/videos/praying%20for%20omudhiiya%20video.MOV', type: 'video/quicktime', title: 'Prayer for Omudhingiya' },
 ];
 
 export default function Media() {
@@ -57,7 +57,7 @@ export default function Media() {
                 <article key={video.src} className="card" style={{ padding: 0, overflow: 'hidden', borderRadius: '8px' }}>
                   <div style={{ aspectRatio: '16 / 9', background: '#111' }}>
                     <video controls playsInline preload="none" style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}>
-                      <source src={video.src} type="video/mp4" />
+                      <source src={video.src} type={video.type} />
                       Your browser does not support this video format.
                     </video>
                   </div>
