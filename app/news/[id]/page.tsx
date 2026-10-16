@@ -10,8 +10,9 @@ export function generateStaticParams() {
   return Object.keys(articles).map((id) => ({ id }));
 }
 
-export default function NewsArticle({ params }: { params: { id: string } }) {
-  const article = articles[params.id];
+export default async function NewsArticle({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const article = articles[id];
 
   if (!article) {
     return (
