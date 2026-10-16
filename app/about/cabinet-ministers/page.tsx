@@ -22,7 +22,7 @@ export default function CabinetMinistersPage() {
           <div className="prime-minister-profile" style={{ display: 'grid', gridTemplateColumns: 'minmax(220px, 0.8fr) minmax(0, 1.4fr)', background: '#fff', borderRadius: '8px', overflow: 'hidden', marginBottom: '2rem', border: '1px solid rgba(36,36,36,0.08)' }}>
             <div className="prime-minister-portrait" style={{ position: 'relative', minHeight: '320px' }}>
               <Image
-                src="/cabinet%20images/1.Rt.Hon.Charles%20Bukantwa.%20Prime%20Minister..jpg"
+                src={cabinetMembers[0].src}
                 alt="Rt. Hon. Charles Bukantwa, Prime Minister"
                 fill
                 style={{ objectFit: 'cover', objectPosition: 'center top' }}
