@@ -42,3 +42,7 @@ next-env.d.ts
 
 # large image assets
 /public/cabinet images/
+
+# large local image/video assets
+/public/images/
+/public/tourist attraction/

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const touristPhotos = [
@@ -11,18 +12,54 @@ const touristPhotos = [
   { src: '/tourist%20attraction/Cocoa%20frutes.jfif', title: 'Cocoa farms', description: 'Bwamba’s fertile soils support rich agriculture.' },
 ];
 
+const communityPhotos = [
+  { src: '/images/Batama%20cultural%20group.jpg', alt: 'Batama cultural group performing', caption: 'Cultural performance' },
+  { src: '/images/cultural%20festival%20image.jpg', alt: 'Community members at a cultural festival', caption: 'Cultural festival' },
+  { src: '/images/dance-troupe%20image%20woemen.jpg', alt: 'Women performing a traditional dance', caption: 'Traditional dance' },
+  { src: '/images/culture/leadership%20council%20of%20elders%20image.PNG', alt: 'Members of the elders council', caption: 'Elders council' },
+  { src: '/images/news-anniversary%20omudhigiya%20enthronment%20day.jpg', alt: 'Community at the Omudhingiya enthronement anniversary', caption: 'Enthronement anniversary' },
+  { src: '/images/news-cabinet%20from%20cabinet%20minister.jpg', alt: 'Cabinet members gathered together', caption: 'Cabinet' },
+  { src: '/images/news-harvest%20more%20festival%20images%20for%20news.jpg', alt: 'Community celebration during the harvest festival', caption: 'Harvest festival' },
+  { src: '/images/royal-couple-image.jpg', alt: 'Cultural leaders in ceremonial attire', caption: 'Cultural leadership' },
+  { src: '/images/culture/women%20dance%201%20image.jpg', alt: 'Women performing a cultural dance', caption: 'Women’s dance' },
+  { src: '/images/culture/women%20weaving%20baskets%20%282%29.jfif', alt: 'Women weaving traditional baskets', caption: 'Basket weaving' },
+  { src: '/images/nabantu-throne%20-queen%20another%20image.jpg', alt: 'Nabantu in ceremonial dress', caption: 'Nabantu' },
+  { src: '/images/another%20omudhingya%20image%20-%20king.jpg', alt: 'Omudhingiya in ceremonial dress', caption: 'Omudhingiya' },
+];
+
 export default function VisitBwamba() {
   return (
     <main>
       <div className="page-hero">
         <div className="container-site" style={{ position: 'relative' }}>
           <div className="badge badge-gold" style={{ marginBottom: '1.5rem' }}>Plan your trip</div>
-          <h1 className="heading-serif" style={{ fontSize: 'clamp(2.25rem, 4vw, 3.5rem)', fontWeight: 700, color: '#fff', marginBottom: '1.25rem' }}>
+          <h1 className="heading-serif" style={{ fontSize: 'clamp(2.25rem, 4vw, 3.5rem)', fontWeight: 700, color: '#fff', marginBottom: '1.25rem', textShadow: '0 2px 10px rgba(0,0,0,0.65)' }}>
             Bwamba
           </h1>
-          <p style={{ fontSize: '1.125rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, maxWidth: '520px' }}>
+          <p style={{ fontSize: '1.125rem', color: 'rgba(255,255,255,0.92)', lineHeight: 1.8, maxWidth: '520px', textShadow: '0 1px 6px rgba(0,0,0,0.7)' }}>
             Discover the beauty and cultural richness of Bundibugyo and the Bwamba region.
           </p>
+        </div>
+      </div>
+
+      <div className="community-photo-strip" role="region" aria-label="Bwamba community photo gallery" tabIndex={0}>
+        <div className="community-photo-track">
+          {[0, 1].map((copy) => (
+            <div key={copy} className="community-photo-group" aria-hidden={copy === 1}>
+              {communityPhotos.map((photo) => (
+                <figure key={`${copy}-${photo.src}`} className="community-photo-card">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    sizes="(max-width: 640px) 80vw, (max-width: 1024px) 40vw, 380px"
+                    style={{ objectFit: 'cover', objectPosition: 'center 35%' }}
+                  />
+                  <figcaption>{photo.caption}</figcaption>
+                </figure>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
 
@@ -170,6 +207,22 @@ export default function VisitBwamba() {
 
         </div>
       </section>
+      <style>{`
+        .community-photo-strip { width: 100%; overflow: hidden; background: #242424; }
+        .community-photo-track { display: flex; width: max-content; animation: community-photo-loop 75s linear infinite; }
+        .community-photo-group { display: flex; gap: 0.75rem; padding-right: 0.75rem; }
+        .community-photo-card { position: relative; flex: 0 0 clamp(250px, 28vw, 380px); aspect-ratio: 4 / 3; margin: 0; overflow: hidden; background: #242424; }
+        .community-photo-card figcaption { position: absolute; inset: auto 0 0; padding: 2rem 0.875rem 0.75rem; background: linear-gradient(transparent, rgba(17,17,17,0.78)); color: #fff; font-size: 0.8125rem; font-weight: 600; }
+        .community-photo-strip:hover .community-photo-track,
+        .community-photo-strip:focus .community-photo-track { animation-play-state: paused; }
+        @keyframes community-photo-loop { to { transform: translateX(-50%); } }
+        @media (prefers-reduced-motion: reduce) {
+          .community-photo-strip { overflow-x: auto; scroll-snap-type: x mandatory; }
+          .community-photo-track { animation: none; }
+          .community-photo-group[aria-hidden="true"] { display: none; }
+          .community-photo-card { scroll-snap-align: start; }
+        }
+      `}</style>
     </main>
   );
 }

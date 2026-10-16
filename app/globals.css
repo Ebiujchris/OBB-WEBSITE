@@ -180,11 +180,13 @@ h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -0.02em; }
 /* ── Page hero ── */
 .page-hero {
   background: #242424;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   position: relative;
   overflow: hidden;
 }
+.page-hero .badge { margin-bottom: 1rem !important; }
+.page-hero h1 { margin-bottom: 0.875rem !important; }
 .page-hero::before {
   content: '';
   position: absolute;
@@ -195,7 +197,7 @@ h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -0.02em; }
     radial-gradient(ellipse 55% 55% at 100% 100%, rgba(107,30,46,0.22) 0%, transparent 55%);
 }
 @media (min-width: 1024px) {
-  .page-hero { padding-top: 6.5rem; padding-bottom: 6.5rem; }
+  .page-hero { padding-top: 4rem; padding-bottom: 4rem; }
 }
 
 /* ── Divider ── */

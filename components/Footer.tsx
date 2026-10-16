@@ -21,20 +21,20 @@ export default function Footer() {
         <div style={{ flex: 1, background: '#1F4D3A' }} />
         <div style={{ flex: 1, background: '#111111' }} />
       </div>
-      <div className="container-site" style={{ paddingTop: '4rem', paddingBottom: '2.5rem' }}>
+      <div className="container-site" style={{ paddingTop: '1.5rem', paddingBottom: '1rem' }}>
 
         {/* Top grid */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-          gap: '3rem',
-          paddingBottom: '3rem',
+          gap: '1.25rem',
+          paddingBottom: '1.25rem',
           borderBottom: '1px solid rgba(255,255,255,0.08)',
         }}>
 
           {/* Brand */}
           <div>
-            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
+            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
               <div style={{
                 width: '2.5rem', height: '2.5rem',
                 background: '#6B1E2E',
@@ -49,10 +49,10 @@ export default function Footer() {
                 <div style={{ fontSize: '0.625rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>Bwa Bwamba</div>
               </div>
             </Link>
-            <p style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.8, maxWidth: '20rem' }}>
+            <p style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, maxWidth: '20rem' }}>
               Cultural institution of the Bamba, Babwisi and Vanuma communities. Preserving heritage since 2012.
             </p>
-            <div style={{ marginTop: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <div style={{ marginTop: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#FCD116', display: 'inline-block' }} />
               <span style={{ fontSize: '0.8125rem', color: 'rgba(255,255,255,0.4)' }}>Bundibugyo, Uganda</span>
             </div>
@@ -60,10 +60,10 @@ export default function Footer() {
 
           {/* Explore */}
           <div>
-            <p style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '1.25rem' }}>
+            <p style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '0.75rem' }}>
               Explore
             </p>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.375rem' }}>
               {[
                 { href: '/about',       label: 'About Us' },
                 { href: '/omudhingiya', label: 'Omudhingiya' },
@@ -81,10 +81,10 @@ export default function Footer() {
 
           {/* Languages */}
           <div>
-            <p style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '1.25rem' }}>
+            <p style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '0.75rem' }}>
               Languages
             </p>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.375rem' }}>
               {[
                 { href: '/languages/lubwisi', label: 'Lubwisi' },
                 { href: '/languages/kwamba',  label: 'Kwamba' },
@@ -102,10 +102,10 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <p style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '1.25rem' }}>
+            <p style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '0.75rem' }}>
               Contact
             </p>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem' }}>
                 <svg width="16" height="16" fill="none" stroke="#D8232A" strokeWidth="1.5" viewBox="0 0 24 24" style={{ marginTop: '0.1rem', flexShrink: 0 }}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -122,8 +122,8 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-            <div style={{ marginTop: '1.75rem' }}>
-              <Link href="/contact" className="btn btn-outline-white" style={{ padding: '0.625rem 1.25rem', fontSize: '0.8125rem' }}>
+            <div style={{ marginTop: '1rem' }}>
+              <Link href="/contact" className="btn btn-outline-white" style={{ padding: '0.5rem 1rem', fontSize: '0.8125rem' }}>
                 Send a message
               </Link>
             </div>
@@ -132,7 +132,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div style={{
-          paddingTop: '1.75rem',
+          paddingTop: '0.875rem',
           display: 'flex',
           flexWrap: 'wrap',
           alignItems: 'center',
@@ -142,10 +142,8 @@ export default function Footer() {
           <p style={{ fontSize: '0.8125rem', color: 'rgba(255,255,255,0.3)' }}>
             &copy; {new Date().getFullYear()} Obudhingiya Bwa Bwamba. All rights reserved.
           </p>
-          <div style={{ display: 'flex', gap: '1.5rem' }}>
-            {[{ href: '/contact', label: 'Contact' }, { href: '/about', label: 'About' }].map(({ href, label }) => (
-              <Link key={href} href={href} className="footer-link-sm">{label}</Link>
-            ))}
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '1.25rem' }}>
+            <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.4)' }}>Designed by InfinitiAnalytics</span>
           </div>
         </div>
 

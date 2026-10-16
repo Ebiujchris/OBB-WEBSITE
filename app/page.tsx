@@ -1,9 +1,29 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import HeroCarousel from '@/components/HeroCarousel';
 
+type CommunityArticle = {
+  title: string;
+  date?: string;
+  category: string;
+  image: string;
+  imageClass?: string;
+  alt: string;
+};
+
+const communityArticles: CommunityArticle[] = [
+  { title: 'Cultural Festival', date: 'Aug 8, 2026', category: 'Events', image: '/images/cultural%20festival%20image.jpg', imageClass: 'festival-image', alt: 'Cultural festival gathering' },
+  { title: 'Language Archive', date: 'Aug 5, 2026', category: 'Language', image: '/images/landuage%20image.jpg', imageClass: 'language-image', alt: 'Community language documentation' },
+  { title: 'Elder Stories', category: 'Culture', image: '/images/culture/leadership%20council%20of%20elders%20image.PNG', imageClass: 'elder-image', alt: 'Council of elders at a cultural gathering' },
+  { title: 'PM at Sports Galore', category: 'Sports', image: '/images/news-cabinet from cabinet minister.jpg', alt: 'Prime Minister speech at Sports Galore' },
+  { title: 'Omudhingiya Anniversary', category: 'Anniversary', image: '/images/news-anniversary%20omudhigiya%20enthronment%20day.jpg', alt: 'Community marking the Omudhingiya enthronement anniversary' },
+  { title: 'Harvest Festival', category: 'Community', image: '/images/news-harvest%20more%20festival%20images%20for%20news.jpg', alt: 'Community harvest festival' },
+  { title: 'Women’s Dance', category: 'Culture', image: '/images/culture/women%20dance%201%20image.jpg', alt: 'Women performing a traditional cultural dance' },
+];
+
 export default function Home() {
   return (
-    <main>
+    <main className="home-page">
 
       {/* ════════════════════════════════════════
           HERO
@@ -12,8 +32,8 @@ export default function Home() {
         background: '#111111',
         position: 'relative',
         overflow: 'hidden',
-        paddingTop: '6rem',
-        paddingBottom: '6rem',
+        paddingTop: '4rem',
+        paddingBottom: '4rem',
       }}>
         {/* Uganda flag color wash — red sweep from top-left, yellow from bottom-right, green depth in centre */}
         <div style={{
@@ -100,7 +120,7 @@ export default function Home() {
               { value: '1,000+', label: 'Audio recordings' },
             ].map((stat) => (
               <div key={stat.label} style={{
-                padding: '2.5rem 2rem',
+                padding: '1.5rem 1rem',
                 textAlign: 'center',
                 borderRight: '1px solid rgba(0,0,0,0.07)',
                 borderBottom: '1px solid rgba(0,0,0,0.07)',
@@ -116,7 +136,7 @@ export default function Home() {
       {/* ════════════════════════════════════════
           OMUDHINGIYA FEATURE
       ════════════════════════════════════════ */}
-      <section className="section-space" style={{ background: '#F8F3E7' }}>
+          <section className="section-space" style={{ background: '#F8F3E7' }}>
         <div className="container-site">
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '3.5rem', alignItems: 'center' }} className="two-col-grid">
             {/* Text */}
@@ -150,13 +170,12 @@ export default function Home() {
               overflow: 'hidden',
               boxShadow: '0 20px 60px rgba(0,0,0,0.15)',
             }}>
-              <div style={{ position: 'relative', height: '18rem', overflow: 'hidden' }}>
+              <div style={{ position: 'relative', height: '32rem', overflow: 'hidden' }}>
                 <img
-                  src="/omundhingiya image.jpeg"
+                  src="/images/another%20omudhingya%20image%20-%20king.jpg"
                   alt="Omudhingiya Martin Ayongi Kamya"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
+                  style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }}
                 />
-                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '4rem', background: 'linear-gradient(to top, #242424, transparent)' }} />
               </div>
               <div style={{ padding: '1.75rem' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.875rem' }}>
@@ -186,7 +205,7 @@ export default function Home() {
       {/* ════════════════════════════════════════
           LANGUAGES
       ════════════════════════════════════════ */}
-      <section className="section-space" style={{ background: '#fff' }}>
+          <section className="section-space language-section" style={{ background: '#fff' }}>
         <div className="container-site">
           <div style={{ textAlign: 'center', maxWidth: '600px', marginInline: 'auto', marginBottom: '3.5rem' }}>
             <h2 className="heading-serif" style={{ fontSize: 'clamp(1.875rem, 3vw, 2.625rem)', fontWeight: 700, color: '#242424', marginBottom: '1rem' }}>
@@ -248,7 +267,7 @@ export default function Home() {
       {/* ════════════════════════════════════════
           CULTURE CATEGORIES
       ════════════════════════════════════════ */}
-      <section className="section-space" style={{ background: '#F8F3E7' }}>
+          <section className="section-space culture-section" style={{ background: '#F8F3E7' }}>
         <div className="container-site">
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1.5rem', marginBottom: '3rem' }}>
             <div>
@@ -262,7 +281,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '1rem' }}>
+          <div className="culture-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '1rem' }}>
             {[
               { title: 'Folk Stories', icon: '📖', href: '/culture/stories' },
               { title: 'Proverbs',     icon: '💬', href: '/culture/proverbs' },
@@ -279,13 +298,28 @@ export default function Home() {
               </Link>
             ))}
           </div>
+          <div className="anthem-row" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '0.75rem', marginTop: '1.25rem', padding: '0.5rem 0.75rem', background: '#FFFDF5', borderTop: '1px solid rgba(201,154,46,0.24)', borderRight: '1px solid rgba(201,154,46,0.24)', borderBottom: '1px solid rgba(201,154,46,0.24)', borderLeft: '4px solid #C99A2E', borderRadius: '6px' }}>
+            <h3 className="heading-serif" style={{ fontSize: '1rem', fontWeight: 700, color: '#242424' }}>
+              Kingdom anthem
+            </h3>
+            <iframe
+              title="Play the Obudhingiya Bwa Bwamba Anthem"
+              width="280"
+              height="166"
+              scrolling="no"
+              allow="autoplay"
+              loading="lazy"
+              src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbwamba%2Fobudhingiya-bwa-bwamba&color=%23C99A2E&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"
+              style={{ width: 'min(100%, 280px)', height: '166px', border: 0, borderRadius: '4px', display: 'block' }}
+            />
+          </div>
         </div>
       </section>
 
       {/* ════════════════════════════════════════
           NEWS
       ════════════════════════════════════════ */}
-      <section className="section-space" style={{ background: '#fff' }}>
+          <section className="section-space community-news-section" style={{ background: '#fff' }}>
         <div className="container-site">
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1.5rem', marginBottom: '3rem' }}>
             <div>
@@ -294,38 +328,41 @@ export default function Home() {
               </h2>
               <p style={{ fontSize: '1rem', color: '#666', lineHeight: 1.6 }}>Events, documentation efforts and cultural initiatives.</p>
             </div>
-            <Link href="/news-events" className="btn btn-outline-dark" style={{ padding: '0.625rem 1.5rem', fontSize: '0.875rem' }}>
-              View all news
-            </Link>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.625rem' }}>
+              <Link href="/news-events" className="btn btn-outline-dark" style={{ padding: '0.625rem 1rem', fontSize: '0.8125rem' }}>
+                View all news
+              </Link>
+              <Link href="/media" className="btn btn-outline-dark" style={{ padding: '0.625rem 1rem', fontSize: '0.8125rem' }}>
+                View gallery
+              </Link>
+            </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
-            {[
-              { title: 'Cultural Festival 2026',           date: 'Aug 8, 2026',  category: 'Events',   gradient: 'linear-gradient(135deg, #6B1E2E, #242424)' },
-              { title: 'Language Documentation Initiative', date: 'Aug 5, 2026',  category: 'Language', gradient: 'linear-gradient(135deg, #1F4D3A, #242424)' },
-              { title: 'Elder Stories Archive',             date: 'Jul 30, 2026', category: 'Culture',  gradient: 'linear-gradient(135deg, #7A5C3E, #242424)' },
-            ].map((article, i) => (
-              <article key={i} className="news-card">
-                <div style={{ height: '11rem', background: article.gradient }} />
-                <div style={{ padding: '1.75rem' }}>
-                  <span style={{
-                    display: 'inline-block',
-                    fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase',
-                    padding: '0.3rem 0.75rem', borderRadius: '9999px',
-                    background: 'rgba(201,154,46,0.1)', color: '#8a6a1a',
-                    border: '1px solid rgba(201,154,46,0.2)',
-                    marginBottom: '1rem',
-                  }}>
-                    {article.category}
-                  </span>
-                  <h3 style={{ fontSize: '1.125rem', fontWeight: 700, color: '#242424', lineHeight: 1.35, marginBottom: '0.5rem' }}>{article.title}</h3>
-                  <p style={{ fontSize: '0.8125rem', color: '#999', marginBottom: '1.25rem' }}>{article.date}</p>
-                  <Link href={`/news/${i + 1}`} style={{ fontSize: '0.875rem', fontWeight: 600, color: '#6B1E2E', display: 'inline-flex', alignItems: 'center', gap: '0.375rem' }}>
-                    Read more →
-                  </Link>
+          <div className="community-carousel" role="region" aria-label="Latest community news and events">
+            <div className="community-carousel-track">
+              {[0, 1].map((copy) => (
+                <div key={copy} className="community-carousel-group" aria-hidden={copy === 1}>
+                  {communityArticles.map((article) => (
+                    <article key={`${copy}-${article.title}`} className="news-card community-news-card">
+                      <div className={`community-news-image ${article.imageClass ?? ''}`}>
+                        <Image
+                          src={article.image}
+                          alt={article.alt}
+                          fill
+                          sizes="(max-width: 640px) 85vw, (max-width: 1024px) 45vw, 340px"
+                          style={{ objectFit: 'cover', objectPosition: article.imageClass === 'elder-image' ? 'center top' : 'center' }}
+                        />
+                      </div>
+                      <div className="community-news-copy">
+                        <span className="community-news-category">{article.category}</span>
+                        <h3>{article.title}</h3>
+                        {article.date && <p>{article.date}</p>}
+                      </div>
+                    </article>
+                  ))}
                 </div>
-              </article>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -333,11 +370,16 @@ export default function Home() {
       {/* ════════════════════════════════════════
           VISIT CTA
       ════════════════════════════════════════ */}
-      <section style={{ background: '#242424', position: 'relative', overflow: 'hidden', paddingTop: '5.5rem', paddingBottom: '5.5rem' }}>
-        <div style={{
-          position: 'absolute', inset: 0, pointerEvents: 'none',
-          background: 'radial-gradient(ellipse 60% 80% at 50% 50%, rgba(107,30,46,0.18) 0%, transparent 65%)',
-        }} />
+        <section style={{
+          backgroundColor: '#242424',
+          backgroundImage: "linear-gradient(rgba(17,17,17,0.32), rgba(17,17,17,0.42)), url('/images/Rwenzori%20Mountains%20.jfif')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          position: 'relative',
+          overflow: 'hidden',
+          paddingTop: '5.5rem',
+          paddingBottom: '5.5rem',
+        }}>
         <div className="container-site" style={{ position: 'relative', textAlign: 'center', maxWidth: '640px', marginInline: 'auto' }}>
           <p style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '1.25rem' }}>
             Plan your trip
@@ -356,7 +398,74 @@ export default function Home() {
       </section>
 
       <style>{`
+        .home-page > section:first-of-type { padding-block: 2rem !important; }
+        .home-page > section:last-of-type { padding-block: 2rem !important; }
+        .home-page .section-space { padding-block: 1.75rem !important; }
+        .home-page .language-section,
+        .home-page .culture-section { padding-block: 1.25rem !important; }
+        .home-page .language-section > .container-site > div:first-child { margin-bottom: 1.5rem !important; }
+        .home-page .language-section > .container-site > div:nth-child(2) { gap: 1rem !important; }
+        .home-page .language-section .card { padding: 1.25rem; }
+        .home-page .language-section .card span:first-of-type { margin-bottom: 0.75rem !important; }
+        .home-page .language-section .card h3 { font-size: 1.75rem !important; margin-bottom: 0.5rem !important; }
+        .home-page .language-section .card p { margin-bottom: 1rem !important; }
+        .home-page .section-space.culture-section .container-site > div:first-child:not(.two-col-grid) { margin-bottom: 1.25rem !important; }
+        .home-page .culture-section .culture-grid { gap: 0.75rem !important; }
+        .home-page .culture-section .culture-card { padding: 0.875rem 1rem; gap: 0.75rem; }
+        .home-page .culture-section .anthem-row { margin-top: 0.75rem !important; gap: 0.5rem !important; }
+        .home-page .culture-section iframe { width: min(100%, 230px) !important; }
+        .home-page .section-space .container-site > div:first-child:not(.two-col-grid) { margin-bottom: 1.25rem !important; }
+        .home-page .hero-grid,
+        .home-page .two-col-grid { gap: 1.5rem !important; }
+        .home-page .stats-grid > div { padding-block: 0.75rem !important; }
+        .home-page .stats-grid > div > .heading-serif { font-size: 2rem !important; }
+        .home-page .stats-grid > div > p:last-child { margin-top: 0.375rem !important; }
+        .home-page .two-col-grid > div:nth-child(2) > div:first-child { height: 26rem !important; }
+        .home-page .news-card > div:first-child { height: 9rem !important; }
+        .home-page .news-card > div:first-child.festival-image { height: 13rem !important; }
+        .home-page .news-card > div:first-child.language-image { height: 13rem !important; }
+        .home-page .news-card > div:first-child.elder-image { height: 17rem !important; }
+        .home-page .community-news-section > .container-site { max-width: 1400px; }
+        .home-page .news-card > div:nth-child(2) { padding: 0.875rem !important; }
+        .home-page .news-card span { padding: 0.2rem 0.55rem !important; margin-bottom: 0.5rem !important; }
+        .home-page .news-card h3 { font-size: 1rem !important; margin-bottom: 0.3rem !important; }
+        .home-page .news-card p { margin-bottom: 0.5rem !important; }
+        .home-page .elder-story-card > div:nth-child(2) { padding: 0.625rem !important; }
+        .home-page .elder-story-card span { margin-bottom: 0.25rem !important; }
+        .home-page .elder-story-card h3 { font-size: 0.95rem !important; margin-bottom: 0.15rem !important; }
+        .home-page .elder-story-card p { margin-bottom: 0.25rem !important; }
+        .home-page iframe { width: min(100%, 250px) !important; }
+        .community-carousel { overflow: hidden; }
+        .community-carousel-track { display: flex; width: max-content; animation: community-carousel-scroll 58s linear infinite; }
+        .community-carousel-group { display: flex; gap: 1rem; padding-right: 1rem; }
+        .community-news-card { flex: 0 0 clamp(270px, 28vw, 340px); }
+        .community-news-link { display: block; height: 100%; color: inherit; text-decoration: none; }
+        .community-news-image { position: relative; height: 13rem; overflow: hidden; background: #242424; }
+        .home-page .news-card > div:first-child.community-news-image { height: 15rem !important; }
+        .community-news-copy { display: flex; min-height: 5rem; flex-direction: column; align-items: flex-start; padding: 0.625rem !important; }
+        .community-news-category { display: inline-block; margin-bottom: 0.5rem !important; }
+        .home-page .community-news-card .community-news-category { margin-bottom: 0.25rem !important; }
+        .home-page .community-news-card .community-news-copy h3 { margin-bottom: 0.2rem !important; font-size: 0.9375rem !important; line-height: 1.3; }
+        .home-page .community-news-card .community-news-copy p { margin-bottom: 0.25rem !important; font-size: 0.75rem; color: #888; }
+        .community-news-action { margin-top: auto; padding: 0 !important; border: 0 !important; background: transparent !important; color: #6B1E2E; font-size: 0.875rem; font-weight: 600; }
+        .community-carousel:hover .community-carousel-track,
+        .community-carousel:focus-within .community-carousel-track { animation-play-state: paused; }
+        @keyframes community-carousel-scroll { to { transform: translateX(-50%); } }
+        @media (prefers-reduced-motion: reduce) {
+          .community-carousel { overflow-x: auto; }
+          .community-carousel-track { animation: none; }
+          .community-carousel-group[aria-hidden="true"] { display: none; }
+        }
+        .home-page > section:first-of-type .badge { margin-bottom: 1.25rem !important; }
+        .home-page > section:first-of-type h1 { margin-bottom: 1.25rem !important; }
+        .home-page > section:first-of-type p { margin-bottom: 1.5rem !important; }
+        .home-page > section:last-of-type .container-site > p { margin-bottom: 0.75rem !important; }
+        .home-page > section:last-of-type h2 { margin-bottom: 0.875rem !important; }
+        .home-page > section:last-of-type .container-site > p:last-of-type { margin-bottom: 1.5rem !important; }
         @media (min-width: 1024px) {
+          .home-page .section-space { padding-block: 2rem !important; }
+          .home-page .language-section,
+          .home-page .culture-section { padding-block: 1.5rem !important; }
           .hero-grid     { grid-template-columns: 1.15fr 0.85fr !important; }
           .two-col-grid  { grid-template-columns: 1fr 1fr !important; }
         }

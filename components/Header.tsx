@@ -5,18 +5,21 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 
 const navItems = [
+  { href: '/',            label: 'Home' },
   { href: '/about',       label: 'About', dropdown: [
     { href: '/history',                  label: 'History' },
     { href: '/visit',                    label: 'Bwamba' },
-    { href: '/about/cabinet-ministers', label: 'Cabinet Ministers' },
+    { href: '/culture',                  label: 'Culture' },
   ]},
   { href: '/omudhingiya', label: 'Omudhingiya', dropdown: [
-    { href: '/nabantu', label: 'Nabantu (Queen)' },
+    { href: '/omudhingiya/nabantu', label: 'Nabantu (Queen)' },
   ]},
+  { href: '/about/cabinet-ministers', label: 'Cabinet' },
   { href: '/languages',   label: 'Languages' },
-  { href: '/culture',     label: 'Culture' },
   { href: '/nabantu',     label: 'Our People' },
-  { href: '/media',       label: 'Media' },
+  { href: '/media',       label: 'Media', dropdown: [
+    { href: '/news-events', label: 'News & Events' },
+  ]},
 ];
 
 export default function Header() {
@@ -130,10 +133,8 @@ export default function Header() {
           </nav>
 
           {/* Desktop CTA */}
-          <div style={{ display: 'none' }} className="lg-cta">
-            <Link href="/contact" className="btn btn-primary" style={{ padding: '0.625rem 1.375rem', fontSize: '0.8125rem' }}>
-              Contact Us
-            </Link>
+          <div style={{ display: 'none', alignItems: 'center', gap: '0.875rem' }} className="lg-cta">
+            <img src="/kingdom%20flag.jpeg" alt="Bwamba Kingdom flag" style={{ width: '4.5rem', height: '3rem', objectFit: 'cover', borderRadius: '0.25rem', border: '1px solid rgba(0,0,0,0.12)', boxShadow: '0 2px 6px rgba(0,0,0,0.12)' }} />
           </div>
 
           {/* Hamburger */}
@@ -210,14 +211,9 @@ export default function Header() {
                 </div>
               ))}
             </nav>
-            <Link
-              href="/contact"
-              onClick={() => setOpen(false)}
-              className="btn btn-primary"
-              style={{ width: '100%' }}
-            >
-              Contact Us
-            </Link>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem' }}>
+              <img src="/kingdom%20flag.jpeg" alt="Bwamba Kingdom flag" style={{ width: '4.5rem', height: '3rem', objectFit: 'cover', borderRadius: '0.25rem', border: '1px solid rgba(0,0,0,0.12)', boxShadow: '0 2px 6px rgba(0,0,0,0.12)' }} />
+            </div>
           </div>
         </div>
       )}
@@ -225,7 +221,7 @@ export default function Header() {
       <style>{`
         @media (min-width: 1024px) {
           .lg-nav  { display: flex !important; }
-          .lg-cta  { display: block !important; }
+          .lg-cta  { display: flex !important; }
           .lg-hide { display: none !important; }
         }
         .nav-link { color: #444; }

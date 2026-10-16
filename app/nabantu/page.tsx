@@ -91,6 +91,32 @@ export default function Nabantu() {
             ))}
           </div>
 
+          <div style={{ marginBottom: '2rem' }}>
+            <h2 className="heading-serif" style={{ fontSize: '1.5rem', fontWeight: 700, color: '#242424', marginBottom: '1rem' }}>
+              Community Life
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.25rem' }}>
+              {[
+                { src: '/images/Batama cultural group.jpg', alt: 'Community members performing a traditional dance', caption: 'Cultural Performance', pos: 'center center' },
+                { src: '/images/dance-troupe image woemen.jpg', alt: 'Women performing a traditional dance', caption: 'Traditional Dance', pos: 'center center' },
+                { src: '/images/batwa-people-2.jpg', alt: 'Community members gathered for a cultural celebration', caption: '', pos: 'center center' },
+                { src: '/images/royal-couple-image.jpg', alt: 'Cultural leaders in ceremonial dress', caption: 'Cultural Leadership', pos: 'center 20%' },
+                { src: '/images/news-cabinet from cabinet minister.jpg', alt: 'Prime Minister speech at Sports Galore', caption: 'PM at Sports Galore', pos: 'center 25%' },
+                { src: '/images/culture/coffee.jfif', alt: 'Coffee growing in Bwamba', caption: 'Coffee Growing', pos: 'center center' },
+                { src: '/images/town images/Town image.png', alt: 'Bundibugyo town', caption: 'Bundibugyo Town', pos: 'center center' },
+                { src: '/images/town images/town image 2.png', alt: 'Community street life in Bwamba', caption: 'Community Life', pos: 'center center' },
+                { src: '/images/town images/street community life.jfif', alt: 'Street life in Bwamba', caption: 'Street Life', pos: 'center center' },
+              ].map((photo) => (
+                <figure key={photo.src} style={{ position: 'relative', aspectRatio: '3 / 2', margin: 0, overflow: 'hidden', borderRadius: '1rem', background: '#242424' }}>
+                  <img src={photo.src} alt={photo.alt} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: photo.pos, display: 'block' }} />
+                  <figcaption style={{ position: 'absolute', inset: 'auto 0 0', padding: '2rem 1rem 1rem', background: 'linear-gradient(transparent, rgba(17,17,17,0.85))', color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>
+                    {photo.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+
           {/* Clans banner */}
           <div style={{ background: '#fff', border: '1px solid rgba(0,0,0,0.07)', borderRadius: '1.25rem', padding: '2.75rem', marginBottom: '2rem' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem', alignItems: 'center' }} className="two-col-grid">

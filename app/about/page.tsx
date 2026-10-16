@@ -39,10 +39,10 @@ export default function About() {
       <div className="page-hero">
         <div className="container-site" style={{ position: 'relative' }}>
           <div className="badge badge-gold" style={{ marginBottom: '1.5rem' }}>About us</div>
-          <h1 className="heading-serif" style={{ fontSize: 'clamp(2.25rem, 4vw, 3.5rem)', fontWeight: 700, color: '#fff', marginBottom: '1.25rem' }}>
+          <h1 className="heading-serif" style={{ fontSize: 'clamp(2.25rem, 4vw, 3.5rem)', fontWeight: 700, color: '#fff', marginBottom: '1.25rem', textShadow: '0 2px 10px rgba(0,0,0,0.8)' }}>
             Obudhingiya Bwa Bwamba
           </h1>
-          <p style={{ fontSize: '1.125rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, maxWidth: '560px' }}>
+          <p style={{ fontSize: '1.125rem', color: 'rgba(255,255,255,0.96)', lineHeight: 1.8, maxWidth: '560px', textShadow: '0 1px 6px rgba(0,0,0,0.8)' }}>
             Uniting the Bamba, Babwisi and Vanuma people through culture, language and community-led heritage preservation.
           </p>
         </div>

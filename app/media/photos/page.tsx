@@ -52,6 +52,30 @@ export const cabinetMembers = [
   { src: `${BASE}/48.Oweng.Kakonge_Edaward_Kifunga..jpg`, name: 'Oweng. Kakonge Edward Kifunga', title: 'Cabinet Member' },
 ];
 
+const communityPhotos = [
+  { src: '/images/another%20omudhingya%20image%20-%20king.jpg', alt: 'Omudhingiya in ceremonial dress', caption: 'Omudhingiya' },
+  { src: '/images/Batama%20cultural%20group.jpg', alt: 'Batama cultural group performing', caption: 'Cultural performance' },
+  { src: '/images/batwa-people-2.jpg', alt: 'Community members at a cultural gathering', caption: 'Community gathering' },
+  { src: '/images/batwa.jpg', alt: 'Batwa community members', caption: 'Batwa community' },
+  { src: '/images/cultural%20festival%20image.jpg', alt: 'Bwamba cultural festival', caption: 'Cultural festival' },
+  { src: '/images/dance-troupe%20image%20woemen.jpg', alt: 'Women performing a traditional dance', caption: 'Traditional dance' },
+  { src: '/images/images%20%281%29.jfif', alt: 'Community archive photograph', caption: 'Community archive' },
+  { src: '/images/landuage%20image.jpg', alt: 'Community member sharing language knowledge', caption: 'Language & storytelling' },
+  { src: '/images/nabantu-throne%20-queen%20another%20image.jpg', alt: 'Nabantu in ceremonial dress', caption: 'Nabantu' },
+  { src: '/images/news-anniversary%20omudhigiya%20enthronment%20day.jpg', alt: 'Omudhingiya enthronement anniversary', caption: 'Enthronement anniversary' },
+  { src: '/images/news-cabinet%20from%20cabinet%20minister.jpg', alt: 'Cabinet members gathered together', caption: 'Cabinet' },
+  { src: '/images/news-harvest%20more%20festival%20images%20for%20news.jpg', alt: 'Harvest festival and community celebrations', caption: 'Harvest festival' },
+  { src: '/images/royal-couple-image.jpg', alt: 'Cultural leaders in ceremonial attire', caption: 'Cultural leadership' },
+  { src: '/images/Rwenzori%20Mountains%20.jfif', alt: 'Rwenzori Mountains landscape', caption: 'Rwenzori Mountains' },
+  { src: '/images/culture/bibo%282%29.jfif', alt: 'Bibo cultural archive image', caption: 'Bibo' },
+  { src: '/images/culture/coffee.jfif', alt: 'Coffee from the Bwamba region', caption: 'Coffee growing' },
+  { src: '/images/culture/Kikoyi%20%282%29.jfif', alt: 'Kikoyi cultural archive image', caption: 'Kikoyi' },
+  { src: '/images/culture/leadership%20council%20of%20elders%20image.PNG', alt: 'Members of the elders council', caption: 'Elders council' },
+  { src: '/images/culture/women%20dance%201%20image.jpg', alt: 'Women performing a cultural dance', caption: 'Women’s dance' },
+  { src: '/images/culture/women%20weaving%20baskets%20%282%29.jfif', alt: 'Women weaving traditional baskets', caption: 'Basket weaving' },
+  { src: '/images/nabantu/nabantu-throne%20iamge%20stab=nding.jpg', alt: 'Nabantu standing in ceremonial dress', caption: 'Nabantu enthronement' },
+];
+
 export default function PhotosPage() {
   return (
     <main>
@@ -59,10 +83,10 @@ export default function PhotosPage() {
         <div className="container-site" style={{ position: 'relative' }}>
           <div className="badge badge-gold" style={{ marginBottom: '1.5rem' }}>Photos</div>
           <h1 className="heading-serif" style={{ fontSize: 'clamp(2.25rem,4vw,3.5rem)', fontWeight: 700, color: '#fff', marginBottom: '1.25rem' }}>
-            Cabinet Members
+            Photo Gallery
           </h1>
           <p style={{ fontSize: '1.125rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, maxWidth: '520px' }}>
-            Official portraits of the Bwamba Kingdom cabinet members and office holders.
+            Community life, cultural traditions, and portraits of Bwamba leaders.
           </p>
         </div>
       </div>
@@ -75,33 +99,28 @@ export default function PhotosPage() {
             </Link>
           </div>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
-            gap: '1.5rem',
-          }}>
-            {cabinetMembers.map((member, i) => (
-              <div key={i} className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ position: 'relative', width: '100%', aspectRatio: '3/4' }}>
+          <div style={{ marginBottom: '3rem' }}>
+            <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '1rem' }}>
+              Community & Culture
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '1.25rem' }}>
+              {communityPhotos.map((photo) => (
+                <figure key={photo.src} style={{ position: 'relative', aspectRatio: '4 / 3', margin: 0, overflow: 'hidden', borderRadius: '1rem', background: '#242424' }}>
                   <Image
-                    src={member.src}
-                    alt={`${member.name} — ${member.title}`}
+                    src={photo.src}
+                    alt={photo.alt}
                     fill
-                    style={{ objectFit: 'cover' }}
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    style={{ objectFit: 'cover', objectPosition: 'center' }}
                   />
-                </div>
-                <div style={{ padding: '1rem' }}>
-                  <p style={{ fontWeight: 700, fontSize: '0.95rem', color: '#242424', marginBottom: '0.25rem', lineHeight: 1.4 }}>
-                    {member.name}
-                  </p>
-                  <p style={{ fontSize: '0.8rem', color: '#666', lineHeight: 1.5 }}>
-                    {member.title}
-                  </p>
-                </div>
-              </div>
-            ))}
+                  <figcaption style={{ position: 'absolute', inset: 'auto 0 0', padding: '2.5rem 1rem 0.875rem', background: 'linear-gradient(transparent, rgba(17,17,17,0.82))', color: '#fff', fontSize: '0.9rem', fontWeight: 600 }}>
+                    {photo.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
+
         </div>
       </section>
     </main>

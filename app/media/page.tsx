@@ -2,9 +2,18 @@ import Link from 'next/link';
 
 const mediaTypes = [
   { href: '/media/photos',    icon: '📸', title: 'Photos',    desc: 'Image gallery and cultural archives.' },
-  { href: '/media/videos',    icon: '🎥', title: 'Videos',    desc: 'Cultural ceremonies and recorded events.' },
+  { href: '/media#video-section', icon: '🎥', title: 'Videos', desc: 'Cultural ceremonies and recorded events.' },
   { href: '/media/audio',     icon: '🎵', title: 'Audio',     desc: 'Songs, stories and spoken recordings.' },
   { href: '/media/documents', icon: '📄', title: 'Documents', desc: 'Historical records and written archives.' },
+];
+
+const videos = [
+  { src: '/images/videos/812C3555.MOV', title: 'Community video 1' },
+  { src: '/images/videos/812C3564.MOV', title: 'Community video 2' },
+  { src: '/images/videos/812C3570.MOV', title: 'Community video 3' },
+  { src: '/images/videos/812C3572.MOV', title: 'Community video 4' },
+  { src: '/images/videos/812C3590.MOV', title: 'Community video 5' },
+  { src: '/images/videos/praying%20for%20omudhiiya%20video.MOV', title: 'Prayer for Omudhingiya' },
 ];
 
 export default function Media() {
@@ -36,65 +45,107 @@ export default function Media() {
             ))}
           </div>
 
-          {/* Kingdom Flag */}
-          <div className="card" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
-            <div className="badge badge-gold">Kingdom Flag</div>
-            <img
-              src="/kingdom flag.jpeg"
-              alt="Obudhingiya Bwa Bwamba Kingdom Flag"
-              style={{ maxWidth: '360px', width: '100%', borderRadius: '0.75rem', boxShadow: '0 8px 24px rgba(0,0,0,0.12)', display: 'block' }}
-            />
-            <p style={{ fontSize: '0.9375rem', color: '#666', textAlign: 'center', maxWidth: '480px', lineHeight: 1.8 }}>
-              The official flag of Obudhingiya Bwa Bwamba — symbol of unity for the Bamba, Babwisi and Vanuma communities.
-            </p>
+          <div id="video-section">
+            <div style={{ marginBottom: '1rem' }}>
+              <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '0.375rem' }}>
+                Videos
+              </h2>
+              <p style={{ fontSize: '0.9375rem', color: '#666' }}>Cultural moments and community recordings.</p>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem' }}>
+              {videos.map((video) => (
+                <article key={video.src} className="card" style={{ padding: 0, overflow: 'hidden', borderRadius: '8px' }}>
+                  <div style={{ aspectRatio: '16 / 9', background: '#111' }}>
+                    <video controls playsInline preload="none" style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}>
+                      <source src={video.src} type="video/mp4" />
+                      Your browser does not support this video format.
+                    </video>
+                  </div>
+                  <div style={{ padding: '0.875rem 1rem' }}>
+                    <h3 style={{ fontSize: '0.9375rem', fontWeight: 600, color: '#242424' }}>{video.title}</h3>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
 
-          {/* Anthem */}
-          <div className="card" style={{ padding: '2.5rem' }}>
-            <div className="badge badge-gold" style={{ marginBottom: '1.25rem' }}>Official Anthem</div>
-            <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '0.375rem' }}>
-              Obudhingiya Bwa Bwamba Anthem
-            </h2>
-            <p style={{ fontSize: '0.8125rem', color: '#999', marginBottom: '2rem', lineHeight: 1.7 }}>
-              Adopted melody by S. Mbangi and Rev. Ntulanke (Bwamba Native Association, 1954) ·
-              Words by J.K. Kutambaki, S.M. Kisembo, G. Kisembo, A.B. Asaba and C.B. Kanyesige ·
-              Harmonized by S.M. Kisembo, Dip. MDD, Makerere University ·
-              Studio Choir: Edith Tusabe Miiki, Jennipher Kabasinguzi Miiki, Vivian Baguma Simoli and Swizen Kyomuhendo
-            </p>
-
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem' }}>
-              {/* Verse 1 */}
-              <div style={{ borderLeft: '3px solid #D8232A', paddingLeft: '1.25rem' }}>
-                <p style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#999', marginBottom: '0.875rem' }}>Verse 1</p>
-                {['Bhesu̱ bhakpa ndi bha ko Bwamba', 'Ki̱dhedheluwa̱ si̱ni̱-si̱ni̱', 'Nanga kusali̱ya ndyasu̱ yoho', 'Ndia K\' Obudhingiya'].map((line, i) => (
-                  <p key={i} className="heading-serif" style={{ fontSize: '1rem', fontStyle: 'italic', color: '#242424', lineHeight: 1.9 }}>{line}</p>
-                ))}
-              </div>
-
-              {/* Chorus */}
-              <div style={{ borderLeft: '3px solid #FCD116', paddingLeft: '1.25rem' }}>
-                <p style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#999', marginBottom: '0.875rem' }}>Chorus</p>
-                {['Bhesu poni Bhanikyamba', 'Ki̱nsi̱mege Mambombi̱', 'Nanga pasu kyalo', 'Ndia bhela bhakugamya', 'Ka kusali̱ya ndyasu̱ yoho'].map((line, i) => (
-                  <p key={i} className="heading-serif" style={{ fontSize: '1rem', fontStyle: 'italic', color: '#242424', lineHeight: 1.9 }}>{line}</p>
-                ))}
-              </div>
-
-              {/* Verse 2 */}
-              <div style={{ borderLeft: '3px solid #1F4D3A', paddingLeft: '1.25rem' }}>
-                <p style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#999', marginBottom: '0.875rem' }}>Verse 2</p>
-                {['Aliku sabuhanguwa ndyasu̱', 'Gu̱si̱ya, mabhi̱li̱, li̱bho, na ngolo', 'Bhanyama tai bha mbungu'].map((line, i) => (
-                  <p key={i} className="heading-serif" style={{ fontSize: '1rem', fontStyle: 'italic', color: '#242424', lineHeight: 1.9 }}>{line}</p>
-                ))}
-              </div>
-
-              {/* Verse 3 */}
-              <div style={{ borderLeft: '3px solid #D8232A', paddingLeft: '1.25rem' }}>
-                <p style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#999', marginBottom: '0.875rem' }}>Verse 3</p>
-                {['Ki̱hu̱ti̱se lunganda ndyasu̱', 'Asili, zeni, kisomo na sa di̱ni̱', 'Kigbe bhiani dhudhu ndyasu̱', 'Andu̱lu̱ ki̱ebombi̱se'].map((line, i) => (
-                  <p key={i} className="heading-serif" style={{ fontSize: '1rem', fontStyle: 'italic', color: '#242424', lineHeight: 1.9 }}>{line}</p>
-                ))}
-              </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '1.25rem', alignItems: 'start' }}>
+            {/* Kingdom Flag */}
+            <div className="card" style={{ padding: '2rem 1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.25rem' }}>
+              <div className="badge badge-gold">Kingdom Flag</div>
+              <img
+                src="/kingdom flag.jpeg"
+                alt="Obudhingiya Bwa Bwamba Kingdom Flag"
+                style={{ maxWidth: '360px', width: '100%', borderRadius: '0.75rem', boxShadow: '0 8px 24px rgba(0,0,0,0.12)', display: 'block' }}
+              />
+              <p style={{ fontSize: '0.9375rem', color: '#666', textAlign: 'center', maxWidth: '480px', lineHeight: 1.8 }}>
+                The official flag of Obudhingiya Bwa Bwamba — symbol of unity for the Bamba, Babwisi and Vanuma communities.
+              </p>
             </div>
+
+            {/* Anthem */}
+            <div className="card" style={{ padding: '2rem 1.5rem' }}>
+              <div className="badge badge-gold" style={{ marginBottom: '1.25rem' }}>Official Anthem</div>
+              <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '0.375rem' }}>
+                Obudhingiya Bwa Bwamba Anthem
+              </h2>
+              <iframe
+                title="Play the Obudhingiya Bwa Bwamba Anthem"
+                width="100%"
+                height="166"
+                scrolling="no"
+                allow="autoplay"
+                loading="lazy"
+                src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbwamba%2Fobudhingiya-bwa-bwamba&color=%23C99A2E&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"
+                style={{ width: '100%', height: '166px', border: 0, borderRadius: '4px', display: 'block' }}
+              />
+            </div>
+          </div>
+
+          <div className="card" style={{ marginTop: '1.25rem', padding: '2rem' }}>
+            <h2 className="heading-serif" style={{ fontSize: '1.5rem', fontWeight: 700, color: '#242424', marginBottom: '0.875rem' }}>
+              Anthem lyrics and credits
+            </h2>
+            <p style={{ fontSize: '0.8125rem', color: '#999', marginBottom: '1.5rem', lineHeight: 1.7 }}>
+                Adopted melody by S. Mbangi and Rev. Ntulanke (Bwamba Native Association, 1954) ·
+                Words by J.K. Kutambaki, S.M. Kisembo, G. Kisembo, A.B. Asaba and C.B. Kanyesige ·
+                Harmonized by S.M. Kisembo, Dip. MDD, Makerere University ·
+                Studio Choir: Edith Tusabe Miiki, Jennipher Kabasinguzi Miiki, Vivian Baguma Simoli and Swizen Kyomuhendo
+              </p>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem' }}>
+                {/* Verse 1 */}
+                <div style={{ borderLeft: '3px solid #D8232A', paddingLeft: '1rem' }}>
+                  <p style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#999', marginBottom: '0.625rem' }}>Verse 1</p>
+                  {['Bhesu̱ bhakpa ndi bha ko Bwamba', 'Ki̱dhedheluwa̱ si̱ni̱-si̱ni̱', 'Nanga kusali̱ya ndyasu̱ yoho', 'Ndia K\' Obudhingiya'].map((line, i) => (
+                    <p key={i} className="heading-serif" style={{ fontSize: '0.9375rem', fontStyle: 'italic', color: '#242424', lineHeight: 1.75 }}>{line}</p>
+                  ))}
+                </div>
+
+                {/* Chorus */}
+                <div style={{ borderLeft: '3px solid #FCD116', paddingLeft: '1rem' }}>
+                  <p style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#999', marginBottom: '0.625rem' }}>Chorus</p>
+                  {['Bhesu poni Bhanikyamba', 'Ki̱nsi̱mege Mambombi̱', 'Nanga pasu kyalo', 'Ndia bhela bhakugamya', 'Ka kusali̱ya ndyasu̱ yoho'].map((line, i) => (
+                    <p key={i} className="heading-serif" style={{ fontSize: '0.9375rem', fontStyle: 'italic', color: '#242424', lineHeight: 1.75 }}>{line}</p>
+                  ))}
+                </div>
+
+                {/* Verse 2 */}
+                <div style={{ borderLeft: '3px solid #1F4D3A', paddingLeft: '1rem' }}>
+                  <p style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#999', marginBottom: '0.625rem' }}>Verse 2</p>
+                  {['Aliku sabuhanguwa ndyasu̱', 'Gu̱si̱ya, mabhi̱li̱, li̱bho, na ngolo', 'Bhanyama tai bha mbungu'].map((line, i) => (
+                    <p key={i} className="heading-serif" style={{ fontSize: '0.9375rem', fontStyle: 'italic', color: '#242424', lineHeight: 1.75 }}>{line}</p>
+                  ))}
+                </div>
+
+                {/* Verse 3 */}
+                <div style={{ borderLeft: '3px solid #D8232A', paddingLeft: '1rem' }}>
+                  <p style={{ fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#999', marginBottom: '0.625rem' }}>Verse 3</p>
+                  {['Ki̱hu̱ti̱se lunganda ndyasu̱', 'Asili, zeni, kisomo na sa di̱ni̱', 'Kigbe bhiani dhudhu ndyasu̱', 'Andu̱lu̱ ki̱ebombi̱se'].map((line, i) => (
+                    <p key={i} className="heading-serif" style={{ fontSize: '0.9375rem', fontStyle: 'italic', color: '#242424', lineHeight: 1.75 }}>{line}</p>
+                  ))}
+                </div>
+              </div>
           </div>
 
         </div>
