@@ -48,20 +48,22 @@ export default function Nabantu() {
                 <div style={{ padding: '2.5rem' }}>
                   <div className="badge badge-gold" style={{ marginBottom: '1.25rem' }}>Biography</div>
                   <h2 className="heading-serif" style={{ fontSize: '1.5rem', fontWeight: 700, color: '#242424', marginBottom: '1.25rem' }}>
-                    Her Royal Highness Mbabazi Betty
+                    Her Royal Highness Mbabazi Betty,
+                    <br />
+                    Na’abantu of Obudhingiya Bwa Bwamba
                   </h2>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                     <p style={{ fontSize: '0.9375rem', color: '#555', lineHeight: 1.85 }}>
-                      Within the Obudhingiya Bwa Bwamba cultural institution, the title <em>Na'abantu</em> — which translates as "Mother of the People" — is bestowed upon the wife of the Omudhingiya. She carries the full honour of Her Royal Highness (HRH) and walks alongside the Omudhingiya as an equal in social standing and public dignity.
+                      Born into the Batalinga Clan of the Babwisi community, Her Royal Highness Mbabazi Betty is a daughter of Mr. Aligyaha Salezio. As wife of His Royal Highness Col. (Rtd) Ayongi Martin Kamya, the Omudhingiya, she serves as the Na’abantu, the “Mother of the People,” and stands as a living symbol of peace, harmony, and protection for the people of Bwamba.
                     </p>
                     <p style={{ fontSize: '0.9375rem', color: '#555', lineHeight: 1.85 }}>
-                      While her role has no formally prescribed duties in the institution's constitution, the Na'abantu is a constant presence at the Omudhingiya's side — accompanying him on official visits, cultural ceremonies and community engagements. She also takes on ceremonial responsibilities in her own right, particularly in matters that touch on the wellbeing of women, children and the fabric of family life within Obudhingiya.
+                      The title Na’abantu is bestowed upon the wife of the Omudhingiya, and she carries the full honour of Her Royal Highness (HRH).
                     </p>
                     <p style={{ fontSize: '0.9375rem', color: '#555', lineHeight: 1.85 }}>
-                      Across all clans and communities of Obudhingiya Bwa Bwamba, the Na'abantu is held with deep respect — seen as a mother to all Bana'Budhingiya. In any gathering of the institution, she holds a position of precedence above all other women.
+                      Across all clans and communities of Obudhingiya Bwa Bwamba, she is held with deep respect as a mother to all Bana’Budhingiya, and she holds a place of precedence above all other women at every gathering of the institution. She carries this honour with a clear sense of purpose: to protect the culture, values, and traditions that bind the people of Bwamba, and to stand with those who need support most, especially women, children, and vulnerable families. She champions the dignity of the home and the strength of marriage and family as the foundation of a healthy society.
                     </p>
                     <p style={{ fontSize: '0.9375rem', color: '#555', lineHeight: 1.85 }}>
-                      Her Royal Highness Mbabazi Betty is the current Na'abantu, wife of His Royal Highness Col. (Rtd) Ayongi Martin Kamya, the Omudhingiya. Born into the Batalinga Clan of the Babwisi community, she is a daughter of Mr. Aligyaha Salezio.
+                      Her commitment to the weak and vulnerable finds practical expression through the Na’abantu Foundation, which advances the wellbeing of women and the protection and care of vulnerable children, while safeguarding the cultural heritage of Bwamba for generations to come.
                     </p>
                   </div>
                 </div>
