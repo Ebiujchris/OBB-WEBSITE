@@ -115,7 +115,7 @@ export default function Nabantu() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.25rem', marginBottom: '3rem' }}>
             {[
               { href: '/nabantu/clans',          icon: '🏛️', title: 'Clans & Sub-Clans',   desc: 'Explore the 25 clans, their histories, totems, and cultural significance.', image: '/images/Batama%20cultural%20group.jpg', alt: 'Community members performing a traditional dance' },
-              { href: '/nabantu/clan-leaders',   icon: '👑', title: 'Clan Leaders',         desc: 'Meet the heads of clans who preserve our traditions and guide our communities.', image: '/images/royal-couple-image.jpg', alt: 'Cultural leaders in ceremonial dress' },
+              { href: '/nabantu/clan-leaders',   icon: '👑', title: 'Clan Leaders',         desc: 'Meet the heads of clans who preserve our traditions and guide our communities.', image: '/images/culture/leadership%20council%20of%20elders%20image.PNG', alt: 'Leadership Council of Elders' },
               { href: '/nabantu/totems',         icon: '🦅', title: 'Totems & Symbols',     desc: 'Discover the totems and their spiritual significance in our culture.', image: '/images/dance-troupe%20image%20woemen.jpg', alt: 'Women performing a traditional dance' },
               { href: '/nabantu/family-lineage', icon: '🌳', title: 'Family & Lineage',     desc: 'Understanding family structures and lineage systems in our communities.', image: '/images/batwa-people-2.jpg', alt: 'Community members gathered for a cultural celebration' },
             ].map((item) => (
