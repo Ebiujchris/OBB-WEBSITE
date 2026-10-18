@@ -14,7 +14,9 @@ const navItems = [
   ]},
   { href: '/omudhingiya', label: 'Omudhingiya', dropdown: [
     { href: '/omudhingiya/nabantu', label: 'Nabantu (Queen)' },
+    { href: '/omudhingiya/prime-minister', label: 'Prime Minister' },
   ]},
+  { href: '/omudhingiya/kusei', label: 'Kusei' },
   { href: '/languages',   label: 'Languages' },
   { href: '/nabantu',     label: 'Our People' },
   { href: '/media',       label: 'Media', dropdown: [
