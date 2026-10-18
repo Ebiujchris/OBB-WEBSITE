@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 const navItems = [
   { href: '/',            label: 'Home' },
   { href: '/about',       label: 'About', dropdown: [
+    { href: '/about/cabinet-ministers', label: 'Cabinet' },
     { href: '/history',                  label: 'History' },
     { href: '/visit',                    label: 'Bwamba' },
     { href: '/culture',                  label: 'Culture' },
@@ -14,7 +15,6 @@ const navItems = [
   { href: '/omudhingiya', label: 'Omudhingiya', dropdown: [
     { href: '/omudhingiya/nabantu', label: 'Nabantu (Queen)' },
   ]},
-  { href: '/about/cabinet-ministers', label: 'Cabinet' },
   { href: '/languages',   label: 'Languages' },
   { href: '/nabantu',     label: 'Our People' },
   { href: '/media',       label: 'Media', dropdown: [
