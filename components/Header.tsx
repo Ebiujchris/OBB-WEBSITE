@@ -17,8 +17,9 @@ const navItems = [
     { href: '/omudhingiya/prime-minister', label: 'Prime Minister' },
   ]},
   { href: '/omudhingiya/kusei', label: 'Kusei' },
-  { href: '/languages',   label: 'Languages' },
-  { href: '/nabantu',     label: 'Our People' },
+  { href: '/nabantu',     label: 'Our People', dropdown: [
+    { href: '/languages', label: 'Languages' },
+  ]},
   { href: '/media',       label: 'Media', dropdown: [
     { href: '/news-events', label: 'News & Events' },
   ]},
