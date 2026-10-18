@@ -2,14 +2,19 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-const ministries = [
-  'Culture and Social Mobilization','Royal Protocol','Royal Infrastructure and Transport',
-  'Lands and Other Natural Resources','Agriculture','Health','Education',
-  'Gender and Social Development','Youth and Sports','Special Interest Groups',
-  'Information, Research and Documentation','Finance','Planning and Economic Development',
-  'Security and Internal Affairs','Trade and Industrial Cooperation',
-  'Constitutional Affairs / Attorney General','External Relations',
-  'Special Duties in the Office of the Katikilo','General Duties in the Office of Omudhingiya',
+const executiveCouncilPhotos = [
+  { src: 'https://res.cloudinary.com/a9kf2wue/image/upload/v1786659106/1.Rt.Hon.Charles_Bukantwa._Prime_Minister..jpg', alt: 'Rt. Hon. Charles Bukantwa, Prime Minister' },
+  { src: 'https://res.cloudinary.com/a9kf2wue/image/upload/v1786659106/2.Rt.Hon._Hassan_Kihanda.1st_Deputy_Prime_Minister..jpg', alt: 'Rt. Hon. Hassan Kihanda, First Deputy Prime Minister' },
+  { src: 'https://res.cloudinary.com/a9kf2wue/image/upload/v1786659106/3.Rt.Hon._Ivan_Mutebi.2nd_Deputy_Prime_Minister..jpg', alt: 'Rt. Hon. Ivan Mutebi, Second Deputy Prime Minister' },
+  { src: 'https://res.cloudinary.com/a9kf2wue/image/upload/v1786659106/6.Oweng.Kisembo_David_Bakasima._Attoney_General..jpg', alt: 'Oweng. Kisembo David Bakasima, Attorney General' },
+  { src: 'https://res.cloudinary.com/a9kf2wue/image/upload/v1786659106/7.Oweng.Rev.Kyomuhendo_Geoffrey._Spokesperson..jpg', alt: 'Oweng. Rev. Kyomuhendo Geoffrey, Spokesperson' },
+  { src: 'https://res.cloudinary.com/a9kf2wue/image/upload/v1786659106/8.Oweng.Musinguzi_John._Minister_of_Trade_Industries_and_Cooperatives..jpg', alt: 'Oweng. Musinguzi John, Minister of Trade, Industries and Cooperatives' },
+  { src: 'https://res.cloudinary.com/a9kf2wue/image/upload/v1786659106/9.Oweng._Chief_Prince_Agaba_Charles._Minister_for_Royal_Protocal_and_Welfare.jpg', alt: 'Oweng. Chief Prince Agaba Charles, Minister for Royal Protocol and Welfare' },
+  { src: 'https://res.cloudinary.com/a9kf2wue/image/upload/v1786659106/10.Oweng.Baguma_Godfrey._Minister_for_General_Duties_in_the_Office_of_Omudhingiya..jpg', alt: 'Oweng. Baguma Godfrey, Minister for General Duties' },
+  { src: 'https://res.cloudinary.com/a9kf2wue/image/upload/v1786659106/11.Oweng.Baguma_Peter._Minister_for_Defence..jpg', alt: 'Oweng. Baguma Peter, Minister for Defence' },
+  { src: 'https://res.cloudinary.com/a9kf2wue/image/upload/v1786659106/12.Oweng.Sunday_Milton._Minister_for_Security..jpg', alt: 'Oweng. Sunday Milton, Minister for Security' },
+  { src: 'https://res.cloudinary.com/a9kf2wue/image/upload/v1786659106/13.Oweng._Mugenyi_Eliphaz._Minister_for_Internal_Relations..jpg', alt: 'Oweng. Mugenyi Eliphaz, Minister for Internal Relations' },
+  { src: 'https://res.cloudinary.com/a9kf2wue/image/upload/v1786659106/14.Oweng.Dr._James_Maisaba._Minister_for_Health..jpg', alt: 'Oweng. Dr. James Maisaba, Minister for Health' },
 ];
 
 const aims = [
@@ -180,21 +185,34 @@ export default function About() {
             </div>
           </div>
 
-          {/* Ministries */}
-          <div className="card" style={{ padding: '2.5rem' }}>
-            <div className="badge badge-gold" style={{ marginBottom: '1.25rem' }}>Executive Council</div>
-            <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '1.25rem' }}>Obudhingiya Ministries</h2>
-            <p style={{ fontSize: '0.9375rem', color: '#666', lineHeight: 1.8, marginBottom: '1.5rem' }}>
-              The specific ministers are appointed by Omudhingiya and approved by Kusei, the Cultural Council.
-            </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '0.75rem' }}>
-              {ministries.map((m, i) => (
-                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', background: '#F8F3E7', borderRadius: '0.625rem', padding: '0.875rem 1rem', fontSize: '0.875rem', color: '#333' }}>
-                  <span style={{ width: 7, height: 7, borderRadius: '50%', background: i % 3 === 0 ? '#D8232A' : i % 3 === 1 ? '#C99A2E' : '#1F4D3A', flexShrink: 0 }} />
-                  Ministry of {m}
+          {/* Executive Council portraits */}
+          <div className="about-council-gallery" role="region" aria-label="Executive Council portraits">
+            <div className="about-council-track">
+              {[0, 1].map((copy) => (
+                <div key={copy} className="about-council-group" aria-hidden={copy === 1}>
+                  {executiveCouncilPhotos.map((photo, index) => (
+                    <div className="about-council-photo" key={`${copy}-${photo.src}`}>
+                      <img src={photo.src} alt={copy === 0 ? photo.alt : ''} />
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>
+            <style>{`
+              .about-council-gallery { overflow: hidden; }
+              .about-council-track { display: flex; width: max-content; animation: about-council-scroll 58s linear infinite; }
+              .about-council-group { display: flex; gap: 1rem; padding-right: 1rem; }
+              .about-council-photo { flex: 0 0 clamp(240px, 25vw, 320px); height: 15rem; overflow: hidden; border-radius: 0.625rem; background: #242424; }
+              .about-council-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+              .about-council-gallery:hover .about-council-track,
+              .about-council-gallery:focus-within .about-council-track { animation-play-state: paused; }
+              @keyframes about-council-scroll { to { transform: translateX(-50%); } }
+              @media (prefers-reduced-motion: reduce) {
+                .about-council-gallery { overflow-x: auto; }
+                .about-council-track { animation: none; }
+                .about-council-group[aria-hidden="true"] { display: none; }
+              }
+            `}</style>
           </div>
 
           {/* Aims & Objectives — collapsible */}
