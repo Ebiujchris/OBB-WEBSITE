@@ -30,15 +30,20 @@ export default function CabinetMinistersPage() {
               />
             </div>
             <div style={{ padding: 'clamp(1.25rem, 3vw, 2.25rem)' }}>
-              <div className="badge badge-gold" style={{ marginBottom: '0.75rem' }}>Katikilo · Prime Minister</div>
+              <div className="badge badge-gold" style={{ marginBottom: '0.75rem' }}>Katikiro · Prime Minister</div>
               <h2 className="heading-serif" style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', fontWeight: 700, color: '#242424', marginBottom: '0.875rem' }}>
-                Rt. Hon. Charles Bukantwa
+                The Right Honourable Charles Bukantwa,
+                <br />
+                Katikiro (Oweng) of Obudingya Bwamba
               </h2>
               <p style={{ fontSize: '0.9375rem', color: '#555', lineHeight: 1.75, marginBottom: '0.875rem' }}>
-                The Katikilo leads the Cabinet and guides parliamentary business in Kusei. Working under the Omudhingiya’s direction, he coordinates the institution’s policies, programmes, communications, and activities, and chairs Cabinet meetings. Two deputies assist with responsibilities delegated by the Prime Minister.
+                The Right Honourable Charles Bukantwa is a son of the Nibe Clan and a proud member of the Bamba people. Rooted in the heritage and traditions of his clan and community, he brings that identity to the service of the Obudingya and its people.
+              </p>
+              <p style={{ fontSize: '0.9375rem', color: '#555', lineHeight: 1.75, marginBottom: '0.875rem' }}>
+                He serves as the Katikiro (Prime Minister) of Obudingya Bwamba and has been the foremost servant of the Omudhingiya since 2020. Working under the Omudhingiya’s direction, he leads the Cabinet and presides over its meetings, guiding the business of Parliament and keeping its proceedings in good order. He coordinates the institution’s policies, programmes, communications, and activities, so that every office moves in harmony and every decision honours the dignity of the Obudingya and the welfare of its people.
               </p>
               <p style={{ fontSize: '0.9375rem', color: '#555', lineHeight: 1.75 }}>
-                Charles Bukantwa is from the Nibe Clan and is of Bamba ethnicity. His deputies are Rt. Hon. (Afande) Kihanda Hassan of the Babandi Clan and Babwisi community, and Rt. Hon. Mutebi Ivan of the Vanuma community.
+                He is assisted by two Deputy Prime Ministers, who carry out the responsibilities he entrusts to them: the Right Honourable (Afande) Kihanda Hassan, of the Babandi Clan and the Babwisi community, and the Right Honourable Mutebi Ivan, of the Vanuma community.
               </p>
             </div>
           </div>
