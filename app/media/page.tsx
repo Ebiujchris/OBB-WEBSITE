@@ -2,18 +2,9 @@ import Link from 'next/link';
 
 const mediaTypes = [
   { href: '/media/photos',    icon: '📸', title: 'Photos',    desc: 'Image gallery and cultural archives.' },
-  { href: '/media#video-section', icon: '🎥', title: 'Videos', desc: 'Cultural ceremonies and recorded events.' },
+  { href: '/media/videos',    icon: '🎥', title: 'Videos',    desc: 'Cultural ceremonies and recorded events.' },
   { href: '/media/audio',     icon: '🎵', title: 'Audio',     desc: 'Songs, stories and spoken recordings.' },
   { href: '/media/documents', icon: '📄', title: 'Documents', desc: 'Historical records and written archives.' },
-];
-
-const videos = [
-  { src: 'https://res.cloudinary.com/a9kf2wue/video/upload/f_mp4/812c3555.mov', type: 'video/mp4', title: 'Community video 1' },
-  { src: 'https://res.cloudinary.com/a9kf2wue/video/upload/f_mp4/812c3564.mov', type: 'video/mp4', title: 'Community video 2' },
-  { src: 'https://res.cloudinary.com/a9kf2wue/video/upload/f_mp4/812c3570.mov', type: 'video/mp4', title: 'Community video 3' },
-  { src: 'https://res.cloudinary.com/a9kf2wue/video/upload/f_mp4/812c3572.mov', type: 'video/mp4', title: 'Community video 4' },
-  { src: 'https://res.cloudinary.com/a9kf2wue/video/upload/f_mp4/812c3590.mov', type: 'video/mp4', title: 'Community video 5' },
-  { src: '/images/videos/praying%20for%20omudhiiya%20video.MOV', type: 'video/quicktime', title: 'Prayer for Omudhingiya' },
 ];
 
 export default function Media() {
@@ -36,37 +27,13 @@ export default function Media() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: '1.25rem' }}>
             {mediaTypes.map((m) => (
               <Link key={m.href} href={m.href} style={{ textDecoration: 'none' }}>
-                <div className="card" style={{ padding: '2.25rem', textAlign: 'center' }}>
+                <div className="card" style={{ padding: '2.25rem', textAlign: 'center', height: '100%' }}>
                   <div style={{ fontSize: '2.5rem', marginBottom: '1.25rem', lineHeight: 1 }}>{m.icon}</div>
                   <h3 className="heading-serif" style={{ fontSize: '1.375rem', fontWeight: 700, color: '#242424', marginBottom: '0.5rem' }}>{m.title}</h3>
                   <p style={{ fontSize: '0.9rem', color: '#666', lineHeight: 1.7 }}>{m.desc}</p>
                 </div>
               </Link>
             ))}
-          </div>
-
-          <div id="video-section">
-            <div style={{ marginBottom: '1rem' }}>
-              <h2 className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '0.375rem' }}>
-                Videos
-              </h2>
-              <p style={{ fontSize: '0.9375rem', color: '#666' }}>Cultural moments and community recordings.</p>
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem' }}>
-              {videos.map((video) => (
-                <article key={video.src} className="card" style={{ padding: 0, overflow: 'hidden', borderRadius: '8px' }}>
-                  <div style={{ aspectRatio: '16 / 9', background: '#111' }}>
-                    <video controls playsInline preload="none" style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}>
-                      <source src={video.src} type={video.type} />
-                      Your browser does not support this video format.
-                    </video>
-                  </div>
-                  <div style={{ padding: '0.875rem 1rem' }}>
-                    <h3 style={{ fontSize: '0.9375rem', fontWeight: 600, color: '#242424' }}>{video.title}</h3>
-                  </div>
-                </article>
-              ))}
-            </div>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '1.25rem', alignItems: 'start' }}>
@@ -150,6 +117,7 @@ export default function Media() {
 
         </div>
       </section>
+
     </main>
   );
 }
