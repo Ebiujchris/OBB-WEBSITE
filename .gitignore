@@ -44,5 +44,7 @@ next-env.d.ts
 /public/cabinet images/
 
 # large local image/video assets
-/public/images/
+/public/images/*
+!/public/images/nabantu/
+!/public/images/nabantu/**
 /public/tourist attraction/
