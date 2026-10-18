@@ -1,4 +1,18 @@
+import Image from 'next/image';
 import Link from 'next/link';
+
+const presidingOfficers = [
+  {
+    src: 'https://res.cloudinary.com/a9kf2wue/image/upload/v1786659106/4.Rt.Hon.Maisaba_Manzi_Edmond._Kusei_Speaker..jpg',
+    name: 'Rt. Hon. Maisaba Manzi Edmond',
+    title: 'Kusei Speaker',
+  },
+  {
+    src: 'https://res.cloudinary.com/a9kf2wue/image/upload/v1786659106/5.Rt.Hon._Kamu_Jim_Sumbabhuliki._Deputy_Kusei_Speaker..jpg',
+    name: 'Rt. Hon. Kamu Jim Sumbabhuliki',
+    title: 'Deputy Kusei Speaker',
+  },
+];
 
 export default function KuseiPage() {
   return (
@@ -46,6 +60,31 @@ export default function KuseiPage() {
               </Link>
             </div>
           </div>
+
+          <section aria-labelledby="kusei-officers-heading" style={{ maxWidth: '920px', margin: '2.5rem auto 0' }}>
+            <h2 id="kusei-officers-heading" className="heading-serif" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#242424', marginBottom: '1.25rem' }}>
+              Presiding Officers
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.25rem' }}>
+              {presidingOfficers.map((officer) => (
+                <article key={officer.title} className="card" style={{ padding: 0, overflow: 'hidden' }}>
+                  <div style={{ position: 'relative', width: '100%', aspectRatio: '3 / 4', background: '#242424' }}>
+                    <Image
+                      src={officer.src}
+                      alt={`${officer.name}, ${officer.title}`}
+                      fill
+                      sizes="(max-width: 640px) 100vw, 40vw"
+                      style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                    />
+                  </div>
+                  <div style={{ padding: '1.25rem' }}>
+                    <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#242424', marginBottom: '0.35rem' }}>{officer.name}</h3>
+                    <p style={{ fontSize: '0.875rem', color: '#666' }}>{officer.title}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
         </div>
       </section>
     </main>
