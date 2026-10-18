@@ -11,6 +11,7 @@ const navItems = [
     { href: '/history',                  label: 'History' },
     { href: '/visit',                    label: 'Bwamba' },
     { href: '/culture',                  label: 'Culture' },
+    { href: '/about/mpaghi',             label: 'Mpaghi sya Bwamba' },
   ]},
   { href: '/omudhingiya', label: 'Omudhingiya', dropdown: [
     { href: '/omudhingiya/nabantu', label: 'Nabantu (Queen)' },

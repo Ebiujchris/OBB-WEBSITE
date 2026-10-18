@@ -47,4 +47,5 @@ next-env.d.ts
 /public/images/*
 !/public/images/nabantu/
 !/public/images/nabantu/**
+!/public/images/sports images and news/
 /public/tourist attraction/
