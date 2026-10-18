@@ -91,32 +91,6 @@ export default function Nabantu() {
             ))}
           </div>
 
-          <div style={{ marginBottom: '2rem' }}>
-            <h2 className="heading-serif" style={{ fontSize: '1.5rem', fontWeight: 700, color: '#242424', marginBottom: '1rem' }}>
-              Community Life
-            </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.25rem' }}>
-              {[
-                { src: '/images/Batama cultural group.jpg', alt: 'Community members performing a traditional dance', caption: 'Cultural Performance', pos: 'center center' },
-                { src: '/images/dance-troupe image woemen.jpg', alt: 'Women performing a traditional dance', caption: 'Traditional Dance', pos: 'center center' },
-                { src: '/images/batwa-people-2.jpg', alt: 'Community members gathered for a cultural celebration', caption: '', pos: 'center center' },
-                { src: '/images/royal-couple-image.jpg', alt: 'Cultural leaders in ceremonial dress', caption: 'Cultural Leadership', pos: 'center 20%' },
-                { src: '/images/news-cabinet from cabinet minister.jpg', alt: 'Prime Minister speech at Sports Galore', caption: 'PM at Sports Galore', pos: 'center 25%' },
-                { src: '/images/culture/coffee.jfif', alt: 'Coffee growing in Bwamba', caption: 'Coffee Growing', pos: 'center center' },
-                { src: '/images/town images/Town image.png', alt: 'Bundibugyo town', caption: 'Bundibugyo Town', pos: 'center center' },
-                { src: '/images/town images/town image 2.png', alt: 'Community street life in Bwamba', caption: 'Community Life', pos: 'center center' },
-                { src: '/images/town images/street community life.jfif', alt: 'Street life in Bwamba', caption: 'Street Life', pos: 'center center' },
-              ].map((photo) => (
-                <figure key={photo.src} style={{ position: 'relative', aspectRatio: '3 / 2', margin: 0, overflow: 'hidden', borderRadius: '1rem', background: '#242424' }}>
-                  <img src={photo.src} alt={photo.alt} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: photo.pos, display: 'block' }} />
-                  <figcaption style={{ position: 'absolute', inset: 'auto 0 0', padding: '2rem 1rem 1rem', background: 'linear-gradient(transparent, rgba(17,17,17,0.85))', color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>
-                    {photo.caption}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
-
           {/* Clans banner */}
           <div style={{ background: '#fff', border: '1px solid rgba(0,0,0,0.07)', borderRadius: '1.25rem', padding: '2.75rem', marginBottom: '2rem' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem', alignItems: 'center' }} className="two-col-grid">
@@ -140,23 +114,21 @@ export default function Nabantu() {
           {/* Sub-pages */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.25rem', marginBottom: '3rem' }}>
             {[
-              { href: '/nabantu/clans',          icon: '🏛️', title: 'Clans & Sub-Clans',   desc: 'Explore the 25 clans, their histories, totems, and cultural significance.' },
-              { href: '/nabantu/clan-leaders',   icon: '👑', title: 'Clan Leaders',         desc: 'Meet the heads of clans who preserve our traditions and guide our communities.' },
-              { href: '/nabantu/totems',         icon: '🦅', title: 'Totems & Symbols',     desc: 'Discover the totems and their spiritual significance in our culture.' },
-              { href: '/nabantu/family-lineage', icon: '🌳', title: 'Family & Lineage',     desc: 'Understanding family structures and lineage systems in our communities.' },
+              { href: '/nabantu/clans',          icon: '🏛️', title: 'Clans & Sub-Clans',   desc: 'Explore the 25 clans, their histories, totems, and cultural significance.', image: '/images/Batama%20cultural%20group.jpg', alt: 'Community members performing a traditional dance' },
+              { href: '/nabantu/clan-leaders',   icon: '👑', title: 'Clan Leaders',         desc: 'Meet the heads of clans who preserve our traditions and guide our communities.', image: '/images/royal-couple-image.jpg', alt: 'Cultural leaders in ceremonial dress' },
+              { href: '/nabantu/totems',         icon: '🦅', title: 'Totems & Symbols',     desc: 'Discover the totems and their spiritual significance in our culture.', image: '/images/dance-troupe%20image%20woemen.jpg', alt: 'Women performing a traditional dance' },
+              { href: '/nabantu/family-lineage', icon: '🌳', title: 'Family & Lineage',     desc: 'Understanding family structures and lineage systems in our communities.', image: '/images/batwa-people-2.jpg', alt: 'Community members gathered for a cultural celebration' },
             ].map((item) => (
               <Link key={item.href} href={item.href} style={{ textDecoration: 'none' }}>
-                <div className="card" style={{ padding: '2rem', display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
-                  <div style={{
-                    width: '3rem', height: '3rem', borderRadius: '0.875rem',
-                    background: '#F8F3E7', border: '1px solid rgba(0,0,0,0.07)',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontSize: '1.4rem', flexShrink: 0,
-                  }}>
-                    {item.icon}
+                <div className="card" style={{ padding: 0, height: '100%', overflow: 'hidden' }}>
+                  <div style={{ height: '12rem', overflow: 'hidden', background: '#242424' }}>
+                    <img src={item.image} alt={item.alt} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                   </div>
-                  <div>
-                    <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#242424', marginBottom: '0.5rem' }}>{item.title}</h3>
+                  <div style={{ padding: '1.5rem' }}>
+                    <div style={{ display: 'flex', gap: '0.875rem', alignItems: 'center', marginBottom: '0.625rem' }}>
+                      <span aria-hidden="true" style={{ fontSize: '1.4rem' }}>{item.icon}</span>
+                      <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#242424' }}>{item.title}</h3>
+                    </div>
                     <p style={{ fontSize: '0.875rem', color: '#666', lineHeight: 1.7 }}>{item.desc}</p>
                   </div>
                 </div>
