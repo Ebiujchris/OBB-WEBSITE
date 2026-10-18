@@ -190,7 +190,7 @@ export default function About() {
             <div className="about-council-track">
               {[0, 1].map((copy) => (
                 <div key={copy} className="about-council-group" aria-hidden={copy === 1}>
-                  {executiveCouncilPhotos.map((photo, index) => (
+                  {executiveCouncilPhotos.map((photo) => (
                     <div className="about-council-photo" key={`${copy}-${photo.src}`}>
                       <img src={photo.src} alt={copy === 0 ? photo.alt : ''} />
                     </div>
@@ -202,7 +202,7 @@ export default function About() {
               .about-council-gallery { overflow: hidden; }
               .about-council-track { display: flex; width: max-content; animation: about-council-scroll 58s linear infinite; }
               .about-council-group { display: flex; gap: 1rem; padding-right: 1rem; }
-              .about-council-photo { flex: 0 0 clamp(240px, 25vw, 320px); height: 15rem; overflow: hidden; border-radius: 0.625rem; background: #242424; }
+              .about-council-photo { flex: 0 0 clamp(270px, 30vw, 380px); height: 18rem; overflow: hidden; border-radius: 0.625rem; background: #242424; }
               .about-council-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
               .about-council-gallery:hover .about-council-track,
               .about-council-gallery:focus-within .about-council-track { animation-play-state: paused; }
