@@ -1,6 +1,27 @@
 import Link from 'next/link';
+import fs from 'fs';
+import path from 'path';
+import QueenGallery from '@/components/QueenGallery';
+
+const getQueenGallery = () => {
+  const folder = path.join(process.cwd(), 'public', 'images', 'nabantu');
+  const fallback = ['/Nabantu(Queen).jpeg'];
+
+  try {
+    const files = fs.readdirSync(folder)
+      .filter((file) => /\.(png|jpe?g|webp|gif|avif|svg)$/i.test(file))
+      .sort();
+
+    if (files.length === 0) return fallback;
+
+    return files.map((file) => `/images/nabantu/${encodeURIComponent(file)}`);
+  } catch {
+    return fallback;
+  }
+};
 
 export default function Nabantu() {
+  const queenImages = getQueenGallery();
   return (
     <main>
       <div className="page-hero">
@@ -84,6 +105,8 @@ export default function Nabantu() {
                 </div>
               ))}
             </div>
+
+            <QueenGallery images={queenImages} />
 
             <div style={{ textAlign: 'center' }}>
               <Link href="/omudhingiya" style={{ fontSize: '0.9rem', fontWeight: 600, color: '#6B1E2E', display: 'inline-flex', alignItems: 'center', gap: '0.375rem' }}>
