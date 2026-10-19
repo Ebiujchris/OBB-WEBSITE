@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import newsCabinetImage from '../../../public/prime minister images/news-cabinet from cabinet minister.jpg';
 
 export default function PrimeMinisterPage() {
   return (
@@ -50,6 +51,17 @@ export default function PrimeMinisterPage() {
               </p>
             </div>
           </div>
+
+          <section style={{ marginBottom: '2rem' }}>
+            <figure style={{ maxWidth: '700px', margin: '0 auto', background: '#fff', borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(36,36,36,0.08)' }}>
+              <Image
+                src={newsCabinetImage}
+                alt="The Prime Minister with cabinet members at an official gathering"
+                sizes="(max-width: 700px) calc(100vw - 3rem), 700px"
+                style={{ width: '100%', height: 'auto' }}
+              />
+            </figure>
+          </section>
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.25rem' }}>
             <Link href="/omudhingiya" style={{ color: '#1F4D3A', textDecoration: 'none', fontSize: '0.95rem' }}>
