@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 const slides = [
   {
-    src: '/prime-minister.jpg',
+    src: '/prime%20minister%20images/prime-minister.jpg',
     alt: 'Rt. Hon. Charles Bukantwa — Prime Minister',
     label: 'Prime Minister',
     name: 'Rt. Hon. Charles Bukantwa',

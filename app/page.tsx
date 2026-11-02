@@ -172,7 +172,7 @@ export default function Home() {
             }}>
               <div style={{ position: 'relative', height: '32rem', overflow: 'hidden' }}>
                 <img
-                  src="/images/another%20omudhingya%20image%20-%20king.jpg"
+                  src="/images/omudhiyga%20images/another%20omudhingya%20image%20-%20king.jpg"
                   alt="Omudhingiya Martin Ayongi Kamya"
                   style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }}
                 />
