@@ -59,7 +59,7 @@ function getCabinetPortrait(src: string) {
     throw new Error(`No local cabinet portrait is configured for ${src}`);
   }
 
-  return `/cabinet%20images/${encodeURIComponent(filename)}`;
+  return `/cabinet-portraits/${imageId}.webp`;
 }
 
 export default function CabinetMinistersPage() {

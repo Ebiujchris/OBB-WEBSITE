@@ -53,7 +53,7 @@ export const cabinetMembers = [
 ];
 
 const communityPhotos = [
-  { src: '/images/omudhiyga%20images/another%20omudhingya%20image%20-%20king.jpg', alt: 'Omudhingiya in ceremonial dress', caption: 'Omudhingiya' },
+  { src: '/leadership/omudhingiya-king.webp', alt: 'Omudhingiya in ceremonial dress', caption: 'Omudhingiya' },
   { src: '/images/Batama%20cultural%20group.jpg', alt: 'Batama cultural group performing', caption: 'Cultural performance' },
   { src: '/images/batwa-people-2.jpg', alt: 'Community members at a cultural gathering', caption: 'Community gathering' },
   { src: '/images/batwa.jpg', alt: 'Batwa community members', caption: 'Batwa community' },
