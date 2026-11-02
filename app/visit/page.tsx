@@ -24,7 +24,7 @@ const communityPhotos = [
   { src: '/images/culture/women%20dance%201%20image.jpg', alt: 'Women performing a cultural dance', caption: 'Women’s dance' },
   { src: '/images/culture/women%20weaving%20baskets%20%282%29.jfif', alt: 'Women weaving traditional baskets', caption: 'Basket weaving' },
   { src: '/images/nabantu-throne%20-queen%20another%20image.jpg', alt: 'Nabantu in ceremonial dress', caption: 'Nabantu' },
-  { src: '/images/another%20omudhingya%20image%20-%20king.jpg', alt: 'Omudhingiya in ceremonial dress', caption: 'Omudhingiya' },
+  { src: '/images/omudhiyga%20images/another%20omudhingya%20image%20-%20king.jpg', alt: 'Omudhingiya in ceremonial dress', caption: 'Omudhingiya' },
 ];
 
 export default function VisitBwamba() {
